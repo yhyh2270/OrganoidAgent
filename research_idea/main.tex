@@ -1,0 +1,219 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usetheme{Boadilla}
+\usecolortheme{seahorse}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{Agentic Organoid Analysis for Immune Migration and Growth Forecasting}
+\subtitle{A Nature Methods-level plan for AI-driven organoid image analysis}
+\author{OrganoidAgent Project}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Motivation}
+  \begin{itemize}
+    \item Organoid experiments create large brightfield datasets with limited quantitative analysis.
+    \item Immune cell migration and organoid growth are dynamic and require robust tracking over time.
+    \item We need an end-to-end pipeline that is reproducible, quality-aware, and scalable.
+    \item Goal: turn raw images into validated phenotypes and predictive models.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Core Scientific Questions}
+  \begin{itemize}
+    \item How do immune cells recruit to and infiltrate organoids under cytokine stimulation?
+    \item Which perturbations alter motility modes and organoid damage phenotypes?
+    \item Can early timepoints forecast later organoid growth and reduce assay duration?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Datasets in Scope}
+  \begin{itemize}
+    \item PBMC + organoid co-culture images (brightfield TIFFs, multiple conditions and days).
+    \item Science Advances paper PDF: MAIT cell activation and recruitment (sciadv.adn6331).
+    \item Organoid time-course dataset (days D0--D14; multiple passages and experiments).
+    \item Optional: supplementary PPTX decks with experimental notes and labels.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Dataset Inventory (PBMC + Organoid)}
+  \begin{itemize}
+    \item 4,893 image files (TIFF/JPEG/PNG).
+    \item Condition tags in filenames: IL12+18, IL1b+23, IL2+7, Unstim, Matrigel, Organoid, Organoid+EC.
+    \item Timepoints present: D0--D3 dominant, with sparse D4--D10.
+    \item Multiple experiment groups (App61+P42, App61+P62, App61+P72, etc.).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Dataset Inventory (Organoid Time Course)}
+  \begin{itemize}
+    \item 2,824 image files across multiple experiments and passages.
+    \item Timepoints: D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12--D14.
+    \item Passages: P3--P12 with multiple dates and replicates.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Why Brightfield (Method Justification)}
+  \begin{itemize}
+    \item Label-free imaging avoids phototoxicity and label bias in immune motility.
+    \item Stable over long time scales (hours to days) for migration and growth trends.
+    \item Captures mechanical phenotypes: deformation, boundary interactions, collective behavior.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Proposed System: Agentic Analysis Pipeline}
+  \begin{enumerate}
+    \item Data intake and metadata normalization.
+    \item Image quality control (focus, illumination, artifact detection).
+    \item Organoid segmentation and boundary tracking.
+    \item Immune cell detection and tracking.
+    \item Migration phenotyping and organoid damage metrics.
+    \item Growth forecasting from early timepoints.
+    \item Report agent for summary, QC, and interpretable results.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Agent Architecture (Practical, Non-Sci-Fi)}
+  \begin{itemize}
+    \item Agent = workflow controller + self-checker, not a black-box scientist.
+    \item Each module produces artifacts + confidence and can be re-run on failure.
+    \item LLM used for structured reporting and decision summaries only.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Module 1: Quality Control}
+  \begin{itemize}
+    \item Focus metrics (Laplacian variance, Tenengrad).
+    \item Illumination stability and background variance.
+    \item Bubble/debris detection using simple heuristics or lightweight classifier.
+    \item Output: QC score per frame and per well with failure reasons.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Module 2: Organoid Segmentation}
+  \begin{itemize}
+    \item Candidate models: Cellpose, SAM/SAM2, classical threshold + morphology.
+    \item Outputs: mask, boundary contour, size/shape descriptors, confidence.
+    \item Temporal stability check across frames.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Module 3: Immune Cell Detection and Tracking}
+  \begin{itemize}
+    \item Detection-first: background subtraction + blob detection.
+    \item Optical-flow-first: detect moving objects when contrast is low.
+    \item Tracking: Kalman + Hungarian or TrackMate-style association.
+    \item Outputs: tracks, ID-switch statistics, track confidence.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Module 4: Migration Phenotyping}
+  \begin{itemize}
+    \item Flux into a boundary ring and dwell time.
+    \item Chemotaxis index and radial velocity toward organoid center.
+    \item Infiltration score (boundary crossings with persistence).
+    \item Condition-level distributions with bootstrap confidence intervals.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Module 5: Growth Forecasting}
+  \begin{itemize}
+    \item Predict later-day morphology from early-day images (e.g., D0--D3 to D7--D10).
+    \item Targets: size distribution, growth rate, failure risk.
+    \item Modeling options: temporal regression, sequence models, or growth curve fitting.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Module 6: Report Agent}
+  \begin{itemize}
+    \item Summarize QC, segmentation confidence, tracking metrics.
+    \item Provide condition-level phenotypes and outliers.
+    \item Generate reproducible, structured reports for lab and paper.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Validation Plan (Nature Methods Bar)}
+  \begin{itemize}
+    \item Organoid boundary accuracy: Dice/IoU and boundary error.
+    \item Immune cell tracking: IDF1, MOTA, ID switches on annotated clips.
+    \item Biological validation: known cytokine effects on recruitment and infiltration.
+    \item Cross-batch generalization: hold-out experiments and passages.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Baselines and Comparators}
+  \begin{itemize}
+    \item Classical thresholding and morphology-only pipelines.
+    \item Single-module baselines (segmentation without QC).
+    \item Human manual quantification on small subsets.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Reproducibility and Release}
+  \begin{itemize}
+    \item Publish dataset manifest and evaluation subset.
+    \item Provide scripts for QC, segmentation, tracking, phenotyping.
+    \item Release reports with standardized metrics and plots.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Timeline (12 Months)}
+  \begin{itemize}
+    \item Months 1--2: QC module, metadata manifest, baseline segmentation.
+    \item Months 3--5: immune cell detection + tracking + initial phenotypes.
+    \item Months 6--8: growth forecasting and cross-condition comparisons.
+    \item Months 9--10: benchmarking, ablation, and validation.
+    \item Months 11--12: manuscript figures, reproducibility package, release.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Risks and Mitigations}
+  \begin{itemize}
+    \item Low contrast immune cells: add motion-based detection and temporal smoothing.
+    \item Artifact-heavy frames: QC gating with explicit failure reasons.
+    \item Heterogeneous naming: normalize with a metadata manifest and regex rules.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Expected Figures for Paper}
+  \begin{itemize}
+    \item Pipeline schematic and agent architecture.
+    \item QC acceptance examples and artifact taxonomy.
+    \item Segmentation + tracking overlays.
+    \item Migration phenotype comparisons (boxplots, CIs).
+    \item Growth forecasting curves and error metrics.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Claimed Contributions (Nature Methods)}
+  \begin{itemize}
+    \item Quality-aware, end-to-end pipeline for brightfield immune migration analysis.
+    \item Unified phenotyping of recruitment, infiltration, and damage metrics.
+    \item Growth forecasting to reduce assay time.
+    \item Reproducible benchmarks and reporting artifacts.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Next Steps}
+  \begin{itemize}
+    \item Generate standardized manifest from filenames and folders.
+    \item Label a small benchmark subset for segmentation and tracking validation.
+    \item Produce initial QC and migration metrics for IL12+18 vs Unstim.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Thank You}
+  \begin{center}
+    Questions and feedback welcome.
+  \end{center}
+\end{frame}
+
+\end{document}

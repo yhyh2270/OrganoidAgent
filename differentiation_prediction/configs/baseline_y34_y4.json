@@ -1,0 +1,16 @@
+{
+  "manifest": "/home/lachlan/ProjectsLFS/OrganoidAgent/results/differentiation_prediction/manifest/yichao_manifest.csv",
+  "split_column": "baseline_split",
+  "train_split": "train",
+  "val_split": "val",
+  "test_split": "test",
+  "extra_eval_splits": "external_test",
+  "tile_size": 512,
+  "tile_mode": "quadrants",
+  "image_size": 512,
+  "time_stride": 1,
+  "z_stride": 1,
+  "batch_size": 8,
+  "epochs": 50,
+  "results_root": "/home/lachlan/ProjectsLFS/OrganoidAgent/results/differentiation_prediction"
+}

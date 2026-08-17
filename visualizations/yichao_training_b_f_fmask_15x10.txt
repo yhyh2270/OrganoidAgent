@@ -1,0 +1,57 @@
+manifest=/home/lachlan/ProjectsLFS/OrganoidAgent/analysis-outputs/yichao_fluorescence_segmentation/manifests/segmentation_targets_manifest.csv
+split=train
+rows=10
+groups=5
+tile=128
+seed=20260511
+mix_status=True
+0	train	overexposure_suppressed	0.020086083213773313	Data-Yichao-8	Data-Yichao-8/Goblet_DF_D2_Position004/03_Goblet_DF_D2_Position004_t032_zproj::instance_0002
+1	train	overexposure_suppressed	0.03427884133507066	Data-Yichao-8	Data-Yichao-8/Goblet_DF_D3_Position004/09_Goblet_DF_D3_Position004_t007_zproj::instance_0002
+2	train	negative	0.0	Data-Yichao-9	Data-Yichao-9/S100A4_CAR-Jurkat_D2/03_S100A4_CAR-Jurkat_D2_t075_zproj::instance_0002
+3	train	negative	0.0	Data-Yichao-2	Data-Yichao-2/N39_TriRep_DF_D2_Position005/09_N39_TriRep_DF_D2_Position005_t004_zproj::instance_0001
+4	train	positive	0.011528990373852698	Data-Yichao-3	Data-Yichao-3/Experiment_1_Day_2_Position003/02_Experiment_1_Day_2_Position003_t024_zproj::instance_0004
+5	train	positive	0.05184125849124061	Data-Yichao-4	Data-Yichao-4/Experiment_1_Day_2_Position001/00_Experiment_1_Day_2_Position001_t037_zproj::instance_0002
+6	train	overexposure_suppressed	0.028497640039184254	Data-Yichao-10	Data-Yichao-10/Goblet_DF_3_Position006/03_Goblet_DF_3_Position006_t024_zproj::instance_0003
+7	train	positive	0.008309999096739228	Data-Yichao-7	Data-Yichao-7/Goblet_DF_D3_Position003/06_Goblet_DF_D3_Position003_t030_zproj::instance_0003
+8	train	negative	0.0	Data-Yichao-3	Data-Yichao-3/Experiment_1_Day_2_Position003/02_Experiment_1_Day_2_Position003_t017_zproj::instance_0002
+9	train	positive	0.0056657223796034	Data-Yichao-7	Data-Yichao-7/Goblet_DF_D3_Position003/06_Goblet_DF_D3_Position003_t025_zproj::instance_0003
+10	train	negative	0.0	Data-Yichao-10	Data-Yichao-10/Goblet_DF_3_Position006/03_Goblet_DF_3_Position006_t013_zproj::instance_0009
+11	train	negative	0.0	Data-Yichao-9	Data-Yichao-9/S100A4_CAR-Jurkar_D3_Position002/05_S100A4_CAR-Jurkar_D3_Position002_t091_zproj::instance_0004
+12	train	positive	0.1666981310175571	Data-Yichao-10	Data-Yichao-10/Goblet_DF_3_Position002/00_Goblet_DF_3_Position002_t037_zproj::instance_0001
+13	train	positive	0.03220863019223014	Data-Yichao-6	Data-Yichao-6/Goblet_DF_D4_Position004/00_Goblet_DF_D4_Position004_t005_zproj::instance_0001
+14	train	negative	0.0	Data-Yichao-6	Data-Yichao-6/Goblet_DF_D4_Position007/02_Goblet_DF_D4_Position007_t007_zproj::instance_0002
+15	train	overexposure_suppressed	0.017649864843377324	Data-Yichao-10	Data-Yichao-10/Goblet_DF_3_Position006/03_Goblet_DF_3_Position006_t039_zproj::instance_0006
+16	train	overexposure_suppressed	0.01492942453854506	Data-Yichao-8	Data-Yichao-8/Goblet_DF_D2_Position004/03_Goblet_DF_D2_Position004_t012_zproj::instance_0002
+17	train	overexposure_suppressed	0.025157784011220197	Data-Yichao-3	Data-Yichao-3/Experiment_1_Day_4_Position001/08_Experiment_1_Day_4_Position001_t007_zproj::instance_0002
+18	train	positive	0.009091711536764057	Data-Yichao-4	Data-Yichao-4/Experiment_1_Day_2_Position001/00_Experiment_1_Day_2_Position001_t006_zproj::instance_0002
+19	train	negative	0.0	Data-Yichao-5	Data-Yichao-5/Goblet_DF_D1_Position002/01_Goblet_DF_D1_Position002_t000_zproj::instance_0002
+20	train	positive	0.01968342816406817	Data-Yichao-2	Data-Yichao-2/N39_TriRep_DF_D2_Position003/07_N39_TriRep_DF_D2_Position003_t014_zproj::instance_0001
+21	train	negative	0.0	Data-Yichao-10	Data-Yichao-10/Goblet_DF_3_Position002/00_Goblet_DF_3_Position002_t033_zproj::instance_0005
+22	train	overexposure_suppressed	0.025102058542517156	Data-Yichao-10	Data-Yichao-10/Goblet_DF_3_Position014/11_Goblet_DF_3_Position014_t025_zproj::instance_0003
+23	train	overexposure_suppressed	0.022414224893563737	Data-Yichao-8	Data-Yichao-8/Goblet_DF_D2_Position004/03_Goblet_DF_D2_Position004_t043_zproj::instance_0002
+24	train	overexposure_suppressed	0.030617308455736403	Data-Yichao-8	Data-Yichao-8/Goblet_DF_D3_Position004/09_Goblet_DF_D3_Position004_t021_zproj::instance_0002
+25	train	positive	0.1316063073990643	Data-Yichao-4	Data-Yichao-4/Experiment_1_Day_3_Position005/08_Experiment_1_Day_3_Position005_t023_zproj::instance_0001
+26	train	overexposure_suppressed	0.026552696189869964	Data-Yichao-3	Data-Yichao-3/Experiment_1_Day_4_Position001/08_Experiment_1_Day_4_Position001_t018_zproj::instance_0002
+27	train	positive	0.12411347517730496	Data-Yichao-8	Data-Yichao-8/Goblet_DF_D3_Position011/16_Goblet_DF_D3_Position011_t017_zproj::instance_0003
+28	train	negative	0.0	Data-Yichao-10	Data-Yichao-10/Goblet_DF_3_Position005/02_Goblet_DF_3_Position005_t023_zproj::instance_0005
+29	train	negative	0.0	Data-Yichao-3	Data-Yichao-3/Experiment_1_Day_2_Position003/02_Experiment_1_Day_2_Position003_t005_zproj::instance_0002
+30	train	overexposure_suppressed	0.011992099322799097	Data-Yichao-8	Data-Yichao-8/Goblet_DF_D2_Position004/03_Goblet_DF_D2_Position004_t001_zproj::instance_0002
+31	train	negative	0.0	Data-Yichao-9	Data-Yichao-9/S100A4_CAR-Jurkar_D3_Position002/05_S100A4_CAR-Jurkar_D3_Position002_t099_zproj::instance_0004
+32	train	overexposure_suppressed	0.026726973684210526	Data-Yichao-3	Data-Yichao-3/Experiment_1_Day_3_Position003/05_Experiment_1_Day_3_Position003_t008_zproj::instance_0003
+33	train	positive	0.12799837719965515	Data-Yichao-10	Data-Yichao-10/Goblet_DF_3_Position015/12_Goblet_DF_3_Position015_t019_zproj::instance_0002
+34	train	positive	0.08904593639575972	Data-Yichao-4	Data-Yichao-4/Experiment_1_Day_3_Position005/08_Experiment_1_Day_3_Position005_t005_zproj::instance_0001
+35	train	negative	0.0	Data-Yichao-3	Data-Yichao-3/Experiment_1_Day_4_Position003/10_Experiment_1_Day_4_Position003_t013_zproj::instance_0008
+36	train	overexposure_suppressed	0.019840649898453366	Data-Yichao-3	Data-Yichao-3/Experiment_1_Day_3_Position003/05_Experiment_1_Day_3_Position003_t041_zproj::instance_0003
+37	train	overexposure_suppressed	0.01597542242703533	Data-Yichao-10	Data-Yichao-10/Goblet_DF_3_Position011/08_Goblet_DF_3_Position011_t005_zproj::instance_0005
+38	train	positive	0.007110208227526663	Data-Yichao-8	Data-Yichao-8/Goblet_DF_D2_Position004/03_Goblet_DF_D2_Position004_t015_zproj::instance_0003
+39	train	negative	0.0	Data-Yichao-10	Data-Yichao-10/Goblet_DF_3_Position002/00_Goblet_DF_3_Position002_t008_zproj::instance_0003
+40	train	positive	0.09451356198161848	Data-Yichao-4	Data-Yichao-4/Experiment_1_Day_2_Position005/04_Experiment_1_Day_2_Position005_t039_zproj::instance_0001
+41	train	negative	0.0	Data-Yichao-8	Data-Yichao-8/Goblet_DF_D3_Position006/11_Goblet_DF_D3_Position006_t006_zproj::instance_0003
+42	train	negative	0.0	Data-Yichao-8	Data-Yichao-8/Goblet_DF_D2_Position003/02_Goblet_DF_D2_Position003_t013_zproj::instance_0006
+43	train	overexposure_suppressed	0.01099290780141844	Data-Yichao-10	Data-Yichao-10/Goblet_DF_3_Position012/09_Goblet_DF_3_Position012_t040_zproj::instance_0006
+44	train	negative	0.0	Data-Yichao-10	Data-Yichao-10/Goblet_DF_3_Position012/09_Goblet_DF_3_Position012_t029_zproj::instance_0001
+45	train	positive	0.02636618058624245	Data-Yichao-8	Data-Yichao-8/Goblet_DF_D3_Position011/16_Goblet_DF_D3_Position011_t012_zproj::instance_0001
+46	train	positive	0.037104072398190045	Data-Yichao-10	Data-Yichao-10/Goblet_DF_3_Position003/01_Goblet_DF_3_Position003_t029_zproj::instance_0001
+47	train	positive	0.008860922049569796	Data-Yichao-3	Data-Yichao-3/Experiment_1_Day_4_Position004/11_Experiment_1_Day_4_Position004_t027_zproj::instance_0003
+48	train	negative	0.0	Data-Yichao-4	Data-Yichao-4/Experiment_1_Day_2_Position001/00_Experiment_1_Day_2_Position001_t002_zproj::instance_0003
+49	train	overexposure_suppressed	0.02448672066302505	Data-Yichao-7	Data-Yichao-7/Goblet_DF_D3_Position003/06_Goblet_DF_D3_Position003_t024_zproj::instance_0005

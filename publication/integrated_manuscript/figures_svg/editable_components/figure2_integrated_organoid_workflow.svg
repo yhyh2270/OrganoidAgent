@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1010" viewBox="0 0 1800 1010">
+    <title>Integrated AAPS organoid morphology and viability workflow</title>
+    <desc>Fully editable native-vector figure for the integrated OrganoidAgent workstation.</desc>
+    <defs>
+      <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#47798a"/></marker>
+      <style>
+        text { font-family: Arial, Helvetica, sans-serif; fill:#17252b; }
+        .panel { fill:#f4f9fb; stroke:#9bbdca; stroke-width:3; }
+        .panel-label { font-size:32px; font-weight:700; } .panel-title { font-size:27px; font-weight:500; }
+        .body { font-size:21px; } .small { font-size:17px; } .small-bold { font-size:17px; font-weight:700; }
+        .tiny { font-size:14px; } .tiny-bold { font-size:15px; font-weight:700; } .italic { font-size:18px; font-style:italic; }
+        .node { fill:#fff; stroke:#47798a; stroke-width:3; } .soft-node { fill:#dceff4; stroke:#78a9b8; stroke-width:2.5; }
+        .morph-node { fill:#e5f6f1; stroke:#218b72; stroke-width:2.8; } .viability-node { fill:#f1eafe; stroke:#7c4bc4; stroke-width:2.8; }
+        .qc-node { fill:#fff4d8; stroke:#c58b20; stroke-width:2.8; } .result-node { fill:#e7f2fb; stroke:#347fb4; stroke-width:2.8; }
+        .block { fill:#fff; stroke:#47798a; stroke-width:3; } .block-divider { stroke:#47798a; stroke-width:2.5; } .block-title { font-size:18px; font-weight:700; }
+        .arrow { fill:none; stroke:#47798a; stroke-width:3; marker-end:url(#arrowhead); } .line { fill:none; stroke:#47798a; stroke-width:3; }
+        .morph-line { fill:none; stroke:#218b72; stroke-width:4; marker-end:url(#arrowhead); } .viability-line { fill:none; stroke:#7c4bc4; stroke-width:4; marker-end:url(#arrowhead); }
+        .dash { fill:none; stroke:#47798a; stroke-width:2.5; stroke-dasharray:7 6; } .port { fill:#4197ad; stroke:#2f6573; stroke-width:1.5; }
+        .folder-fill { fill:#52a9b5; } .icon-fill { fill:#f8fcfd; stroke:#47798a; stroke-width:3; } .icon-line { fill:none; stroke:#47798a; stroke-width:3; }
+        .paper-back { fill:#dbe9ed; stroke:#7da5b2; stroke-width:2; } .paper-mid { fill:#e8f2f4; stroke:#648e9b; stroke-width:2; } .paper-front { fill:#f8fcfd; stroke:#47798a; stroke-width:2.5; }
+        .chart-bg { fill:#f8fcfd; stroke:#7da5b2; stroke-width:2; } .chart-axis { fill:none; stroke:#6c8790; stroke-width:2; }
+      </style>
+    </defs><rect width="100%" height="100%" fill="white"/>
+<g id="panel-A"><rect id="panel-A-background" x="12" y="12" width="510" height="490" rx="18" class="panel"/><text x="30" y="50" class="panel-label" text-anchor="start" >A</text><text x="70" y="50" class="panel-title" text-anchor="start" >Project-aware organoid workspace</text>
+<rect id="project-folder-box" x="38" y="75" width="300" height="88" rx="18" class="node"/>
+<g class="icon" transform="translate(53 83) scale(0.55)">
+      <path d="M0 14 H32 L42 24 H92 V74 H0 Z" class="folder-fill"/>
+      <path d="M0 14 H32 L42 24 H92 V74 H0 Z" class="icon-line"/>
+      <path d="M4 29 H88" class="icon-line"/>
+    </g>
+<text x="122" y="108" class="body" text-anchor="start"><tspan x="122" dy="0">Integrated organoid</tspan><tspan x="122" dy="24">analysis project</tspan></text>
+<rect x="50" y="193" width="23" height="22" rx="3" fill="#52a9b5" stroke="#47798a" stroke-width="2"/>
+<text x="84" y="210" class="body" text-anchor="start" >Raw images + metadata</text>
+<rect x="50" y="235" width="23" height="22" rx="3" fill="#d8a945" stroke="#47798a" stroke-width="2"/>
+<text x="84" y="252" class="body" text-anchor="start" >Models + checkpoints</text>
+<rect x="50" y="277" width="23" height="22" rx="3" fill="#9bbdca" stroke="#47798a" stroke-width="2"/>
+<text x="84" y="294" class="body" text-anchor="start" >Masks + features</text>
+<rect x="50" y="319" width="23" height="22" rx="3" fill="#9bbdca" stroke="#47798a" stroke-width="2"/>
+<text x="84" y="336" class="body" text-anchor="start" >Run logs + reports</text>
+<text x="350" y="191" class="small" text-anchor="start" >Project context</text>
+<rect id="workflow-1" x="220" y="210" width="255" height="45" rx="18" class="node"/>
+<text x="347" y="239" class="small" text-anchor="middle" >dataset_binding.aaps</text>
+<rect id="workflow-2" x="227" y="252" width="255" height="45" rx="18" class="node"/>
+<text x="354" y="281" class="small" text-anchor="middle" >image_qc.aaps</text>
+<rect id="workflow-3" x="234" y="294" width="255" height="45" rx="18" class="node"/>
+<text x="361" y="323" class="small" text-anchor="middle" >morphology_analysis.aaps</text>
+<rect id="workflow-4" x="241" y="336" width="255" height="45" rx="18" class="node"/>
+<text x="368" y="365" class="small" text-anchor="middle" >viability_detection.aaps</text>
+<rect id="workflow-5" x="248" y="378" width="255" height="45" rx="18" class="node"/>
+<text x="375" y="407" class="small" text-anchor="middle" >joint_report.aaps</text>
+<text x="260" y="470" class="body" text-anchor="middle" >Shared data, provenance, and artifacts</text>
+</g>
+<g id="panel-B"><rect id="panel-B-background" x="538" y="12" width="650" height="490" rx="18" class="panel"/><text x="556" y="50" class="panel-label" text-anchor="start" >B</text><text x="596" y="50" class="panel-title" text-anchor="start" >Top-down dual-workflow design</text>
+<text x="1165" y="76" class="italic" text-anchor="end" >Task-oriented program</text>
+<text x="560" y="108" class="body" text-anchor="start" >1. Bind selected dataset or image scope</text>
+<text x="560" y="141" class="body" text-anchor="start" >2. Inspect modality, quality, and experimental context</text>
+<text x="560" y="174" class="body" text-anchor="start" >3. Route the requested analytical workflow</text>
+<rect id="workflow-router" x="780" y="198" width="170" height="48" rx="18" class="qc-node"/>
+<text x="865" y="229" class="small-bold" text-anchor="middle" >Workflow router</text>
+<path d="M865 246 V270 H690 V294" class="line"/><path d="M865 270 H1040 V294" class="line"/>
+<rect id="morphology-route" x="565" y="294" width="250" height="116" rx="18" class="morph-node"/>
+<text x="690" y="324" class="small-bold" text-anchor="middle" >Morphological Analysis</text>
+<text x="690" y="351" class="small" text-anchor="middle"><tspan x="690" dy="0">Cellpose + signal recovery</tspan><tspan x="690" dy="23">instance merge + metrics</tspan></text>
+<rect id="viability-route" x="915" y="294" width="250" height="116" rx="18" class="viability-node"/>
+<text x="1040" y="324" class="small-bold" text-anchor="middle" >Viability Detection</text>
+<text x="1040" y="351" class="small" text-anchor="middle"><tspan x="1040" dy="0">YOLO → SAM → ROI crop</tspan><tspan x="1040" dy="23">checkpoint-1 inference</tspan></text>
+<path d="M690 410 V433 H865" class="line"/><path d="M1040 410 V433 H865" class="line"/>
+<rect id="review-and-report" x="740" y="426" width="250" height="50" rx="18" class="qc-node"/>
+<text x="865" y="458" class="small-bold" text-anchor="middle" >QC → visualize → report</text>
+</g>
+<g id="panel-C"><rect id="panel-C-background" x="1204" y="12" width="584" height="490" rx="18" class="panel"/><text x="1222" y="50" class="panel-label" text-anchor="start" >C</text><text x="1262" y="50" class="panel-title" text-anchor="start" >Reusable blocks and skills</text>
+<g id="block-image-qc"><rect id="block-image-qc-background" x="1228" y="76" width="250" height="128" rx="18" class="block"/><path d="M1228,114 H1478" class="block-divider"/><text x="1353.0" y="103" class="block-title" text-anchor="middle" >image_qc</text><circle cx="1228" cy="133" r="6" class="port"/><text x="1244" y="139" class="small" text-anchor="start" >image</text><circle cx="1478" cy="133" r="6" class="port"/><text x="1462" y="139" class="small" text-anchor="end" >qc_report</text><circle cx="1228" cy="160" r="6" class="port"/><text x="1244" y="166" class="small" text-anchor="start" >metadata</text><circle cx="1478" cy="160" r="6" class="port"/><text x="1462" y="166" class="small" text-anchor="end" >preview</text></g>
+<g id="block-bind"><rect id="block-bind-background" x="1512" y="76" width="250" height="128" rx="18" class="block"/><path d="M1512,114 H1762" class="block-divider"/><text x="1637.0" y="103" class="block-title" text-anchor="middle" >bind_dataset</text><circle cx="1512" cy="133" r="6" class="port"/><text x="1528" y="139" class="small" text-anchor="start" >dataset</text><circle cx="1762" cy="133" r="6" class="port"/><text x="1746" y="139" class="small" text-anchor="end" >scope</text><circle cx="1512" cy="160" r="6" class="port"/><text x="1528" y="166" class="small" text-anchor="start" >selection</text><circle cx="1762" cy="160" r="6" class="port"/><text x="1746" y="166" class="small" text-anchor="end" >manifest</text></g>
+<g id="block-segment"><rect id="block-segment-background" x="1228" y="225" width="250" height="128" rx="18" class="block"/><path d="M1228,263 H1478" class="block-divider"/><text x="1353.0" y="252" class="block-title" text-anchor="middle" >segment_organoid</text><circle cx="1228" cy="282" r="6" class="port"/><text x="1244" y="288" class="small" text-anchor="start" >image</text><circle cx="1478" cy="282" r="6" class="port"/><text x="1462" y="288" class="small" text-anchor="end" >mask</text><circle cx="1228" cy="309" r="6" class="port"/><text x="1244" y="315" class="small" text-anchor="start" >qc_report</text><circle cx="1478" cy="309" r="6" class="port"/><text x="1462" y="315" class="small" text-anchor="end" >overlay</text><circle cx="1478" cy="336" r="6" class="port"/><text x="1462" y="342" class="small" text-anchor="end" >instances</text></g>
+<g id="block-roi"><rect id="block-roi-background" x="1512" y="225" width="250" height="128" rx="18" class="block"/><path d="M1512,263 H1762" class="block-divider"/><text x="1637.0" y="252" class="block-title" text-anchor="middle" >extract_viability_roi</text><circle cx="1512" cy="282" r="6" class="port"/><text x="1528" y="288" class="small" text-anchor="start" >image</text><circle cx="1762" cy="282" r="6" class="port"/><text x="1746" y="288" class="small" text-anchor="end" >SAM mask</text><circle cx="1512" cy="309" r="6" class="port"/><text x="1528" y="315" class="small" text-anchor="start" >YOLO box</text><circle cx="1762" cy="309" r="6" class="port"/><text x="1746" y="315" class="small" text-anchor="end" >ROI crop</text></g>
+<g id="block-morphology"><rect id="block-morphology-background" x="1228" y="374" width="250" height="98" rx="18" class="block"/><path d="M1228,412 H1478" class="block-divider"/><text x="1353.0" y="401" class="block-title" text-anchor="middle" >quantify_morphology</text><circle cx="1228" cy="431" r="6" class="port"/><text x="1244" y="437" class="small" text-anchor="start" >mask</text><circle cx="1478" cy="431" r="6" class="port"/><text x="1462" y="437" class="small" text-anchor="end" >features</text></g>
+<g id="block-viability"><rect id="block-viability-background" x="1512" y="374" width="250" height="98" rx="18" class="block"/><path d="M1512,412 H1762" class="block-divider"/><text x="1637.0" y="401" class="block-title" text-anchor="middle" >predict_viability</text><circle cx="1512" cy="431" r="6" class="port"/><text x="1528" y="437" class="small" text-anchor="start" >ROI crop</text><circle cx="1762" cy="431" r="6" class="port"/><text x="1746" y="437" class="small" text-anchor="end" >score</text></g>
+</g>
+<path id="A-to-B" d="M522,245 L538,245" class="arrow"/>
+<path id="B-to-C" d="M1188,245 L1204,245" class="arrow"/>
+<g id="panel-D"><rect id="panel-D-background" x="12" y="520" width="990" height="475" rx="18" class="panel"/><text x="30" y="558" class="panel-label" text-anchor="start" >D</text><text x="70" y="558" class="panel-title" text-anchor="start" >Parser, policy, and agent-assisted compiler</text>
+<g class="icon" transform="translate(42 648)">
+      <path d="M0 0 H48 L68 20 V88 H0 Z" class="icon-fill"/>
+      <path d="M48 0 V20 H68" class="icon-line"/>
+      <text x="34" y="48" class="tiny-bold" text-anchor="middle" >.aaps</text>
+      <text x="34" y="68" class="tiny" text-anchor="middle" >script</text>
+    </g>
+<text x="76" y="750" class="small" text-anchor="middle"><tspan x="76" dy="0">.aaps</tspan><tspan x="76" dy="22">workflow</tspan></text>
+<path id="" d="M125,690 L205,690" class="arrow"/>
+<rect id="parser" x="218" y="653" width="135" height="74" rx="18" class="soft-node"/>
+<text x="285" y="697" class="body" text-anchor="middle" >parser</text>
+<path id="" d="M363,690 L425,690" class="arrow"/>
+<g class="icon" transform="translate(438 645)">
+      <rect x="18" y="0" width="54" height="66" rx="9" class="paper-back"/>
+      <rect x="9" y="8" width="54" height="66" rx="9" class="paper-mid"/>
+      <rect x="0" y="16" width="54" height="66" rx="9" class="paper-front"/>
+      <path d="M12 34 H42 M12 46 H42 M12 58 H36" class="icon-line"/>
+    </g>
+<text x="477" y="752" class="small" text-anchor="middle" >structured IR</text>
+<path id="" d="M530,690 L590,690" class="arrow"/>
+<rect id="compiler" x="603" y="653" width="145" height="74" rx="18" class="soft-node"/>
+<text x="675" y="686" class="small" text-anchor="middle" >agent-assisted</text>
+<text x="675" y="709" class="small" text-anchor="middle" >compiler</text>
+<path id="" d="M758,690 L820,690" class="arrow"/>
+<rect id="execution-plan" x="833" y="640" width="140" height="100" rx="18" class="result-node"/>
+<text x="903" y="677" class="small-bold" text-anchor="middle"><tspan x="903" dy="0">validated</tspan><tspan x="903" dy="23">execution plan</tspan></text>
+<rect id="execution-policy" x="120" y="795" width="760" height="125" rx="18" class="node"/>
+<text x="500" y="827" class="small-bold" text-anchor="middle" >Execution policy</text>
+<circle cx="155" cy="856" r="5" fill="#47798a"/>
+<text x="169" y="861" class="small" text-anchor="start" >dataset scope</text>
+<circle cx="395" cy="856" r="5" fill="#47798a"/>
+<text x="409" y="861" class="small" text-anchor="start" >allowed tools</text>
+<circle cx="635" cy="856" r="5" fill="#47798a"/>
+<text x="649" y="861" class="small" text-anchor="start" >model/checkpoint</text>
+<circle cx="155" cy="892" r="5" fill="#47798a"/>
+<text x="169" y="897" class="small" text-anchor="start" >fallback rules</text>
+<circle cx="395" cy="892" r="5" fill="#47798a"/>
+<text x="409" y="897" class="small" text-anchor="start" >output contract</text>
+<circle cx="635" cy="892" r="5" fill="#47798a"/>
+<text x="649" y="897" class="small" text-anchor="start" >review gate</text>
+<path d="M500 795 V762 H675 V727" class="dash"/>
+<text x="500" y="958" class="small" text-anchor="middle" >Deterministic tools where possible; bounded agent decisions where needed</text>
+</g>
+<g id="panel-E"><rect id="panel-E-background" x="1018" y="520" width="770" height="475" rx="18" class="panel"/><text x="1036" y="558" class="panel-label" text-anchor="start" >E</text><text x="1076" y="558" class="panel-title" text-anchor="start" >Controlled execution and unified outputs</text>
+<g transform="translate(1048 650)" opacity="0.55"><rect width="82" height="94" rx="5" fill="#d6dde0" stroke="#526b73" stroke-width="2"/><path d="M12 70 C4 49 24 25 41 35 C59 17 80 40 67 57 C81 77 52 88 39 76 C28 88 16 82 12 70Z" fill="#87969b"/></g>
+<g transform="translate(1060 659)" opacity="0.75"><rect width="82" height="94" rx="5" fill="#d6dde0" stroke="#526b73" stroke-width="2"/><path d="M12 70 C4 49 24 25 41 35 C59 17 80 40 67 57 C81 77 52 88 39 76 C28 88 16 82 12 70Z" fill="#87969b"/></g>
+<g transform="translate(1072 668)" opacity="1"><rect width="82" height="94" rx="5" fill="#d6dde0" stroke="#526b73" stroke-width="2"/><path d="M12 70 C4 49 24 25 41 35 C59 17 80 40 67 57 C81 77 52 88 39 76 C28 88 16 82 12 70Z" fill="#87969b"/></g>
+<text x="1100" y="785" class="small" text-anchor="middle" >Bright-field</text>
+<text x="1100" y="807" class="small" text-anchor="middle" >images</text>
+<path id="" d="M1150,705 L1200,705" class="arrow"/>
+<rect id="execution-qc" x="1210" y="660" width="125" height="88" rx="18" class="qc-node"/>
+<text x="1272" y="695" class="small-bold" text-anchor="middle"><tspan x="1272" dy="0">QC + data</tspan><tspan x="1272" dy="22">binding</tspan></text>
+<path d="M1335 704 H1360 V620 H1390" class="morph-line"/><path d="M1360 704 V790 H1390" class="viability-line"/>
+<rect id="morph-execution" x="1400" y="568" width="205" height="105" rx="18" class="morph-node"/>
+<text x="1502" y="598" class="small-bold" text-anchor="middle" >Morphology route</text>
+<text x="1502" y="626" class="small" text-anchor="middle"><tspan x="1502" dy="0">Cellpose / recovery</tspan><tspan x="1502" dy="22">mask + features</tspan></text>
+<rect id="viability-execution" x="1400" y="738" width="205" height="105" rx="18" class="viability-node"/>
+<text x="1502" y="768" class="small-bold" text-anchor="middle" >Viability route</text>
+<text x="1502" y="796" class="small" text-anchor="middle"><tspan x="1502" dy="0">YOLO + SAM crop</tspan><tspan x="1502" dy="22">viability score</tspan></text>
+<path d="M1605 620 H1640 V705 H1660" class="morph-line"/><path d="M1605 790 H1640 V705 H1660" class="viability-line"/>
+<rect id="joint-evidence" x="1665" y="650" width="100" height="110" rx="18" class="result-node"/>
+<text x="1715" y="683" class="small-bold" text-anchor="middle"><tspan x="1715" dy="0">Joint</tspan><tspan x="1715" dy="22">evidence</tspan><tspan x="1715" dy="22">package</tspan></text>
+<text x="1403" y="885" class="small-bold" text-anchor="middle" >Outputs</text>
+<g transform="translate(1260 900)"><rect width="98" height="76" rx="5" fill="#101820"/><path d="M17 46 C6 29 18 8 38 13 C54 0 77 13 71 32 C84 51 59 68 42 57 C28 70 10 61 17 46Z" fill="#26a6b7" stroke="#254f5f" stroke-width="2"/><path d="M50 20 C62 8 84 17 82 35 C94 47 82 66 65 60 C52 70 37 57 42 43 C34 32 39 24 50 20Z" fill="#61be76" stroke="#254f5f" stroke-width="2"/><path d="M13 22 C19 8 37 7 44 19 C55 24 51 43 39 47 C31 58 11 49 14 35 C5 31 6 25 13 22Z" fill="#844cc1" stroke="#254f5f" stroke-width="2"/></g>
+<g class="icon" transform="translate(1380 905)">
+      <rect width="72" height="62" class="chart-bg"/>
+      <path d="M8 8 V54 H66" class="chart-axis"/>
+      <path d="M8 52 C28 43 35 20 62 11" fill="none" stroke="#218b72" stroke-width="5"/>
+    </g>
+<g class="icon" transform="translate(1470 905)">
+      <rect width="72" height="62" class="chart-bg"/>
+      <path d="M8 8 V54 H66" class="chart-axis"/>
+      <path d="M8 52 L26 34 L42 42 L62 13" fill="none" stroke="#7c4bc4" stroke-width="5"/>
+    </g>
+<g transform="translate(1590 884)"><rect width="54" height="82" rx="6" class="paper-back"/><rect x="-10" y="10" width="54" height="82" rx="6" class="paper-front"/><path d="M0 30 H34 M0 42 H34 M0 54 H24" class="icon-line"/></g>
+<text x="1309" y="987" class="tiny" text-anchor="middle" >overlay</text>
+<text x="1416" y="987" class="tiny" text-anchor="middle" >morphology</text>
+<text x="1506" y="987" class="tiny" text-anchor="middle" >viability</text>
+<text x="1611" y="987" class="tiny" text-anchor="middle" >report</text>
+</g>
+<path id="D-to-E" d="M1002,755 L1018,755" class="arrow"/>
+</svg>

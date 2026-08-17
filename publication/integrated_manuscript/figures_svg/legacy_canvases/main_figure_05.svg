@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="2481" height="3508" viewBox="0 0 2481 3508">
+  <title>Editable canvas for main_figure_05.png</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+    <style>
+      .label { font: 600 28px Arial, Helvetica, sans-serif; fill: #0f172a; }
+      .body { font: 22px Arial, Helvetica, sans-serif; fill: #334155; }
+      .small { font: 18px Arial, Helvetica, sans-serif; fill: #475569; }
+      .box { fill: #ffffff; stroke: #334155; stroke-width: 2.5; rx: 18; }
+      .arrow { fill: none; stroke: #334155; stroke-width: 3; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <!-- The legacy page is intentionally isolated as one replaceable layer. -->
+  <g id="legacy-raster-reference" opacity="1">
+    <image x="0" y="0" width="2481" height="3508" preserveAspectRatio="none"
+      xlink:href="../assets/main_figure_05.png"/>
+  </g>
+  <!-- Add reconstructed vector panels above this layer and hide the reference when ready. -->
+  <g id="editable-vector-content"/>
+</svg>

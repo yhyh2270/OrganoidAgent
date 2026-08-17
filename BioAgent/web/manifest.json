@@ -1,0 +1,15 @@
+{
+  "name": "BioAgent",
+  "short_name": "BioAgent",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f5efe6",
+  "theme_color": "#2f6d5a",
+  "icons": [
+    {
+      "src": "icons/bioagent.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

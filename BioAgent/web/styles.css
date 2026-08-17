@@ -1,0 +1,420 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inria+Sans:wght@300;400;700&display=swap");
+
+:root {
+  --bg: #f5efe6;
+  --panel: #ffffff;
+  --panel-2: #f9f4ee;
+  --ink: #1f1c19;
+  --muted: #6d6257;
+  --accent: #2f6d5a;
+  --accent-2: #e36d3a;
+  --line: #e3d8cc;
+  --shadow: 0 18px 40px rgba(30, 26, 22, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inria Sans", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top left, #f9e9d9 0%, #f5efe6 45%, #e7efe8 100%);
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px 48px 60px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 56px;
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
+  color: var(--accent);
+  margin: 0 0 4px;
+}
+
+.paper-title {
+  margin: 0;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.status-card {
+  background: var(--panel);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+  display: grid;
+  gap: 12px;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.chip {
+  background: var(--panel-2);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.chip.neutral {
+  color: var(--muted);
+}
+
+.chip.good {
+  color: #1d6b3a;
+}
+
+.chip.bad {
+  color: #b23c2f;
+}
+
+main {
+  margin-top: 32px;
+  display: grid;
+  gap: 24px;
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.panel-header h2 {
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0 0 6px;
+}
+
+.panel-header p {
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.field span {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+select,
+input,
+textarea {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  font-family: "Inria Sans", sans-serif;
+  font-size: 14px;
+  background: #fffaf6;
+  color: var(--ink);
+}
+
+input[type="file"] {
+  background: #fffdf8;
+}
+
+.dropzone {
+  border: 1px dashed var(--line);
+  background: #fffaf3;
+  padding: 14px;
+  border-radius: 14px;
+  gap: 10px;
+}
+
+.dropzone.dragging {
+  border-color: var(--accent);
+  background: #edf7f3;
+}
+
+.dropzone-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.dropzone button.ghost {
+  width: fit-content;
+  padding: 8px 14px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 12px 20px rgba(47, 109, 90, 0.2);
+}
+
+button.ghost {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+button.danger {
+  border-color: #e3b6ad;
+  color: #b23c2f;
+}
+
+.job-list {
+  display: grid;
+  gap: 12px;
+}
+
+.job-card {
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  padding: 14px 16px;
+  background: #fffdf9;
+  display: grid;
+  gap: 8px;
+}
+
+.job-card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.template-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 20px;
+}
+
+.split-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px;
+}
+
+.split-column {
+  display: grid;
+  gap: 16px;
+}
+
+.split-column + .split-column {
+  border-left: 1px solid var(--line);
+  padding-left: 24px;
+}
+
+.template-list {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 12px;
+  background: #fffdf8;
+  display: grid;
+  gap: 10px;
+  max-height: 320px;
+  overflow: auto;
+}
+
+.template-item {
+  border: 1px solid transparent;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #f7f1ea;
+  cursor: pointer;
+  display: grid;
+  gap: 4px;
+}
+
+.template-item.active {
+  border-color: var(--accent);
+  background: #edf7f3;
+}
+
+.template-item h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.template-item p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.workspace-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+}
+
+.pane {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  background: #fffdf8;
+  display: grid;
+  gap: 12px;
+  min-height: 320px;
+}
+
+.pane-header {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+}
+
+.chat-history {
+  display: grid;
+  gap: 12px;
+  max-height: 320px;
+  overflow: auto;
+}
+
+.chat-message {
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #f7f1ea;
+  display: grid;
+  gap: 6px;
+}
+
+.chat-message.user {
+  border-left: 4px solid var(--accent);
+}
+
+.chat-message.assistant {
+  border-left: 4px solid var(--accent-2);
+}
+
+.chat-input {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.chat-input textarea {
+  min-height: 90px;
+}
+
+.chat-input button {
+  align-self: stretch;
+  height: 100%;
+}
+
+.bench-area {
+  display: grid;
+  gap: 12px;
+}
+
+.bench-card {
+  border-radius: 12px;
+  border: 1px dashed var(--line);
+  padding: 14px;
+  color: var(--muted);
+  background: #fffaf3;
+}
+
+footer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .grid.three,
+  .grid.two,
+  .workspace-grid,
+  .template-grid,
+  .split-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .split-column + .split-column {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

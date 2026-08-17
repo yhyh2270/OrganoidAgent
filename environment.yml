@@ -1,0 +1,14 @@
+name: organoid
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch=2.3
+  - torchvision=0.18
+  - pytorch-cuda=12.1  # Replace with cpuonly on machines without an NVIDIA GPU.
+  - pip:
+      - -r requirements-analysis.txt

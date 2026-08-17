@@ -1,0 +1,14 @@
+database=/home/lachlan/ProjectsLFS/OrganoidAgent/analysis-outputs/yichao_instance_pairs_resized_256/metadata/resized_pairs.sqlite
+output=/home/lachlan/ProjectsLFS/OrganoidAgent/visualizations/yichao_complete_instance_pair_grid_5_per_dataset.png
+filter=is_edge_padded == 0
+selection=5 area-spread complete instances per dataset where available
+Data-Yichao-1: complete_count=5, shown=5
+Data-Yichao-2: complete_count=3044, shown=5
+Data-Yichao-3: complete_count=37520, shown=5
+Data-Yichao-4: complete_count=18991, shown=5
+Data-Yichao-5: complete_count=16495, shown=5
+Data-Yichao-6: complete_count=0, shown=0
+Data-Yichao-7: complete_count=0, shown=0
+Data-Yichao-8: complete_count=0, shown=0
+Data-Yichao-9: complete_count=12634, shown=5
+Data-Yichao-10: complete_count=61136, shown=5

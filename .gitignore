@@ -1,0 +1,55 @@
+datasets/
+.DS_Store
+__pycache__/
+*.pyc
+*.log
+OrganoidData/
+OrganoidData
+references/*
+!references/
+!references/*.md
+!references/Yichao/
+!references/Yichao/*.md
+!references/experiment_design/
+!references/experiment_design/*.md
+!references/deo_segmentation_metric_method_tex/
+!references/deo_segmentation_metric_method_tex/**
+segmentation/
+selected_data/
+AiResult.pptx
+._AiResult.pptx
+research_idea/*.aux
+research_idea/*.log
+research_idea/*.nav
+research_idea/*.out
+research_idea/*.pdf
+research_idea/*.snm
+research_idea/*.toc
+references/Yichao/yichao_v2_temporal_b2f_tex/*.aux
+references/Yichao/yichao_v2_temporal_b2f_tex/*.log
+references/Yichao/yichao_v2_temporal_b2f_tex/*.out
+references/Yichao/yichao_v2_temporal_b2f_tex/*.toc
+
+# Local data and environments
+Yichao-data-1/
+.venv_lif/
+# Local experiment/data artifacts
+._.DS_Store
+# Local raw/extracted microscopy data. Keep durable summaries under references/
+# and curated preview figures under visualizations/ instead of tracking data.
+Data-Yichao-*/
+Data-Yichao-v1/
+DATA-Yichao-v2/
+Data-Zhengyu/
+Yichao-example/
+datasets-online/
+analysis-outputs/
+outputs/
+.ultralytics/
+fluorescence_prediction/.ultralytics/
+fluorescence_prediction/weights/*.pth
+fluorescence_prediction/weights/*.pt
+.auto-readme-work/
+pixel2pixel_fluorescent/
+results/
+pixel2pixel_fluorescent

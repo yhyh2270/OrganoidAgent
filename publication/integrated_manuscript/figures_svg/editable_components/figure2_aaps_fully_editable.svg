@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="940" viewBox="0 0 1800 940">
+    <title>Fully editable AAPS structured analytical workflow</title>
+    <desc>Native vector reconstruction. Every panel, label, box, connector, port, and icon is editable.</desc>
+    <defs>
+      <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#47798a"/></marker>
+      <style>
+        text { font-family: Arial, Helvetica, sans-serif; fill:#17252b; }
+        .panel { fill:#eef8fb; stroke:#9bbdca; stroke-width:3; }
+        .panel-label { font-size:32px; font-weight:700; } .panel-title { font-size:28px; font-weight:500; }
+        .body { font-size:22px; } .small { font-size:18px; } .small-bold { font-size:18px; font-weight:700; }
+        .tiny { font-size:14px; } .tiny-bold { font-size:15px; font-weight:700; } .italic { font-size:19px; font-style:italic; }
+        .node { fill:#f9fdfe; stroke:#47798a; stroke-width:3; } .soft-node { fill:#d9eef3; stroke:#78a9b8; stroke-width:2.5; }
+        .block { fill:#f8fcfd; stroke:#47798a; stroke-width:3; } .block-divider { stroke:#47798a; stroke-width:2.5; } .block-title { font-size:20px; font-weight:700; }
+        .arrow { fill:none; stroke:#47798a; stroke-width:3; marker-end:url(#arrowhead); } .line { fill:none; stroke:#47798a; stroke-width:3; }
+        .dash { fill:none; stroke:#47798a; stroke-width:2.5; stroke-dasharray:7 6; } .port { fill:#4197ad; stroke:#2f6573; stroke-width:1.5; }
+        .folder-fill { fill:#52a9b5; } .icon-fill { fill:#f8fcfd; stroke:#47798a; stroke-width:3; } .icon-line { fill:none; stroke:#47798a; stroke-width:3; }
+        .paper-back { fill:#dbe9ed; stroke:#7da5b2; stroke-width:2; } .paper-mid { fill:#e8f2f4; stroke:#648e9b; stroke-width:2; } .paper-front { fill:#f8fcfd; stroke:#47798a; stroke-width:2.5; }
+        .chart-bg { fill:#f8fcfd; stroke:#7da5b2; stroke-width:2; } .chart-axis { fill:none; stroke:#6c8790; stroke-width:2; }
+      </style>
+    </defs><rect width="100%" height="100%" fill="white"/>
+<g id="panel-A"><rect id="panel-A-background" x="12" y="12" width="530" height="470" rx="18" class="panel"/><text x="30" y="50" class="panel-label" text-anchor="start" >A</text><text x="70" y="50" class="panel-title" text-anchor="start" >Project-aware AAPS workspace</text>
+<rect id="project-folder-box" x="38" y="78" width="300" height="92" rx="18" class="node"/>
+<g class="icon" transform="translate(53 88) scale(0.55)">
+      <path d="M0 14 H32 L42 24 H92 V74 H0 Z" class="folder-fill"/>
+      <path d="M0 14 H32 L42 24 H92 V74 H0 Z" class="icon-line"/>
+      <path d="M4 29 H88" class="icon-line"/>
+    </g>
+<text x="122" y="112" class="body" text-anchor="start"><tspan x="122" dy="0">DEO organoid</tspan><tspan x="122" dy="25">analysis project</tspan></text>
+<rect x="51" y="205" width="23" height="22" rx="3" fill="#50a8b5" stroke="#47798a" stroke-width="2"/>
+<text x="84" y="222" class="body" text-anchor="start" >Data</text>
+<rect x="51" y="248" width="23" height="22" rx="3" fill="#d8a945" stroke="#47798a" stroke-width="2"/>
+<text x="84" y="265" class="body" text-anchor="start" >Artifacts</text>
+<rect x="51" y="291" width="23" height="22" rx="3" fill="#9bbdca" stroke="#47798a" stroke-width="2"/>
+<text x="84" y="308" class="body" text-anchor="start" >Run log</text>
+<rect x="51" y="334" width="23" height="22" rx="3" fill="#9bbdca" stroke="#47798a" stroke-width="2"/>
+<text x="84" y="351" class="body" text-anchor="start" >Report</text>
+<text x="350" y="197" class="small" text-anchor="start" >Project context</text>
+<rect id="workflow-1" x="224" y="224" width="270" height="43" rx="18" class="node"/>
+<text x="359" y="252" class="small" text-anchor="middle" >dataset_registration.aaps</text>
+<rect id="workflow-2" x="231" y="261" width="270" height="43" rx="18" class="node"/>
+<text x="366" y="289" class="small" text-anchor="middle" >image_qc.aaps</text>
+<rect id="workflow-3" x="238" y="298" width="270" height="43" rx="18" class="node"/>
+<text x="373" y="326" class="small" text-anchor="middle" >segmentation_routing.aaps</text>
+<rect id="workflow-4" x="245" y="335" width="270" height="43" rx="18" class="node"/>
+<text x="380" y="363" class="small" text-anchor="middle" >metric_quantification.aaps</text>
+<rect id="workflow-5" x="252" y="372" width="270" height="43" rx="18" class="node"/>
+<text x="387" y="400" class="small" text-anchor="middle" >report_generation.aaps</text>
+<text x="279" y="450" class="body" text-anchor="middle" >Many .aaps workflows</text>
+</g>
+<g id="panel-B"><rect id="panel-B-background" x="558" y="12" width="630" height="470" rx="18" class="panel"/><text x="576" y="50" class="panel-label" text-anchor="start" >B</text><text x="616" y="50" class="panel-title" text-anchor="start" >Top-down GUI program design</text>
+<text x="1164" y="81" class="italic" text-anchor="end" >Top-down program</text>
+<text x="580" y="112" class="body" text-anchor="start" >1. Register raw images and metadata</text>
+<text x="580" y="148" class="body" text-anchor="start" >2. Inspect image quality and experimental context</text>
+<text x="580" y="184" class="body" text-anchor="start" >3. Route segmentation method</text>
+<rect id="loop-node" x="680" y="210" width="430" height="50" rx="18" class="soft-node"/>
+<text x="895" y="242" class="small" text-anchor="middle" >↻  for each image        QC and method routing</text>
+<path d="M700 260 V350 H735" class="line"/>
+<rect id="low-confidence-node" x="735" y="278" width="410" height="54" rx="18" class="soft-node"/>
+<text x="940" y="312" class="small" text-anchor="middle" >⚡ low confidence → human review / correction</text>
+<rect id="route-node" x="735" y="342" width="410" height="62" rx="18" class="soft-node"/>
+<text x="940" y="369" class="small" text-anchor="middle"><tspan x="940" dy="0">⚡ route: Cellpose / thresholding / signal recovery /</tspan><tspan x="940" dy="22">prompt-guided correction</tspan></text>
+<text x="580" y="414" class="body" text-anchor="start" >4. Verify mask and overlay</text>
+<text x="580" y="443" class="body" text-anchor="start" >5. Quantify growth, differentiation, and fusion metrics</text>
+<text x="580" y="472" class="body" text-anchor="start" >6. Summarize biological conclusions</text>
+</g>
+<g id="panel-C"><rect id="panel-C-background" x="1204" y="12" width="584" height="470" rx="18" class="panel"/><text x="1222" y="50" class="panel-label" text-anchor="start" >C</text><text x="1262" y="50" class="panel-title" text-anchor="start" >Reusable blocks and skills</text>
+<g id="block-image-qc"><rect id="block-image-qc-background" x="1232" y="82" width="245" height="145" rx="18" class="block"/><path d="M1232,120 H1477" class="block-divider"/><text x="1354.5" y="109" class="block-title" text-anchor="middle" >image_qc</text><circle cx="1232" cy="139" r="6" class="port"/><text x="1248" y="145" class="small" text-anchor="start" >image</text><circle cx="1477" cy="139" r="6" class="port"/><text x="1461" y="145" class="small" text-anchor="end" >qc_report</text><circle cx="1232" cy="166" r="6" class="port"/><text x="1248" y="172" class="small" text-anchor="start" >metadata</text><circle cx="1477" cy="166" r="6" class="port"/><text x="1461" y="172" class="small" text-anchor="end" >preview</text></g>
+<g id="block-segment"><rect id="block-segment-background" x="1515" y="82" width="245" height="145" rx="18" class="block"/><path d="M1515,120 H1760" class="block-divider"/><text x="1637.5" y="109" class="block-title" text-anchor="middle" >segment_organoid</text><circle cx="1515" cy="139" r="6" class="port"/><text x="1531" y="145" class="small" text-anchor="start" >image</text><circle cx="1760" cy="139" r="6" class="port"/><text x="1744" y="145" class="small" text-anchor="end" >mask</text><circle cx="1515" cy="166" r="6" class="port"/><text x="1531" y="172" class="small" text-anchor="start" >qc_report</text><circle cx="1760" cy="166" r="6" class="port"/><text x="1744" y="172" class="small" text-anchor="end" >overlay</text><circle cx="1760" cy="193" r="6" class="port"/><text x="1744" y="199" class="small" text-anchor="end" >instances</text></g>
+<g id="block-metrics"><rect id="block-metrics-background" x="1232" y="265" width="245" height="145" rx="18" class="block"/><path d="M1232,303 H1477" class="block-divider"/><text x="1354.5" y="292" class="block-title" text-anchor="middle" >quantify_metrics</text><circle cx="1232" cy="322" r="6" class="port"/><text x="1248" y="328" class="small" text-anchor="start" >mask</text><circle cx="1477" cy="322" r="6" class="port"/><text x="1461" y="328" class="small" text-anchor="end" >area</text><circle cx="1232" cy="349" r="6" class="port"/><text x="1248" y="355" class="small" text-anchor="start" >image</text><circle cx="1477" cy="349" r="6" class="port"/><text x="1461" y="355" class="small" text-anchor="end" >darkness_P90</text><circle cx="1477" cy="376" r="6" class="port"/><text x="1461" y="382" class="small" text-anchor="end" >fusion_score</text></g>
+<g id="block-review"><rect id="block-review-background" x="1515" y="265" width="245" height="145" rx="18" class="block"/><path d="M1515,303 H1760" class="block-divider"/><text x="1637.5" y="292" class="block-title" text-anchor="middle" >review_overlay</text><circle cx="1515" cy="322" r="6" class="port"/><text x="1531" y="328" class="small" text-anchor="start" >overlay</text><circle cx="1760" cy="322" r="6" class="port"/><text x="1744" y="328" class="small" text-anchor="end" >approval</text><circle cx="1515" cy="349" r="6" class="port"/><text x="1531" y="355" class="small" text-anchor="start" >confidence</text><circle cx="1760" cy="349" r="6" class="port"/><text x="1744" y="355" class="small" text-anchor="end" >correction</text></g>
+<text x="1496" y="441" class="body" text-anchor="middle" >Block contract = inputs + outputs + tools</text>
+<text x="1496" y="470" class="body" text-anchor="middle" >+ agent + validation + artifacts</text>
+</g>
+<path id="A-to-B" d="M542,235 L558,235" class="arrow"/>
+<path id="B-to-C" d="M1188,235 L1204,235" class="arrow"/>
+<g id="panel-D"><rect id="panel-D-background" x="12" y="500" width="1015" height="425" rx="18" class="panel"/><text x="30" y="538" class="panel-label" text-anchor="start" >D</text><text x="70" y="538" class="panel-title" text-anchor="start" >Parser, grammar, and agent-based compiler</text>
+<g class="icon" transform="translate(45 620)">
+      <path d="M0 0 H48 L68 20 V88 H0 Z" class="icon-fill"/>
+      <path d="M48 0 V20 H68" class="icon-line"/>
+      <text x="34" y="48" class="tiny-bold" text-anchor="middle" >.aaps</text>
+      <text x="34" y="68" class="tiny" text-anchor="middle" >script</text>
+    </g>
+<text x="79" y="724" class="small" text-anchor="middle"><tspan x="79" dy="0">example</tspan><tspan x="79" dy="22">code</tspan></text>
+<rect x="205" y="560" width="66" height="56" rx="12" class="dash"/>
+<path id="" d="M281,588 L352,588" class="arrow"/>
+<g class="icon" transform="translate(367 543)">
+      <rect x="18" y="0" width="54" height="66" rx="9" class="paper-back"/>
+      <rect x="9" y="8" width="54" height="66" rx="9" class="paper-mid"/>
+      <rect x="0" y="16" width="54" height="66" rx="9" class="paper-front"/>
+      <path d="M12 34 H42 M12 46 H42 M12 58 H36" class="icon-line"/>
+    </g>
+<path id="" d="M457,588 L515,588" class="arrow"/>
+<rect id="compiler-icon" x="528" y="553" width="76" height="70" rx="18" class="node"/>
+<path id="" d="M614,588 L700,588" class="arrow"/>
+<g class="icon" transform="translate(716 543)">
+      <rect x="18" y="0" width="54" height="66" rx="9" class="paper-back"/>
+      <rect x="9" y="8" width="54" height="66" rx="9" class="paper-mid"/>
+      <rect x="0" y="16" width="54" height="66" rx="9" class="paper-front"/>
+      <path d="M12 34 H42 M12 46 H42 M12 58 H36" class="icon-line"/>
+    </g>
+<rect id="execution-plan" x="810" y="660" width="145" height="58" rx="18" class="soft-node"/>
+<text x="882" y="685" class="small" text-anchor="middle" >execution</text>
+<text x="882" y="707" class="small" text-anchor="middle" >plan</text>
+<rect id="parser" x="205" y="660" width="145" height="58" rx="18" class="soft-node"/>
+<text x="277" y="695" class="small" text-anchor="middle" >parser</text>
+<text x="277" y="742" class="small" text-anchor="middle" >deterministic parse</text>
+<rect id="structured-IR" x="365" y="660" width="155" height="58" rx="18" class="soft-node"/>
+<text x="442" y="695" class="small" text-anchor="middle" >structured IR</text>
+<text x="442" y="742" class="small" text-anchor="middle" >recursive module filling</text>
+<rect id="compiler" x="515" y="660" width="145" height="58" rx="18" class="soft-node"/>
+<text x="587" y="695" class="small" text-anchor="middle" >compiler</text>
+<rect id="resolved-workflow" x="700" y="660" width="145" height="58" rx="18" class="soft-node"/>
+<text x="772" y="695" class="small" text-anchor="middle" >resolved workflow</text>
+<text x="772" y="742" class="small" text-anchor="middle" >agent-assisted generation</text>
+<text x="938" y="540" class="small" text-anchor="end" >top-down recursive</text>
+<text x="938" y="564" class="small" text-anchor="end" >fill-in motif</text>
+<path d="M870 623 V647" class="arrow"/>
+<path d="M540 718 V770 H895 V718" class="dash"/>
+<text x="112" y="810" class="small-bold" text-anchor="middle" >Missing block</text>
+<text x="112" y="838" class="small" text-anchor="middle" >generate reusable</text>
+<text x="112" y="862" class="small" text-anchor="middle" >.aaps block</text>
+<text x="310" y="810" class="small-bold" text-anchor="middle" >Missing script</text>
+<text x="310" y="838" class="small" text-anchor="middle" >write Python /</text>
+<text x="310" y="862" class="small" text-anchor="middle" >shell script</text>
+<text x="508" y="810" class="small-bold" text-anchor="middle" >Missing tool</text>
+<text x="508" y="838" class="small" text-anchor="middle" >report setup or</text>
+<text x="508" y="862" class="small" text-anchor="middle" >select fallback</text>
+<text x="706" y="810" class="small-bold" text-anchor="middle" >Missing dependency</text>
+<text x="706" y="838" class="small" text-anchor="middle" >prepare safe</text>
+<text x="706" y="862" class="small" text-anchor="middle" >setup prompt</text>
+<text x="904" y="810" class="small-bold" text-anchor="middle" >Ambiguous result</text>
+<text x="904" y="838" class="small" text-anchor="middle" >ask human</text>
+<text x="904" y="862" class="small" text-anchor="middle" >review</text>
+</g>
+<g id="panel-E"><rect id="panel-E-background" x="1044" y="500" width="744" height="425" rx="18" class="panel"/><text x="1062" y="538" class="panel-label" text-anchor="start" >E</text><text x="1102" y="538" class="panel-title" text-anchor="start" >Controlled execution and biological outputs</text>
+<g transform="translate(1080 610)" opacity="0.55"><rect width="94" height="108" rx="5" fill="#d6dde0" stroke="#526b73" stroke-width="2"/><path d="M15 78 C4 54 27 27 47 39 C68 18 92 45 76 63 C93 86 58 99 45 84 C31 98 19 91 15 78Z" fill="#87969b"/><circle cx="66" cy="33" r="10" fill="#aab5b9"/></g>
+<g transform="translate(1094 620)" opacity="0.72"><rect width="94" height="108" rx="5" fill="#d6dde0" stroke="#526b73" stroke-width="2"/><path d="M15 78 C4 54 27 27 47 39 C68 18 92 45 76 63 C93 86 58 99 45 84 C31 98 19 91 15 78Z" fill="#87969b"/><circle cx="66" cy="33" r="10" fill="#aab5b9"/></g>
+<g transform="translate(1108 630)" opacity="1"><rect width="94" height="108" rx="5" fill="#d6dde0" stroke="#526b73" stroke-width="2"/><path d="M15 78 C4 54 27 27 47 39 C68 18 92 45 76 63 C93 86 58 99 45 84 C31 98 19 91 15 78Z" fill="#87969b"/><circle cx="66" cy="33" r="10" fill="#aab5b9"/></g>
+<path id="" d="M1214,674 L1270,674" class="arrow"/>
+<circle cx="1302" cy="674" r="34" fill="#d8f2f1" stroke="#47798a" stroke-width="3"/><path d="M1285 674 L1298 687 L1320 656" fill="none" stroke="#47798a" stroke-width="4"/>
+<path id="" d="M1338,674 L1388,674" class="arrow"/>
+<g transform="translate(1400 592)"><rect width="98" height="76" rx="5" fill="#101820"/><path d="M17 46 C6 29 18 8 38 13 C54 0 77 13 71 32 C84 51 59 68 42 57 C28 70 10 61 17 46Z" fill="#26a6b7" stroke="#254f5f" stroke-width="2"/><path d="M50 20 C62 8 84 17 82 35 C94 47 82 66 65 60 C52 70 37 57 42 43 C34 32 39 24 50 20Z" fill="#61be76" stroke="#254f5f" stroke-width="2"/><path d="M13 22 C19 8 37 7 44 19 C55 24 51 43 39 47 C31 58 11 49 14 35 C5 31 6 25 13 22Z" fill="#844cc1" stroke="#254f5f" stroke-width="2"/></g>
+<g transform="translate(1421 614)"><rect width="98" height="76" rx="5" fill="#101820"/><path d="M17 46 C6 29 18 8 38 13 C54 0 77 13 71 32 C84 51 59 68 42 57 C28 70 10 61 17 46Z" fill="#28a6b8" stroke="#254f5f" stroke-width="2"/><path d="M50 20 C62 8 84 17 82 35 C94 47 82 66 65 60 C52 70 37 57 42 43 C34 32 39 24 50 20Z" fill="#6abb73" stroke="#254f5f" stroke-width="2"/><path d="M13 22 C19 8 37 7 44 19 C55 24 51 43 39 47 C31 58 11 49 14 35 C5 31 6 25 13 22Z" fill="#9a4fbd" stroke="#254f5f" stroke-width="2"/></g>
+<g transform="translate(1442 636)"><rect width="98" height="76" rx="5" fill="#101820"/><path d="M17 46 C6 29 18 8 38 13 C54 0 77 13 71 32 C84 51 59 68 42 57 C28 70 10 61 17 46Z" fill="#39a9bc" stroke="#254f5f" stroke-width="2"/><path d="M50 20 C62 8 84 17 82 35 C94 47 82 66 65 60 C52 70 37 57 42 43 C34 32 39 24 50 20Z" fill="#73bf68" stroke="#254f5f" stroke-width="2"/><path d="M13 22 C19 8 37 7 44 19 C55 24 51 43 39 47 C31 58 11 49 14 35 C5 31 6 25 13 22Z" fill="#9650b8" stroke="#254f5f" stroke-width="2"/></g>
+<path id="" d="M1545,674 L1590,674" class="arrow"/>
+<g class="icon" transform="translate(1600 574)">
+      <rect width="72" height="62" class="chart-bg"/>
+      <path d="M8 8 V54 H66" class="chart-axis"/>
+      <path d="M8 52 C28 43 35 20 62 11" fill="none" stroke="#63b7c7" stroke-width="5"/>
+    </g>
+<g class="icon" transform="translate(1600 648)">
+      <rect width="72" height="62" class="chart-bg"/>
+      <path d="M8 8 V54 H66" class="chart-axis"/>
+      <path d="M8 14 C26 18 40 43 62 52" fill="none" stroke="#58a8c8" stroke-width="5"/>
+    </g>
+<g class="icon" transform="translate(1600 722)">
+      <rect width="72" height="62" class="chart-bg"/>
+      <path d="M8 8 V54 H66" class="chart-axis"/>
+      <path d="M8 52 L26 34 L42 42 L62 13" fill="none" stroke="#db932d" stroke-width="5"/>
+    </g>
+<path id="" d="M1675,674 L1710,674" class="arrow"/>
+<g transform="translate(1715 585)"><rect width="54" height="142" rx="8" class="paper-back"/><rect x="-10" y="10" width="54" height="142" rx="8" class="paper-mid"/><rect x="-20" y="20" width="54" height="142" rx="8" class="paper-front"/><rect x="-10" y="34" width="34" height="16" fill="#d6eef2"/><path d="M-10 65 H24 M-10 77 H24 M-10 89 H12" class="icon-line"/><rect x="-10" y="103" width="13" height="13" fill="#e8b04e"/><circle cx="18" cy="110" r="8" fill="#70b68b"/><path d="M-10 141 L1 129 L10 135 L24 119" fill="none" stroke="#4ba4b8" stroke-width="3"/></g>
+<text x="1142" y="782" class="small" text-anchor="middle"><tspan x="1142" dy="0">Heterogeneous</tspan><tspan x="1142" dy="22">DEO bright-field</tspan><tspan x="1142" dy="22">images</tspan></text>
+<text x="1302" y="782" class="small" text-anchor="middle"><tspan x="1302" dy="0">QC:</tspan><tspan x="1302" dy="22">brightness, blur,</tspan><tspan x="1302" dy="22">density, object scale</tspan></text>
+<text x="1467" y="782" class="small" text-anchor="middle"><tspan x="1467" dy="0">Segmentation</tspan><tspan x="1467" dy="22">and metrics</tspan></text>
+<text x="1636" y="782" class="small" text-anchor="middle"><tspan x="1636" dy="0">biological</tspan><tspan x="1636" dy="22">metrics</tspan></text>
+<text x="1741" y="782" class="small" text-anchor="middle"><tspan x="1741" dy="0">Artifacts</tspan><tspan x="1741" dy="22">and report</tspan></text>
+<text x="1416" y="895" class="body" text-anchor="middle" >Validation and human review</text>
+</g>
+<path id="D-to-E" d="M1027,708 L1044,708" class="arrow"/>
+</svg>

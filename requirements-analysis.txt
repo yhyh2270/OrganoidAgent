@@ -1,0 +1,27 @@
+-r requirements.txt
+
+# Fluorescence inference, morphology analysis, training, and microscopy tools.
+# Keep torch and torchvision on matching releases. For a CUDA-specific wheel,
+# install them from https://pytorch.org/get-started/locally/ before this file.
+torch>=2.3,<2.4
+torchvision>=0.18,<0.19
+opencv-python-headless>=4.8,<5
+ultralytics>=8.2,<9
+cellpose==4.1.0
+segment-anything>=1,<2
+fastremap>=1.14
+roifile>=2023.5
+fill-voids>=2,<3
+scipy>=1.10,<2
+scikit-image>=0.21,<1
+scikit-learn>=1.2,<2
+matplotlib>=3.7,<4
+seaborn>=0.13,<1
+readlif>=0.6,<1
+h5py>=3.8,<4
+tqdm>=4.65
+natsort>=8,<9
+
+# Optional download and legacy database helpers used by scripts/ and BioAgentUtils/.
+kaggle>=1.6,<2
+PyMySQL>=1.1,<2

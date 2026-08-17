@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OrganoidAgent Studio</title>
+    <link rel="manifest" href="/static/manifest.json" />
+    <link rel="icon" href="/static/icons/icon-192.png" />
+    <link rel="stylesheet" href="/static/styles.css?v=24" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo-dot"></div>
+        <div>
+          <div class="title">OrganoidAgent Studio</div>
+          <div class="subtitle">Datasets, imaging pipelines, and Codex-backed agent work.</div>
+        </div>
+      </div>
+      <div class="stats" id="dataset-stats">Loading datasets…</div>
+    </header>
+
+    <nav class="tabs stage-tabs" role="tablist" aria-label="Main workflow stages">
+      <button class="tab stage-tab active" data-stage="data">Data Visualization</button>
+      <button class="tab stage-tab" data-stage="workflow">Analysis Workflows</button>
+      <button class="tab stage-tab" data-stage="results">Results Visualization</button>
+    </nav>
+    <nav class="subtabs" aria-label="Stage pages">
+      <div class="subtab-group active" data-stage-group="data">
+        <button class="subtab active" data-tab="datasets">Datasets</button>
+        <button class="subtab" data-tab="segmentation">Segmentation</button>
+        <button class="subtab" data-tab="features">Features</button>
+        <button class="subtab" data-tab="analysis">Analysis Data</button>
+      </div>
+      <div class="subtab-group" data-stage-group="workflow">
+        <button class="subtab" data-tab="agent">Morphological Analysis</button>
+        <button class="subtab" data-tab="fluorescence">Viability Detection</button>
+      </div>
+      <div class="subtab-group" data-stage-group="results">
+        <button class="subtab" data-tab="viability-results">Results Overview</button>
+      </div>
+    </nav>
+
+    <main class="content">
+      <section class="panel active" id="panel-datasets">
+        <div class="grid split">
+          <div class="card">
+            <h2>Dataset Index</h2>
+            <div class="list" id="dataset-list"></div>
+          </div>
+          <div class="card">
+            <h2>Files</h2>
+            <div class="list" id="file-list">Select a dataset.</div>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Dataset Notes</h2>
+          <div id="dataset-info" class="markdown">Select a dataset.</div>
+        </div>
+        <div class="card preview">
+          <h2>Preview</h2>
+          <div id="preview-panel" class="preview-body">Select a file to preview.</div>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-agent">
+        <div class="card agent-data-context">
+          <div class="section-heading">
+            <div>
+              <h2>Analysis Input</h2>
+              <p class="hint">Bind a dataset or selected images to every Codex request in this workspace.</p>
+            </div>
+            <span id="agent-selection-count" class="tag">No dataset selected</span>
+          </div>
+          <div class="agent-data-controls">
+            <label for="agent-dataset-select">Dataset</label>
+            <select id="agent-dataset-select"><option value="">Select a dataset</option></select>
+            <button class="soft-btn" id="agent-select-all-files">Select all images</button>
+            <button class="soft-btn" id="agent-clear-files">Clear files</button>
+          </div>
+          <div id="agent-file-selection" class="agent-file-selection muted">
+            Select a dataset to analyze the whole dataset or choose specific images.
+          </div>
+          <p class="hint">If no individual image is checked, the selected dataset directory is used as the analysis scope.</p>
+        </div>
+        <div class="studio-shell">
+          <aside class="studio-blocks card">
+            <div class="section-heading">
+              <h2>Blocks</h2>
+              <span class="muted">AAPS v1</span>
+            </div>
+            <button class="block-pill plan" data-template="inspect">Inspect</button>
+            <button class="block-pill segmentation" data-template="segmentation">Segmentation</button>
+            <button class="block-pill tracking" data-template="tracking">Tracking</button>
+            <button class="block-pill pairing" data-template="pairing">Pair Dataset</button>
+            <button class="block-pill quantification" data-template="quantification">Quantification</button>
+            <button class="block-pill fluorescence" data-template="fluorescence">Viability Detection</button>
+            <button class="block-pill database" data-template="database">Database</button>
+            <button class="block-pill review" data-template="review">Review Gate</button>
+            <button class="block-pill report" data-template="report">Report</button>
+          </aside>
+
+          <section class="studio-program card">
+            <div class="section-heading">
+              <div>
+                <h2>Pipeline Program</h2>
+                <p class="hint">Load a task script, edit blocks, then ask Codex to review or execute.</p>
+              </div>
+              <div class="button-row">
+                <button class="soft-btn" id="parse-pipeline-btn">Parse Blocks</button>
+                <button class="soft-btn" id="send-plan-btn">Ask Codex</button>
+                <button class="soft-btn" id="run-assistant-btn">Assistant Job</button>
+              </div>
+            </div>
+            <div class="script-loader">
+              <label for="script-select">Task script</label>
+              <select id="script-select"></select>
+              <button class="soft-btn" id="load-script-btn">Load Script</button>
+              <button class="soft-btn" id="save-script-btn">Save Local Edits</button>
+            </div>
+            <textarea id="pipeline-editor" class="pipeline-editor" spellcheck="false"></textarea>
+            <div id="pipeline-status" class="hint">Edit or paste an AAPS pipeline, then parse it into blocks.</div>
+            <div id="pipeline-blocks" class="pipeline-canvas"></div>
+          </section>
+
+          <aside class="studio-status card">
+            <div class="section-heading">
+              <h2>Status</h2>
+              <div class="button-row">
+                <button class="danger-btn" id="stop-agent-job" disabled>Stop Job</button>
+                <button class="soft-btn" id="refresh-agent-state">Refresh</button>
+              </div>
+            </div>
+            <div class="status-grid" id="agent-status-grid">
+              <div class="status-row"><span>Backend</span><strong>checking</strong></div>
+              <div class="status-row"><span>Codex</span><strong>checking</strong></div>
+              <div class="status-row"><span>Pipeline</span><strong>idle</strong></div>
+            </div>
+            <h2 class="small-heading">Execution Output</h2>
+            <pre id="agent-job-output" class="terminal-output">No active job.</pre>
+            <div class="morphology-live-progress" aria-live="polite">
+              <div class="section-heading compact-heading">
+                <h2 class="small-heading">Morphology Progress</h2>
+                <span id="morphology-job-id" class="muted"></span>
+              </div>
+              <div id="morphology-progress" class="hint">No morphology job running.</div>
+              <progress id="morphology-progress-bar" max="100" value="0" hidden></progress>
+            </div>
+          </aside>
+        </div>
+
+        <div class="card studio-database-card">
+          <div class="section-heading">
+            <div>
+              <h2>Database Registry</h2>
+              <p class="hint">Maintained SQLite outputs and summaries from OrganoidAgent, ../Zhengyu, and ../Compactness.</p>
+            </div>
+            <button class="soft-btn" id="refresh-database-registry">Refresh Databases</button>
+          </div>
+          <div id="database-registry" class="database-registry">Loading databases...</div>
+        </div>
+
+        <div class="card studio-chat-card">
+          <div class="section-heading">
+            <div>
+              <h2>OrganoidAgent Chat</h2>
+              <p class="hint">Use response for planning, assistant for repo tasks that may inspect or edit files.</p>
+            </div>
+            <div class="button-row">
+              <button class="soft-btn" id="new-agent-chat">New Chat</button>
+              <label class="toggle-label"><input type="checkbox" id="assistant-mode-toggle" /> assistant</label>
+            </div>
+          </div>
+          <div id="agent-messages" class="chat-messages"></div>
+          <div class="chat-compose">
+            <textarea id="agent-chat-input" placeholder="Ask to modify the pipeline, inspect data, or run a bounded Codex job..."></textarea>
+            <button id="send-agent-chat" class="primary-btn">Send</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-fluorescence">
+        <div class="fluorescence-layout">
+          <div class="card fluorescence-controls">
+            <div class="section-heading">
+              <div>
+                <h2>Organoid Viability Detection</h2>
+                <p class="hint">YOLO + SAM segmentation, morphology evidence, checkpoint-1 viability scoring, and an auditable report.</p>
+              </div>
+              <span id="fluorescence-status" class="tag">checking</span>
+            </div>
+            <label for="fluorescence-dataset">Dataset</label>
+            <select id="fluorescence-dataset"></select>
+            <div class="button-row fluorescence-selection-actions">
+              <button class="soft-btn" id="fluorescence-select-all">Select all</button>
+              <button class="soft-btn" id="fluorescence-clear">Clear</button>
+              <span class="muted" id="fluorescence-selection-count">0 selected</span>
+            </div>
+            <div id="fluorescence-image-list" class="fluorescence-image-list">Select a dataset.</div>
+            <label for="fluorescence-instruction">Analysis instruction</label>
+            <textarea id="fluorescence-instruction" class="fluorescence-instruction">Detect organoid viability and provide segmentation outputs, morphology features, a viability score, and an evidence-based interpretation.</textarea>
+            <div class="fluorescence-run-row">
+              <label for="fluorescence-order">Sort</label>
+              <select id="fluorescence-order">
+                <option value="desc">Viability high → low</option>
+                <option value="asc">Viability low → high</option>
+              </select>
+              <button id="fluorescence-run" class="primary-btn">Run detection</button>
+            </div>
+            <p class="hint">Up to 30 images per batch. Results are research-use only and require experimental validation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-viability-results">
+        <div class="card results-history-card">
+          <div class="section-heading">
+            <div>
+              <h2>Current Page Results</h2>
+              <p class="hint">Tasks run since this page was opened. Refreshing the browser clears this list.</p>
+            </div>
+            <button class="soft-btn" id="clear-session-results">Clear current results</button>
+          </div>
+          <div id="results-history-summary" class="results-summary-grid"></div>
+          <div class="results-history-layout">
+            <div id="results-history-list" class="results-history-list">No tasks have been run on this page yet.</div>
+            <div id="results-history-detail" class="results-history-detail preview-body">Select a run to inspect its outputs.</div>
+          </div>
+        </div>
+        <div class="card fluorescence-results-card">
+          <div class="section-heading">
+            <div>
+              <h2>Viability Detection Results</h2>
+              <p class="hint">Review segmentation overlays, crops, viability scores, morphology features, and the analysis report.</p>
+            </div>
+            <span id="fluorescence-job-id" class="muted"></span>
+          </div>
+          <div id="fluorescence-progress" class="hint">Select images and run a task from Analysis Workflows → Viability Detection.</div>
+          <progress id="fluorescence-progress-bar" max="100" value="0" hidden></progress>
+          <div id="fluorescence-summary"></div>
+          <div id="fluorescence-results" class="fluorescence-results"></div>
+          <div id="fluorescence-report" class="markdown fluorescence-report"></div>
+        </div>
+        <div class="card fluorescence-results-card" id="morphology-results-card" hidden>
+          <div class="section-heading">
+            <div>
+              <h2>Morphology Results</h2>
+              <p class="hint">Review Cellpose masks, overlays, signal evidence, quantitative metrics, comparison figures, and report.</p>
+            </div>
+            <span id="morphology-result-job-id" class="muted"></span>
+          </div>
+          <div id="morphology-summary"></div>
+          <div id="morphology-results" class="fluorescence-results"></div>
+          <div id="morphology-report" class="markdown fluorescence-report"></div>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-segmentation">
+        <div class="card">
+          <h2>Segmentation Assets</h2>
+          <p class="hint">
+            Image archives and label files. Click to preview or extract.
+          </p>
+          <div class="list" id="segmentation-list"></div>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-features">
+        <div class="card">
+          <h2>Feature Tables</h2>
+          <p class="hint">Tabular feature sets and ground-truth labels.</p>
+          <div class="list" id="features-list"></div>
+        </div>
+        <div class="card preview">
+          <h2>Preview</h2>
+          <div id="features-preview" class="preview-body">Select a table.</div>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-analysis">
+        <div class="card">
+          <h2>Analysis Data</h2>
+          <p class="hint">AnnData / H5 datasets for downstream analysis.</p>
+          <div class="list" id="analysis-list"></div>
+        </div>
+        <div class="card preview">
+          <h2>Summary</h2>
+          <div id="analysis-preview" class="preview-body">Select a file.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>Powered by Tornado • PWA enabled</div>
+      <div class="muted">Local datasets in /datasets</div>
+    </footer>
+
+    <script src="/static/app.js?v=24"></script>
+  </body>
+</html>

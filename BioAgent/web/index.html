@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BioAgent</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">AI Agent for Organoid Processing</p>
+          <h1>BioAgent</h1>
+          <p class="subtitle">Prompt is All You Need</p>
+          <p class="paper-title">
+            Prompt is All You Need: An AI Agent for Biomedical Analysis with Atomic Task
+          </p>
+        </div>
+        <div class="status-card">
+          <div class="status-row">
+            <span>Backend</span>
+            <span id="status-indicator" class="chip neutral">Checking</span>
+          </div>
+          <div class="status-row">
+            <span>Jobs</span>
+            <span id="job-count" class="chip neutral">0 queued</span>
+          </div>
+          <div class="status-row">
+            <span>Mode</span>
+            <span class="chip">Local analysis</span>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Agent Configuration</h2>
+            <p>Select the eyes, mind, and hands for each run.</p>
+          </div>
+          <div class="grid three">
+            <label class="field">
+              <span>Eyes</span>
+              <select id="eyes"></select>
+              <small>Image model for perception.</small>
+            </label>
+            <label class="field">
+              <span>Mind</span>
+              <select id="mind"></select>
+              <small>Reasoning and knowledge engine.</small>
+            </label>
+            <label class="field">
+              <span>Hands</span>
+              <select id="hand"></select>
+              <small>Execution controller (SDK).</small>
+            </label>
+          </div>
+        </section>
+
+        <section class="panel split-panel">
+          <div class="split-grid">
+            <div class="split-column" id="template-column">
+              <div class="panel-header">
+                <h2>Template Library</h2>
+                <p>Create, edit, and reuse task templates for the SDK runner.</p>
+              </div>
+              <div class="template-grid">
+                <div class="template-list" id="template-list"></div>
+                <div class="template-editor">
+                  <label class="field">
+                    <span>Template Name</span>
+                    <input id="template-label" type="text" placeholder="Segmentation QC" />
+                  </label>
+                  <label class="field">
+                    <span>Template Prompt</span>
+                    <textarea id="template-body" rows="6"></textarea>
+                  </label>
+                  <div class="actions">
+                    <button id="template-save" class="primary">Save Template</button>
+                    <button id="template-new" class="ghost">New</button>
+                    <button id="template-delete" class="ghost danger">Delete</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="split-column" id="task-column">
+              <div class="panel-header">
+                <h2>Task Studio</h2>
+                <p>Pick a template and run a task with custom notes.</p>
+              </div>
+              <div class="grid two">
+                <label class="field">
+                  <span>Task Template</span>
+                  <select id="task"></select>
+                  <small>Templates are editable in the library above.</small>
+                </label>
+                <label class="field">
+                  <span>Notes</span>
+                  <input id="notes" type="text" placeholder="Sample, batch, or dataset info" />
+                  <small>Optional context for this run.</small>
+                </label>
+              </div>
+              <div class="grid two">
+                <div class="field dropzone" id="files-dropzone">
+                  <span>Files</span>
+                  <div class="dropzone-body">
+                    <div>Drag files here or</div>
+                    <button type="button" class="ghost" id="browse-files">Browse files</button>
+                  </div>
+                  <input id="task-files" type="file" multiple hidden />
+                  <small id="task-files-label">No files selected.</small>
+                </div>
+                <div class="field dropzone" id="folder-dropzone">
+                  <span>Folder</span>
+                  <div class="dropzone-body">
+                    <div>Drag a folder here or</div>
+                    <button type="button" class="ghost" id="browse-folder">Browse folder</button>
+                  </div>
+                  <input id="task-folder" type="file" webkitdirectory directory hidden />
+                  <small id="task-folder-label">No folder selected.</small>
+                </div>
+              </div>
+              <label class="field">
+                <span>Prompt</span>
+                <textarea id="prompt" rows="6"></textarea>
+              </label>
+              <div class="actions">
+                <button id="run" class="primary">Run BioAgent</button>
+                <button id="refresh" class="ghost">Refresh Jobs</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Workspace</h2>
+            <p>Chat history on the left, analysis bench on the right.</p>
+          </div>
+          <div class="workspace-grid">
+            <div class="pane">
+              <div class="pane-header">Chat</div>
+              <div id="chat-history" class="chat-history"></div>
+              <div class="chat-input">
+                <textarea id="chat-input" rows="3" placeholder="Ask BioAgent to run or explain tasks..."></textarea>
+                <button id="chat-send" class="primary">Send</button>
+              </div>
+            </div>
+            <div class="pane">
+              <div class="pane-header">Bench</div>
+              <div id="bench" class="bench-area">
+                <div class="bench-card">
+                  Visualizations, tables, and artifacts will appear here.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Recent Jobs</h2>
+            <p>Queued requests waiting for execution drivers.</p>
+          </div>
+          <div id="jobs" class="job-list"></div>
+        </section>
+      </main>
+
+      <footer>
+        <div>Powered by Tornado • PWA ready</div>
+        <div>BioAgent local workspace</div>
+      </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/sw.js");
+        });
+      }
+    </script>
+  </body>
+</html>
