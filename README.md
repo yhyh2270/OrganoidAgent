@@ -10,8 +10,6 @@ OrganoidAgent 是一个面向类器官图像与实验数据的本地优先智能
 
 > OrganoidAgent is a local-first platform for organoid image segmentation, morphology analysis, fluorescence-based viability prediction, dataset exploration, and agent-assisted workflows.
 
-![OrganoidAgent](demos/OrganoidAgent.png)
-
 ## 核心功能
 
 | 模块 | 功能 |
