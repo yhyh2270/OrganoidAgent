@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2000 1100" style="enable-background:new 0 0 2000 1100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#F7FAFB;stroke:#AAC3CC;stroke-width:3;}
+	.st2{fill:#17252B;}
+	.st3{font-family:'Arial-BoldMT';}
+	.st4{font-size:15.1273px;}
+	.st5{fill:#DCE5E8;stroke:#4F899B;stroke-width:2.5;}
+	.st6{font-size:12.8582px;}
+	.st7{fill:#8C9B9F;}
+	.st8{fill:#B3BEC1;}
+	.st9{font-family:'ArialMT';}
+	.st10{font-size:9.0764px;}
+	.st11{fill:#FFFFFF;stroke:#4F899B;stroke-width:2.5;}
+	.st12{stroke:#9BBDCA;stroke-width:2;}
+	.st13{fill:none;stroke:#496F7D;stroke-width:2.5;}
+	.st14{font-size:7.9418px;}
+	.st15{fill:#FFFFFF;stroke:#496F7D;stroke-width:2.8;}
+	.st16{fill:#55AAB7;}
+	.st17{fill:none;stroke:#496F7D;stroke-width:1.65;stroke-miterlimit:2.2;}
+	.st18{font-size:10.5891px;}
+	.st19{fill:#4F899B;}
+	.st20{fill:none;}
+	.st21{fill:#496F7D;}
+	.st22{fill:#E9F3F6;stroke:#4F899B;stroke-width:2.8;}
+	.st23{fill:#E9F3F6;stroke:#4F899B;stroke-width:3;}
+	.st24{fill:#101820;}
+	.st25{fill:#4F899B;stroke:#254F5F;stroke-width:2;}
+	.st26{fill:#82AAB5;stroke:#254F5F;stroke-width:2;}
+	.st27{fill:#6D8790;stroke:#254F5F;stroke-width:2;}
+	.st28{fill:#FFFFFF;stroke:#7DA5B2;stroke-width:2;}
+	.st29{fill:none;stroke:#6C8790;stroke-width:2;}
+	.st30{fill:none;stroke:#4F899B;stroke-width:5;}
+	.st31{fill:#DBE9ED;stroke:#7DA5B2;stroke-width:2;}
+	.st32{fill:#FFFFFF;stroke:#496F7D;stroke-width:2.5;}
+	.st33{fill:none;stroke:#496F7D;stroke-width:3;}
+	.st34{fill:none;stroke:#4F899B;stroke-width:3;}
+	.st35{fill:none;stroke:#718F9A;stroke-width:2.5;stroke-dasharray:8,7;}
+	.st36{fill:#F8FCFD;stroke:#7DA5B2;stroke-width:2;}
+	.st37{fill:none;stroke:#7C4BC4;stroke-width:5;}
+</style>
+<desc>Editable four-panel workflow: data context, constrained orchestration, parallel analyses, and unified results.</desc>
+<rect x="574.3" y="193.1" class="st0" width="756.4" height="416"/>
+<path id="panel-A-background" class="st1" d="M587.9,199.9h220.9c3.8,0,6.8,3,6.8,6.8v156.6c0,3.8-3,6.8-6.8,6.8H587.9
+	c-3.8,0-6.8-3-6.8-6.8V206.7C581.1,202.9,584.1,199.9,587.9,199.9z"/>
+<text transform="matrix(1 0 0 1 587.8691 214.2487)" class="st2 st3 st4">A</text>
+<path class="st5" d="M673.9,224.2h44.3c2,0,3.5,1.6,3.5,3.6v32.8c0,2-1.6,3.6-3.5,3.6h-44.3c-2,0-3.5-1.6-3.5-3.6v-32.8
+	C670.3,225.8,671.9,224.2,673.9,224.2z"/>
+<path class="st5" d="M669.1,227.2h44.5c2,0,3.6,1.6,3.6,3.6v33.4c0,2-1.6,3.6-3.6,3.6h-44.5c-2,0-3.6-1.6-3.6-3.6v-33.4
+	C665.5,228.8,667.1,227.2,669.1,227.2z"/>
+<text transform="matrix(1 0 0 1 602.9961 214.2487)" class="st2 st3 st6">Data visualization and input</text>
+<g>
+	<path class="st5" d="M596.2,229.6h47.3c2.1,0,3.8,1.7,3.8,3.8v34.8c0,2.1-1.7,3.8-3.8,3.8h-47.3c-2.1,0-3.8-1.7-3.8-3.8v-34.8
+		C592.4,231.3,594.1,229.6,596.2,229.6z"/>
+	<path class="st7" d="M600.3,259.1c-4.9-10.2,4.2-20.4,14-16.3c8.7-8.3,26.1,1.9,20,12.1c6.4,9.8-9.5,14.4-16.3,7.2
+		C610.2,269.3,602.6,265.1,600.3,259.1z"/>
+	<circle class="st8" cx="631.4" cy="241.3" r="4.5"/>
+	<text transform="matrix(1 0 0 1 593.4004 282.1326)" class="st2 st9 st10">Single image</text>
+</g>
+<path class="st5" d="M664.8,230.4h44.5c2,0,3.6,1.6,3.6,3.6v32.8c0,2-1.6,3.6-3.6,3.6h-44.5c-2,0-3.6-1.6-3.6-3.6V234
+	C661.2,232,662.8,230.4,664.8,230.4z"/>
+<path class="st7" d="M669.1,257.8c-4.6-9.6,3.9-19.2,13.2-15.3c8.2-7.8,24.6,1.8,18.9,11.4c6,9.3-8.9,13.5-15.3,6.8
+	C678.3,267.4,671.2,263.5,669.1,257.8z"/>
+<circle class="st8" cx="698.3" cy="240.2" r="4.5"/>
+<text transform="matrix(1 0 0 1 654.0752 283.0644)" class="st2 st9 st10">Batch / time series</text>
+<path class="st11" d="M734.9,227.8h62.4c2.1,0,3.8,1.7,3.8,3.8v34.8c0,2.1-1.7,3.8-3.8,3.8h-62.4c-2.1,0-3.8-1.7-3.8-3.8v-34.8
+	C731.1,229.5,732.8,227.8,734.9,227.8z"/>
+<path class="st12" d="M740.9,237.6h48.8 M740.9,246.7h48.8 M740.9,255.8h48.8"/>
+<path class="st12" d="M753,232.7v32.1 M773.8,232.7v32.1"/>
+<rect x="740.9" y="232.7" class="st13" width="48.8" height="32.1"/>
+<text transform="matrix(1 0 0 1 747.624 282.1328)" class="st2 st9 st10">Metadata</text>
+<text transform="matrix(1 0 0 1 727.8633 290.6413)" class="st2 st9 st14">condition • time • path</text>
+<path id="project-workspace" class="st15" d="M595.8,301.2h205.9c4,0,7.2,3,7.2,6.8v35.5c0,3.8-3.2,6.8-7.2,6.8H595.8
+	c-4,0-7.2-3-7.2-6.8V308C588.6,304.3,591.8,301.2,595.8,301.2z"/>
+<g transform="translate(70 305) scale(0.55)">
+	<path class="st16" d="M954.4,22.4h14.4l4.5,4.7h22.4v23.4h-41.3V22.4z"/>
+	<path class="st17" d="M954.4,22.4h14.4l4.5,4.7h22.4v23.4h-41.3V22.4z"/>
+	<path class="st17" d="M956.2,29.4h37.7"/>
+</g>
+<text transform="matrix(1 0 0 1 627.2002 315.9802)" class="st2 st9 st18">Data Visualization</text>
+<circle class="st19" cx="629.1" cy="326.9" r="1.9"/>
+<text transform="matrix(1 0 0 1 634.7637 329.2165)" class="st2 st9 st10">Dataset index</text>
+<circle class="st19" cx="704.7" cy="326.9" r="1.9"/>
+<text transform="matrix(1 0 0 1 710.4004 329.2165)" class="st2 st9 st10">Image preview</text>
+<circle class="st19" cx="629.1" cy="339.4" r="1.9"/>
+<text transform="matrix(1 0 0 1 634.7637 341.696)" class="st2 st9 st10">Selected files</text>
+<circle class="st19" cx="704.7" cy="339.4" r="1.9"/>
+<text transform="matrix(1 0 0 1 710.4004 341.696)" class="st2 st9 st10">Experimental metadata</text>
+<g id="panel-B">
+	<path id="panel-B-background" class="st1" d="M829.9,199.9H1317c3.8,0,6.8,3,6.8,6.8v156.6c0,3.8-3,6.8-6.8,6.8H829.9
+		c-3.8,0-6.8-3-6.8-6.8V206.7C823.1,202.9,826.1,199.9,829.9,199.9z"/>
+	<text transform="matrix(1 0 0 1 829.9053 214.2487)" class="st2 st3 st4">B</text>
+	<text transform="matrix(1 0 0 1 845.0332 214.2487)" class="st2 st3 st6">Workflow selection and execution</text>
+	<path id="user-request" class="st15" d="M842.8,226.4h80.9c3.8,0,6.8,3,6.8,6.8v23.4c0,3.8-3,6.8-6.8,6.8h-80.9
+		c-3.8,0-6.8-3-6.8-6.8v-23.4C836,229.4,839,226.4,842.8,226.4z"/>
+	<text transform="matrix(1 0 0 1 865.3242 238.4529)" class="st2 st3 st10">Request</text>
+	<text transform="matrix(1 0 0 1 856.2324 249.0417)" class="st2 st9 st10">selected data</text>
+	<text transform="matrix(1 0 0 1 858.6348 258.1179)" class="st2 st9 st10">+ instruction</text>
+	<path class="st20" d=""/>
+	<path class="st21" d="M945.3,240.9l7.9,4l-7.9,4V240.9z"/>
+	<path id="request-to-bind" class="st21" d="M952.4,244.9"/>
+	<path id="data-binding" class="st22" d="M963,226.4h77.1c3.8,0,6.8,3,6.8,6.8v23.4c0,3.8-3,6.8-6.8,6.8H963c-3.8,0-6.8-3-6.8-6.8
+		v-23.4C956.2,229.4,959.3,226.4,963,226.4z"/>
+	<text transform="matrix(1 0 0 1 980.9258 238.4529)" class="st2 st3 st10">Bind data</text>
+	<text transform="matrix(1 0 0 1 968.3018 249.0417)" class="st2 st9 st10">dataset / images</text>
+	<text transform="matrix(1 0 0 1 971.0781 258.1179)" class="st2 st9 st10">condition / time</text>
+	<path class="st20" d=""/>
+	<path class="st21" d="M1061.8,240.9l7.9,4l-7.9,4V240.9z"/>
+	<path id="bind-to-parse" class="st21" d="M1068.9,244.9"/>
+	<path id="workflow-router" class="st22" d="M1079.5,226.4h88.5c3.8,0,6.8,3,6.8,6.8v23.4c0,3.8-3,6.8-6.8,6.8h-88.5
+		c-3.8,0-6.8-3-6.8-6.8v-23.4C1072.7,229.4,1075.7,226.4,1079.5,226.4z"/>
+	<text transform="matrix(1 0 0 1 1089.9688 238.4529)" class="st2 st3 st10">Route workflow</text>
+	<text transform="matrix(1 0 0 1 1086.6719 249.0417)" class="st2 st9 st10">AAPS morphology</text>
+	<text transform="matrix(1 0 0 1 1089.1982 258.1179)" class="st2 st9 st10">or viability runner</text>
+	<path class="st20" d=""/>
+	<path class="st21" d="M1189.6,240.9l7.9,4l-7.9,4V240.9z"/>
+	<path id="parse-to-plan" class="st21" d="M1196.7,244.9"/>
+	<path id="validated-plan" class="st23" d="M1207.3,226.4h94.2c3.8,0,6.8,3,6.8,6.8v23.4c0,3.8-3,6.8-6.8,6.8h-94.2
+		c-3.8,0-6.8-3-6.8-6.8v-23.4C1200.5,229.4,1203.6,226.4,1207.3,226.4z"/>
+	<text transform="matrix(1 0 0 1 1228.501 238.4529)" class="st2 st3 st10">Validate run</text>
+	<text transform="matrix(1 0 0 1 1224.8379 249.0417)" class="st2 st9 st10">tools + models</text>
+	<text transform="matrix(1 0 0 1 1224.2041 258.1179)" class="st2 st9 st10">output contract</text>
+	<path id="execution-policy" class="st23" d="M842.8,278.2h458.7c3.8,0,6.8,3,6.8,6.8v45c0,3.8-3,6.8-6.8,6.8H842.8
+		c-3.8,0-6.8-3-6.8-6.8v-45C836,281.2,839,278.2,842.8,278.2z"/>
+	<text transform="matrix(1 0 0 1 969.2334 290.6413)" class="st2 st9 st18">Execution policy and reproducibility controls</text>
+	<path id="policy-1" class="st15" d="M853.4,299.7h52.2c3.8,0,6.8,3,6.8,6.8v12.9c0,3.8-3,6.8-6.8,6.8h-52.2c-3.8,0-6.8-3-6.8-6.8
+		v-12.9C846.5,302.8,849.6,299.7,853.4,299.7z"/>
+	<text transform="matrix(1 0 0 1 858.2607 315.9802)" class="st2 st3 st14">Data scope</text>
+	<path id="policy-2" class="st15" d="M929.7,299.7h52.2c3.8,0,6.8,3,6.8,6.8v12.9c0,3.8-3,6.8-6.8,6.8h-52.2c-3.8,0-6.8-3-6.8-6.8
+		v-12.9C922.9,302.8,926,299.7,929.7,299.7z"/>
+	<text transform="matrix(1 0 0 1 930.0293 315.9802)" class="st2 st3 st14">Allowed tools</text>
+	<path id="policy-3" class="st15" d="M1006.1,299.7h52.2c3.8,0,6.8,3,6.8,6.8v12.9c0,3.8-3,6.8-6.8,6.8h-52.2c-3.8,0-6.8-3-6.8-6.8
+		v-12.9C999.3,302.8,1002.4,299.7,1006.1,299.7z"/>
+	<text transform="matrix(1 0 0 1 1005.54 315.9802)" class="st2 st3 st14">Model identity</text>
+	<path id="policy-4" class="st15" d="M1082.5,299.7h52.2c3.8,0,6.8,3,6.8,6.8v12.9c0,3.8-3,6.8-6.8,6.8h-52.2c-3.8,0-6.8-3-6.8-6.8
+		v-12.9C1075.7,302.8,1078.8,299.7,1082.5,299.7z"/>
+	<text transform="matrix(1 0 0 1 1082.1396 315.9802)" class="st2 st3 st14">Fallback rules</text>
+	<path id="policy-5" class="st15" d="M1158.9,299.7h52.2c3.8,0,6.8,3,6.8,6.8v12.9c0,3.8-3,6.8-6.8,6.8h-52.2c-3.8,0-6.8-3-6.8-6.8
+		v-12.9C1152.1,302.8,1155.2,299.7,1158.9,299.7z"/>
+	<text transform="matrix(1 0 0 1 1169.7939 315.9802)" class="st2 st3 st14">QC gate</text>
+	<path id="policy-6" class="st15" d="M1235.3,299.7h52.2c3.8,0,6.8,3,6.8,6.8v12.9c0,3.8-3,6.8-6.8,6.8h-52.2c-3.8,0-6.8-3-6.8-6.8
+		v-12.9C1228.5,302.8,1231.6,299.7,1235.3,299.7z"/>
+	<text transform="matrix(1 0 0 1 1234.4873 315.9802)" class="st2 st3 st14">Human review</text>
+	<text transform="matrix(1 0 0 1 908.2148 352.2859)" class="st2 st9 st10">Deterministic processing where possible; bounded and auditable agent decisions.</text>
+</g>
+<path class="st20" d=""/>
+<path id="A-to-B" class="st21" d="M823.1,284.6"/>
+<path id="panel-C-background" class="st1" d="M587.9,378.4h445.9c3.8,0,6.8,3,6.8,6.8v209.5c0,3.8-3,6.8-6.8,6.8H587.9
+	c-3.8,0-6.8-3-6.8-6.8V385.2C581.1,381.4,584.1,378.4,587.9,378.4z"/>
+<text transform="matrix(1 0 0 1 587.8691 392.7507)" class="st2 st3 st4">C</text>
+<text transform="matrix(1 0 0 1 602.9961 392.7507)" class="st2 st3 st6">Parallel analysis workflows</text>
+<path id="shared-input" class="st22" d="M595.1,472.1H657c4,0,7.2,3.5,7.2,7.9v27.9c0,4.3-3.2,7.9-7.2,7.9h-61.9
+	c-4,0-7.2-3.5-7.2-7.9v-27.9C587.9,475.6,591.1,472.1,595.1,472.1z"/>
+<text transform="matrix(1 0 0 1 601.082 485.9727)" class="st2 st3 st10">QC-passed</text>
+<text transform="matrix(1 0 0 1 591.2266 498.4527)" class="st2 st9 st10">bright-field image</text>
+<text transform="matrix(1 0 0 1 592.8574 506.3941)" class="st2 st9 st10">+ execution plan</text>
+<text transform="matrix(1 0 0 1 682.415 415.4421)" class="st2 st9 st18">I. Morphological Analysis — AAPS </text>
+<path class="st23" d="M690.7,421.5h315.8c4.6,0,8.3,3.7,8.3,8.3v48.4c0,4.6-3.7,8.3-8.3,8.3H690.7c-4.6,0-8.3-3.7-8.3-8.3v-48.4
+	C682.4,425.2,686.1,421.5,690.7,421.5z"/>
+<g id="morph-step-1">
+	<path id="morph-step-1-background" class="st15" d="M702.1,433.2h79c3.8,0,6.8,3,6.8,6.8v25.7c0,3.8-3,6.8-6.8,6.8h-79
+		c-3.8,0-6.8-3-6.8-6.8V440C695.3,436.3,698.3,433.2,702.1,433.2z"/>
+	<text transform="matrix(1 0 0 1 722.6855 444.9402)" class="st2 st3 st10">Cellpose</text>
+	<text transform="matrix(1 0 0 1 721.4238 455.1511)" class="st2 st9 st10">multiscale</text>
+	<text transform="matrix(1 0 0 1 714.3535 463.4714)" class="st2 st9 st10">segmentation</text>
+</g>
+<path class="st20" d=""/>
+<path class="st21" d="M789,447.1l9.3,4.6l-9.3,4.6V447.1z"/>
+<path class="st21" d="M797.4,451.7"/>
+<g id="morph-step-2">
+	<path id="morph-step-2-background" class="st15" d="M808,433.2h79c3.8,0,6.8,3,6.8,6.8v25.7c0,3.8-3,6.8-6.8,6.8h-79
+		c-3.8,0-6.8-3-6.8-6.8V440C801.2,436.3,804.2,433.2,808,433.2z"/>
+	<text transform="matrix(1 0 0 1 808.2627 444.9402)" class="st2 st3 st10">Recovery + merge</text>
+	<text transform="matrix(1 0 0 1 821.7598 455.1511)" class="st2 st9 st10">large objects</text>
+	<text transform="matrix(1 0 0 1 818.4844 463.4714)" class="st2 st9 st10">instance mask</text>
+</g>
+<path class="st20" d=""/>
+<path class="st21" d="M894.9,447.1l9.3,4.6l-9.3,4.6V447.1z"/>
+<path class="st21" d="M903.3,451.7"/>
+<g id="morph-step-3">
+	<path id="morph-step-3-background" class="st15" d="M913.9,433.2h79c3.8,0,6.8,3,6.8,6.8v25.7c0,3.8-3,6.8-6.8,6.8h-79
+		c-3.8,0-6.8-3-6.8-6.8V440C907.1,436.3,910.1,433.2,913.9,433.2z"/>
+	<text transform="matrix(1 0 0 1 910.0117 444.9402)" class="st2 st3 st10">Morphology metrics</text>
+	<text transform="matrix(1 0 0 1 918.9951 455.1511)" class="st2 st9 st10">area • roundness</text>
+	<text transform="matrix(1 0 0 1 918.7471 463.4714)" class="st2 st9 st10">darkness • fusion</text>
+</g>
+<text transform="matrix(1 0 0 1 682.415 506.5837)" class="st2 st9 st18">II. Viability Detection — deterministic inference runner</text>
+<path class="st23" d="M690.7,512.6h315.8c4.6,0,8.3,3.7,8.3,8.3v48.4c0,4.6-3.7,8.3-8.3,8.3H690.7c-4.6,0-8.3-3.7-8.3-8.3V521
+	C682.4,516.4,686.1,512.6,690.7,512.6z"/>
+<g id="viability-step-1">
+	<path id="viability-step-1-background" class="st15" d="M702.1,524.4h79c3.8,0,6.8,3,6.8,6.8v17.4c0,3.8-3,6.8-6.8,6.8h-79
+		c-3.8,0-6.8-3-6.8-6.8v-17.4C695.3,527.4,698.3,524.4,702.1,524.4z"/>
+	<text transform="matrix(1 0 0 1 702.7686 536.0818)" class="st2 st3 st10">YOLO localization</text>
+	<text transform="matrix(1 0 0 1 715.3594 546.2927)" class="st2 st9 st10">organoid box</text>
+</g>
+<path class="st20" d=""/>
+<path class="st21" d="M789,538.3l9.3,4.6l-9.3,4.6V538.3z"/>
+<path class="st21" d="M797.4,542.9"/>
+<g id="viability-step-2">
+	<path id="viability-step-2-background" class="st15" d="M808,524.4h79c3.8,0,6.8,3,6.8,6.8v25.7c0,3.8-3,6.8-6.8,6.8h-79
+		c-3.8,0-6.8-3-6.8-6.8v-25.7C801.2,527.4,804.2,524.4,808,524.4z"/>
+	<text transform="matrix(1 0 0 1 805.127 536.0818)" class="st2 st3 st10">SAM ROI extraction</text>
+	<text transform="matrix(1 0 0 1 817.9082 546.2927)" class="st2 st9 st10">mask • overlay</text>
+	<text transform="matrix(1 0 0 1 825.042 554.613)" class="st2 st9 st10">model crop</text>
+</g>
+<path class="st20" d=""/>
+<path class="st21" d="M894.9,538.3l9.3,4.6l-9.3,4.6V538.3z"/>
+<path class="st21" d="M903.3,542.9"/>
+<g id="viability-step-3">
+	<path id="viability-step-3-background" class="st15" d="M913.9,524.4h79c3.8,0,6.8,3,6.8,6.8v25.7c0,3.8-3,6.8-6.8,6.8h-79
+		c-3.8,0-6.8-3-6.8-6.8v-25.7C907.1,527.4,910.1,524.4,913.9,524.4z"/>
+	<text transform="matrix(1 0 0 1 914.623 536.0818)" class="st2 st3 st10">Viability inference</text>
+	<text transform="matrix(1 0 0 1 927.6504 546.2927)" class="st2 st9 st10">checkpoint-1</text>
+	<text transform="matrix(1 0 0 1 920.3408 554.613)" class="st2 st9 st10">ConvNeXt score</text>
+</g>
+<path class="st20" d=""/>
+<path class="st21" d="M670.1,456.1l9.3,4.6l-9.3,4.6V456.1z"/>
+<path class="st21" d="M687.7,451.7"/>
+<path class="st20" d=""/>
+<path class="st21" d="M670.1,539.4l9.3,4.6l-9.3,4.6V539.4z"/>
+<path class="st21" d="M687.7,542.9"/>
+<text transform="matrix(1 0 0 1 820.8896 590.9187)" class="st2 st3 st14">Both routes operate on bright-field input images</text>
+<path class="st20" d=""/>
+<path class="st21" d="M812.5,378.4"/>
+<path id="panel-D-background" class="st1" d="M1054.9,378.4H1317c3.8,0,6.8,3,6.8,6.8v209.5c0,3.8-3,6.8-6.8,6.8h-262.1
+	c-3.8,0-6.8-3-6.8-6.8V385.2C1048.1,381.4,1051.2,378.4,1054.9,378.4z"/>
+<text transform="matrix(1 0 0 1 1054.9238 392.7507)" class="st2 st3 st4">D</text>
+<text transform="matrix(1 0 0 1 1070.0508 392.7507)" class="st2 st3 st6">Results and review</text>
+<path id="evidence-package" class="st23" d="M1067,404.1h237.9c3.8,0,6.8,3,6.8,6.8v28.7c0,3.8-3,6.8-6.8,6.8H1067
+	c-3.8,0-6.8-3-6.8-6.8v-28.7C1060.2,407.1,1063.3,404.1,1067,404.1z"/>
+<text transform="matrix(1 0 0 1 1125.1406 418.4675)" class="st2 st9 st18">Unified evidence package</text>
+<text transform="matrix(1 0 0 1 1128.6201 431.3249)" class="st2 st9 st10">source • model • parameters</text>
+<text transform="matrix(1 0 0 1 1132.1426 440.78)" class="st2 st9 st10">outputs • QC • provenance</text>
+<g transform="translate(1310 700)">
+	<path class="st24" d="M-242-238.6h33.3c1,0,1.9,0.8,1.9,1.9v25c0,1-0.8,1.9-1.9,1.9H-242c-1,0-1.9-0.8-1.9-1.9v-25
+		C-243.9-237.7-243.1-238.6-242-238.6z"/>
+	<path class="st25" d="M-237.5-221.2c-4.2-6.4,0.4-14.4,7.9-12.5c6.1-4.9,14.7,0,12.5,7.2c4.9,7.2-4.5,13.6-11,9.5
+		C-233.3-212.1-240.1-215.5-237.5-221.2z"/>
+	<path class="st26" d="M-225-231c4.5-4.5,12.9-1.1,12.1,5.7c4.5,4.5,0,11.7-6.4,9.5c-4.9,3.8-10.6-1.1-8.7-6.4
+		C-231.1-226.5-229.2-229.5-225-231z"/>
+	<path class="st27" d="M-239-230.2c2.3-5.3,9.1-5.7,11.7-1.1c4.2,1.9,2.6,9.1-1.9,10.6c-3,4.2-10.6,0.8-9.5-4.5
+		C-242-226.8-241.7-229.1-239-230.2z"/>
+</g>
+<text transform="matrix(1 0 0 1 1070.9773 502.4233)" class="st2 st9 st10">Overlay</text>
+<g transform="translate(1460 708)">
+	<rect x="-345.8" y="-246.1" class="st28" width="30.8" height="26.6"/>
+	<path class="st29" d="M-342.4-242.7v19.7h24.8"/>
+	<path class="st30" d="M-342.4-223.9c8.6-3.9,11.6-13.7,23.1-17.6"/>
+</g>
+<text transform="matrix(1 0 0 1 1133.123 502.5233)" class="st2 st9 st10">Metrics</text>
+<path id="rank-card" class="st23" d="M1200.2,459.1h43.1c3.8,0,6.8,2.4,6.8,5.4v18c0,3-3,5.4-6.8,5.4h-43.1c-3.8,0-6.8-2.4-6.8-5.4
+	v-18C1193.4,461.5,1196.5,459.1,1200.2,459.1z"/>
+<text transform="matrix(1 0 0 1 1207.0564 469.6359)" class="st2 st3 st14">Viability</text>
+<text transform="matrix(1 0 0 1 1197.7415 482.0243)" class="st2 st9 st10">score + rank</text>
+<text transform="matrix(1 0 0 1 1202.0103 502.4232)" class="st2 st9 st10">Prediction</text>
+<g transform="translate(1840 692)">
+	<path class="st31" d="M-572.1-242h21.2c1.5,0,2.6,1.2,2.6,2.6v32.5c0,1.5-1.2,2.6-2.6,2.6h-21.2c-1.5,0-2.6-1.2-2.6-2.6v-32.5
+		C-574.8-240.8-573.6-242-572.1-242z"/>
+	<path class="st32" d="M-577-237.4h21.2c1.5,0,2.6,1.2,2.6,2.6v32.5c0,1.5-1.2,2.6-2.6,2.6H-577c-1.5,0-2.6-1.2-2.6-2.6v-32.5
+		C-579.7-236.2-578.5-237.4-577-237.4z"/>
+	<path class="st33" d="M-574.8-229.1h16.3 M-574.8-223.8h16.3 M-574.8-218.5h11.3"/>
+	<path class="st34" d="M-574.8-207.5l4.9-4.9l4.2,2.3l7.2-6.1"/>
+</g>
+<text transform="matrix(1 0 0 1 1260.3035 502.5237)" class="st2 st9 st10">Report</text>
+<path id="results-workstation" class="st15" d="M1068.9,512.6H1216c3.8,0,6.8,3,6.8,6.8v45c0,3.8-3,6.8-6.8,6.8h-147.1
+	c-3.8,0-6.8-3-6.8-6.8v-45C1062.1,515.7,1065.2,512.6,1068.9,512.6z"/>
+<text transform="matrix(1 0 0 1 1094.2961 526.6277)" class="st2 st9 st18">Results Visualization</text>
+<text transform="matrix(1 0 0 1 1084.0117 537.2166)" class="st2 st9 st10">inspect image-level evidence</text>
+<text transform="matrix(1 0 0 1 1070.8936 546.2927)" class="st2 st9 st10">compare conditions and time points</text>
+<text transform="matrix(1 0 0 1 1074.1885 555.3699)" class="st2 st9 st10">export SVG / CSV / JSON / report</text>
+<path id="human-review" class="st23" d="M1239.9,512.6h62c3.8,0,6.8,3,6.8,6.8v45c0,3.8-3,6.8-6.8,6.8h-62c-3.8,0-6.8-3-6.8-6.8v-45
+	C1233,515.7,1236.1,512.6,1239.9,512.6z"/>
+<text transform="matrix(1 0 0 1 1240.0957 526.6277)" class="st2 st3 st10">Human review</text>
+<text transform="matrix(1 0 0 1 1257.4951 538.7292)" class="st2 st9 st10">accept</text>
+<text transform="matrix(1 0 0 1 1240.0889 547.8054)" class="st2 st9 st10">flag uncertainty</text>
+<text transform="matrix(1 0 0 1 1239.8477 556.8816)" class="st2 st9 st10">revise workflow</text>
+<path class="st20" d=""/>
+<path class="st21" d="M1222.1,538.2l7.9,4l-7.9,4V538.2z"/>
+<path class="st21" d="M1229.3,542.1"/>
+<path class="st35" d="M1270.9,512.6V507h44.6V393.5h-9.5"/>
+<text transform="matrix(1 0 0 1 1275.998 401.0712)" class="st2 st9 st14">feedback</text>
+<path class="st20" d=""/>
+<path id="C-to-D" class="st21" d="M1048.1,489.9"/>
+<g transform="translate(1470 905)">
+	<rect x="-317.5" y="-443.1" class="st36" width="30.8" height="26.5"/>
+	<path class="st29" d="M-314.1-439.6v19.7h24.8"/>
+	<path class="st37" d="M-314.1-420.8l7.7-7.7l6.8,3.4l8.6-12.4"/>
+</g>
+</svg>

@@ -1,171 +1,389 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="940" viewBox="0 0 1800 940">
-    <title>Fully editable AAPS structured analytical workflow</title>
-    <desc>Native vector reconstruction. Every panel, label, box, connector, port, and icon is editable.</desc>
-    <defs>
-      <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#47798a"/></marker>
-      <style>
-        text { font-family: Arial, Helvetica, sans-serif; fill:#17252b; }
-        .panel { fill:#eef8fb; stroke:#9bbdca; stroke-width:3; }
-        .panel-label { font-size:32px; font-weight:700; } .panel-title { font-size:28px; font-weight:500; }
-        .body { font-size:22px; } .small { font-size:18px; } .small-bold { font-size:18px; font-weight:700; }
-        .tiny { font-size:14px; } .tiny-bold { font-size:15px; font-weight:700; } .italic { font-size:19px; font-style:italic; }
-        .node { fill:#f9fdfe; stroke:#47798a; stroke-width:3; } .soft-node { fill:#d9eef3; stroke:#78a9b8; stroke-width:2.5; }
-        .block { fill:#f8fcfd; stroke:#47798a; stroke-width:3; } .block-divider { stroke:#47798a; stroke-width:2.5; } .block-title { font-size:20px; font-weight:700; }
-        .arrow { fill:none; stroke:#47798a; stroke-width:3; marker-end:url(#arrowhead); } .line { fill:none; stroke:#47798a; stroke-width:3; }
-        .dash { fill:none; stroke:#47798a; stroke-width:2.5; stroke-dasharray:7 6; } .port { fill:#4197ad; stroke:#2f6573; stroke-width:1.5; }
-        .folder-fill { fill:#52a9b5; } .icon-fill { fill:#f8fcfd; stroke:#47798a; stroke-width:3; } .icon-line { fill:none; stroke:#47798a; stroke-width:3; }
-        .paper-back { fill:#dbe9ed; stroke:#7da5b2; stroke-width:2; } .paper-mid { fill:#e8f2f4; stroke:#648e9b; stroke-width:2; } .paper-front { fill:#f8fcfd; stroke:#47798a; stroke-width:2.5; }
-        .chart-bg { fill:#f8fcfd; stroke:#7da5b2; stroke-width:2; } .chart-axis { fill:none; stroke:#6c8790; stroke-width:2; }
-      </style>
-    </defs><rect width="100%" height="100%" fill="white"/>
-<g id="panel-A"><rect id="panel-A-background" x="12" y="12" width="530" height="470" rx="18" class="panel"/><text x="30" y="50" class="panel-label" text-anchor="start" >A</text><text x="70" y="50" class="panel-title" text-anchor="start" >Project-aware AAPS workspace</text>
-<rect id="project-folder-box" x="38" y="78" width="300" height="92" rx="18" class="node"/>
-<g class="icon" transform="translate(53 88) scale(0.55)">
-      <path d="M0 14 H32 L42 24 H92 V74 H0 Z" class="folder-fill"/>
-      <path d="M0 14 H32 L42 24 H92 V74 H0 Z" class="icon-line"/>
-      <path d="M4 29 H88" class="icon-line"/>
-    </g>
-<text x="122" y="112" class="body" text-anchor="start"><tspan x="122" dy="0">DEO organoid</tspan><tspan x="122" dy="25">analysis project</tspan></text>
-<rect x="51" y="205" width="23" height="22" rx="3" fill="#50a8b5" stroke="#47798a" stroke-width="2"/>
-<text x="84" y="222" class="body" text-anchor="start" >Data</text>
-<rect x="51" y="248" width="23" height="22" rx="3" fill="#d8a945" stroke="#47798a" stroke-width="2"/>
-<text x="84" y="265" class="body" text-anchor="start" >Artifacts</text>
-<rect x="51" y="291" width="23" height="22" rx="3" fill="#9bbdca" stroke="#47798a" stroke-width="2"/>
-<text x="84" y="308" class="body" text-anchor="start" >Run log</text>
-<rect x="51" y="334" width="23" height="22" rx="3" fill="#9bbdca" stroke="#47798a" stroke-width="2"/>
-<text x="84" y="351" class="body" text-anchor="start" >Report</text>
-<text x="350" y="197" class="small" text-anchor="start" >Project context</text>
-<rect id="workflow-1" x="224" y="224" width="270" height="43" rx="18" class="node"/>
-<text x="359" y="252" class="small" text-anchor="middle" >dataset_registration.aaps</text>
-<rect id="workflow-2" x="231" y="261" width="270" height="43" rx="18" class="node"/>
-<text x="366" y="289" class="small" text-anchor="middle" >image_qc.aaps</text>
-<rect id="workflow-3" x="238" y="298" width="270" height="43" rx="18" class="node"/>
-<text x="373" y="326" class="small" text-anchor="middle" >segmentation_routing.aaps</text>
-<rect id="workflow-4" x="245" y="335" width="270" height="43" rx="18" class="node"/>
-<text x="380" y="363" class="small" text-anchor="middle" >metric_quantification.aaps</text>
-<rect id="workflow-5" x="252" y="372" width="270" height="43" rx="18" class="node"/>
-<text x="387" y="400" class="small" text-anchor="middle" >report_generation.aaps</text>
-<text x="279" y="450" class="body" text-anchor="middle" >Many .aaps workflows</text>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1800 940" style="enable-background:new 0 0 1800 940;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#EEF8FB;stroke:#9BBDCA;stroke-width:3;}
+	.st3{fill:#17252B;}
+	.st4{font-family:'Arial-BoldMT';}
+	.st5{font-size:12.6356px;}
+	.st6{font-family:'ArialMT';}
+	.st7{font-size:11.0562px;}
+	.st8{fill:#F9FDFE;stroke:#47798A;stroke-width:3;}
+	.st9{fill:#52A9B5;}
+	.st10{fill:none;stroke:#47798A;stroke-width:1.65;stroke-miterlimit:2.2;}
+	.st11{font-size:8.687px;}
+	.st12{fill:#50A8B5;stroke:#47798A;stroke-width:2;}
+	.st13{fill:#D8A945;stroke:#47798A;stroke-width:2;}
+	.st14{fill:#9BBDCA;stroke:#47798A;stroke-width:2;}
+	.st15{font-size:7.1075px;}
+	.st16{font-family:'Arial-ItalicMT';}
+	.st17{font-size:7.5024px;}
+	.st18{fill:#D9EEF3;stroke:#78A9B8;stroke-width:2.5;}
+	.st19{enable-background:new    ;}
+	.st20{font-family:'AdobeSongStd-Light-GBpc-EUC-H';}
+	.st21{fill:none;stroke:#47798A;stroke-width:3;}
+	.st22{fill:#F8FCFD;stroke:#47798A;stroke-width:3;}
+	.st23{stroke:#47798A;stroke-width:2.5;}
+	.st24{font-size:7.8973px;}
+	.st25{fill:#4197AD;stroke:#2F6573;stroke-width:1.5;}
+	.st26{fill:#47798A;}
+	.st27{font-size:5.9229px;}
+	.st28{font-size:5.5281px;}
+	.st29{fill:none;stroke:#47798A;stroke-width:2.5;stroke-dasharray:7,6;}
+	.st30{fill:#DBE9ED;stroke:#7DA5B2;stroke-width:2;}
+	.st31{fill:#E8F2F4;stroke:#648E9B;stroke-width:2;}
+	.st32{fill:#F8FCFD;stroke:#47798A;stroke-width:2.5;}
+	.st33{opacity:0.55;}
+	.st34{fill:#D6DDE0;stroke:#526B73;stroke-width:2;}
+	.st35{fill:#87969B;}
+	.st36{fill:#AAB5B9;}
+	.st37{opacity:0.72;}
+	.st38{fill:#D8F2F1;stroke:#47798A;stroke-width:3;}
+	.st39{fill:none;stroke:#47798A;stroke-width:4;}
+	.st40{fill:#101820;}
+	.st41{fill:#26A6B7;stroke:#254F5F;stroke-width:2;}
+	.st42{fill:#61BE76;stroke:#254F5F;stroke-width:2;}
+	.st43{fill:#844CC1;stroke:#254F5F;stroke-width:2;}
+	.st44{fill:#39A9BC;stroke:#254F5F;stroke-width:2;}
+	.st45{fill:#73BF68;stroke:#254F5F;stroke-width:2;}
+	.st46{fill:#9650B8;stroke:#254F5F;stroke-width:2;}
+	.st47{fill:#F8FCFD;stroke:#7DA5B2;stroke-width:2;}
+	.st48{fill:none;stroke:#6C8790;stroke-width:2;}
+	.st49{fill:none;stroke:#63B7C7;stroke-width:5;}
+	.st50{fill:none;stroke:#58A8C8;stroke-width:5;}
+	.st51{fill:#D6EEF2;}
+	.st52{fill:#E8B04E;}
+	.st53{fill:#70B68B;}
+	.st54{fill:none;stroke:#4BA4B8;stroke-width:3;}
+</style>
+<desc>Native vector reconstruction. Every panel, label, box, connector, port, and icon is editable.</desc>
+<path class="st0" d=""/>
+<path class="st0" d=""/>
+<path class="st0" d=""/>
+<g id="panel-D">
+	<rect x="590.1" y="73.7" class="st1" width="710.8" height="371.2"/>
+	<g id="panel-A">
+		<path id="panel-A-background" class="st2" d="M602,78.5h195.1c3.9,0,7.1,3.2,7.1,7.1V257c0,3.9-3.2,7.1-7.1,7.1H602
+			c-3.9,0-7.1-3.2-7.1-7.1V85.6C594.9,81.7,598.1,78.5,602,78.5z"/>
+		<text transform="matrix(1 0 0 1 601.9933 93.488)" class="st3 st4 st5">A</text>
+		<text transform="matrix(1 0 0 1 617.7882 93.488)" class="st3 st6 st7">Project-aware AAPS workspace</text>
+		<path id="project-folder-box" class="st8" d="M612.3,104.5h104.2c3.9,0,7.1,3.2,7.1,7.1v22.1c0,3.9-3.2,7.1-7.1,7.1H612.3
+			c-3.9,0-7.1-3.2-7.1-7.1v-22.1C605.2,107.7,608.3,104.5,612.3,104.5z"/>
+		<g transform="translate(53 88) scale(0.55)">
+			<path class="st9" d="M1014.7,42.8h12.6l3.9,3.9h19.7v19.7h-36.3V42.8z"/>
+			<path class="st10" d="M1014.7,42.8h12.6l3.9,3.9h19.7v19.7h-36.3V42.8z"/>
+			<path class="st10" d="M1016.3,48.7h33.2"/>
+		</g>
+		<text transform="matrix(1 0 0 1 638.3214 117.9694)" class="st3 st6 st11">DEO organoid</text>
+		<text transform="matrix(1 0 0 1 638.3214 127.8415)" class="st3 st6 st11">analysis project</text>
+		<path class="st12" d="M611.5,154.7h6.7c0.7,0,1.2,0.5,1.2,1.2v6.3c0,0.7-0.5,1.2-1.2,1.2h-6.7c-0.7,0-1.2-0.5-1.2-1.2v-6.3
+			C610.3,155.2,610.8,154.7,611.5,154.7z"/>
+		<text transform="matrix(1 0 0 1 623.3156 161.405)" class="st3 st6 st11">Data</text>
+		<path class="st13" d="M611.5,171.7h6.7c0.7,0,1.2,0.5,1.2,1.2v6.3c0,0.7-0.5,1.2-1.2,1.2h-6.7c-0.7,0-1.2-0.5-1.2-1.2v-6.3
+			C610.3,172.2,610.8,171.7,611.5,171.7z"/>
+		<text transform="matrix(1 0 0 1 623.3156 178.3835)" class="st3 st6 st11">Artifacts</text>
+		<path class="st14" d="M611.5,188.7h6.7c0.7,0,1.2,0.5,1.2,1.2v6.3c0,0.7-0.5,1.2-1.2,1.2h-6.7c-0.7,0-1.2-0.5-1.2-1.2v-6.3
+			C610.3,189.2,610.8,188.7,611.5,188.7z"/>
+		<text transform="matrix(1 0 0 1 623.3156 195.364)" class="st3 st6 st11">Run log</text>
+		<path class="st14" d="M611.5,205.6h6.7c0.7,0,1.2,0.5,1.2,1.2v6.3c0,0.7-0.5,1.2-1.2,1.2h-6.7c-0.7,0-1.2-0.5-1.2-1.2v-6.3
+			C610.3,206.2,610.8,205.6,611.5,205.6z"/>
+		<text transform="matrix(1 0 0 1 623.3156 212.3415)" class="st3 st6 st11">Report</text>
+		<text transform="matrix(1 0 0 1 728.3497 151.5329)" class="st3 st6 st15">Project context</text>
+		<path id="workflow-1" class="st8" d="M685.7,162.2h92.4c3.9,0,7.1,3.2,7.1,7.1v2.8c0,3.9-3.2,7.1-7.1,7.1h-92.4
+			c-3.9,0-7.1-3.2-7.1-7.1v-2.8C678.6,165.4,681.8,162.2,685.7,162.2z"/>
+		<text transform="matrix(1 0 0 1 691.9962 173.2507)" class="st3 st6 st15">dataset_registration.aaps</text>
+		<path id="workflow-2" class="st8" d="M688.5,176.8h92.4c3.9,0,7.1,3.2,7.1,7.1v2.8c0,3.9-3.2,7.1-7.1,7.1h-92.4
+			c-3.9,0-7.1-3.2-7.1-7.1v-2.8C681.4,180,684.5,176.8,688.5,176.8z"/>
+		<text transform="matrix(1 0 0 1 710.5656 187.86)" class="st3 st6 st15">image_qc.aaps</text>
+		<path id="workflow-3" class="st8" d="M691.2,191.4h92.4c3.9,0,7.1,3.2,7.1,7.1v2.8c0,3.9-3.2,7.1-7.1,7.1h-92.4
+			c-3.9,0-7.1-3.2-7.1-7.1v-2.8C684.1,194.6,687.3,191.4,691.2,191.4z"/>
+		<text transform="matrix(1 0 0 1 694.5597 202.4704)" class="st3 st6 st15">segmentation_routing.aaps</text>
+		<path id="workflow-4" class="st8" d="M694,206h92.4c3.9,0,7.1,3.2,7.1,7.1v2.8c0,3.9-3.2,7.1-7.1,7.1H694c-3.9,0-7.1-3.2-7.1-7.1
+			v-2.8C686.9,209.2,690.1,206,694,206z"/>
+		<text transform="matrix(1 0 0 1 698.9093 217.0807)" class="st3 st6 st15">metric_quantification.aaps</text>
+		<path id="workflow-5" class="st8" d="M696.8,220.6h92.4c3.9,0,7.1,3.2,7.1,7.1v2.8c0,3.9-3.2,7.1-7.1,7.1h-92.4
+			c-3.9,0-7.1-3.2-7.1-7.1v-2.8C689.7,223.8,692.8,220.6,696.8,220.6z"/>
+		<text transform="matrix(1 0 0 1 706.2111 231.6901)" class="st3 st6 st15">report_generation.aaps</text>
+		<text transform="matrix(1 0 0 1 657.588 251.4343)" class="st3 st6 st11">Many .aaps workflows</text>
+	</g>
+	<g id="panel-B">
+		<path id="panel-B-background" class="st2" d="M817.6,78.5h234.5c3.9,0,7.1,3.2,7.1,7.1V257c0,3.9-3.2,7.1-7.1,7.1H817.6
+			c-3.9,0-7.1-3.2-7.1-7.1V85.6C810.5,81.7,813.7,78.5,817.6,78.5z"/>
+		<text transform="matrix(1 0 0 1 817.589 93.488)" class="st3 st4 st5">B</text>
+		<text transform="matrix(1 0 0 1 833.3839 93.488)" class="st3 st6 st7">Top-down GUI program design</text>
+		<text transform="matrix(1 0 0 1 987.0743 105.7292)" class="st3 st16 st17">Top-down program</text>
+		<text transform="matrix(1 0 0 1 819.1691 117.9694)" class="st3 st6 st11">1. Register raw images and metadata</text>
+		<text transform="matrix(1 0 0 1 819.1691 132.1843)" class="st3 st6 st11">2. Inspect image quality and experimental context</text>
+		<text transform="matrix(1 0 0 1 819.1691 146.4001)" class="st3 st6 st11">3. Route segmentation method</text>
+		<path id="loop-node" class="st18" d="M865.8,156.7h155.6c3.9,0,7.1,3.2,7.1,7.1v5.5c0,3.9-3.2,7.1-7.1,7.1H865.8
+			c-3.9,0-7.1-3.2-7.1-7.1v-5.5C858.7,159.8,861.8,156.7,865.8,156.7z"/>
+		<text transform="matrix(1 0 0 1 878.4611 169.3015)" class="st19"><tspan x="0" y="0" class="st3 st20 st15">↻</tspan><tspan x="7.1" y="0" class="st3 st6 st15"> for each image QC and method routing</tspan></text>
+		<path class="st21" d="M866.6,176.4v35.5h13.8"/>
+		<path id="low-confidence-node" class="st18" d="M887.5,183.5h147.7c3.9,0,7.1,3.2,7.1,7.1v7.1c0,3.9-3.2,7.1-7.1,7.1H887.5
+			c-3.9,0-7.1-3.2-7.1-7.1v-7.1C880.4,186.7,883.6,183.5,887.5,183.5z"/>
+		<text transform="matrix(1 0 0 1 887.9415 196.9431)" class="st19"><tspan x="0" y="0" class="st3 st20 st15">⚡</tspan><tspan x="7.1" y="0" class="st3 st6 st15"> low confidence → human review / correction</tspan></text>
+		<path id="route-node" class="st18" d="M887.5,208.8h147.7c3.9,0,7.1,3.2,7.1,7.1v10.3c0,3.9-3.2,7.1-7.1,7.1H887.5
+			c-3.9,0-7.1-3.2-7.1-7.1v-10.3C880.4,212,883.6,208.8,887.5,208.8z"/>
+		<text transform="matrix(1 0 0 1 882.6036 219.4499)" class="st19"><tspan x="0" y="0" class="st3 st20 st15">⚡</tspan><tspan x="7.1" y="0" class="st3 st6 st15"> route: Cellpose / thresholding / signal recovery /</tspan></text>
+		<text transform="matrix(1 0 0 1 921.8136 228.1364)" class="st3 st6 st15">prompt-guided correction</text>
+		<text transform="matrix(1 0 0 1 819.1691 237.2184)" class="st3 st6 st11">4. Verify mask and overlay</text>
+		<text transform="matrix(1 0 0 1 819.1691 248.6696)" class="st3 st6 st11">5. Quantify growth, differentiation, and fusion metrics</text>
+		<text transform="matrix(1 0 0 1 819.1691 260.1208)" class="st3 st6 st11">6. Summarize biological conclusions</text>
+	</g>
+	<g id="panel-C">
+		<path id="panel-C-background" class="st2" d="M1072.7,78.5h216.4c3.9,0,7.1,3.2,7.1,7.1V257c0,3.9-3.2,7.1-7.1,7.1h-216.4
+			c-3.9,0-7.1-3.2-7.1-7.1V85.6C1065.6,81.7,1068.7,78.5,1072.7,78.5z"/>
+		<text transform="matrix(1 0 0 1 1072.671 93.488)" class="st3 st4 st5">C</text>
+		<text transform="matrix(1 0 0 1 1088.465 93.488)" class="st3 st6 st7">Reusable blocks and skills</text>
+		<g id="block-image-qc">
+			<path id="block-image-qc-background" class="st22" d="M1083.7,106.1h82.5c3.9,0,7.1,3.2,7.1,7.1v43c0,3.9-3.2,7.1-7.1,7.1h-82.5
+				c-3.9,0-7.1-3.2-7.1-7.1v-43C1076.6,109.3,1079.8,106.1,1083.7,106.1z"/>
+			<path class="st23" d="M1076.6,121.1h96.7"/>
+			<text transform="matrix(1 0 0 1 1106.7736 116.7849)" class="st3 st4 st24">image_qc</text>
+			<circle class="st25" cx="1076.6" cy="128.6" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1082.9366 130.9997)" class="st3 st6 st15">image</text>
+			<circle class="st25" cx="1173.4" cy="128.6" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1137.0167 130.9997)" class="st3 st6 st15">qc_report</text>
+			<circle class="st25" cx="1076.6" cy="139.3" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1082.9366 141.6618)" class="st3 st6 st15">metadata</text>
+			<circle class="st25" cx="1173.4" cy="139.3" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1142.5519 141.6618)" class="st3 st6 st15">preview</text>
+		</g>
+		<g id="block-segment">
+			<path id="block-segment-background" class="st22" d="M1195.5,106.1h82.5c3.9,0,7.1,3.2,7.1,7.1v43c0,3.9-3.2,7.1-7.1,7.1h-82.5
+				c-3.9,0-7.1-3.2-7.1-7.1v-43C1188.4,109.3,1191.5,106.1,1195.5,106.1z"/>
+			<path class="st23" d="M1188.4,121.1h96.7"/>
+			<text transform="matrix(1 0 0 1 1201.4122 116.7849)" class="st3 st4 st24">segment_organoid</text>
+			<circle class="st25" cx="1188.4" cy="128.6" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1194.6837 130.9997)" class="st3 st6 st15">image</text>
+			<circle class="st25" cx="1285.1" cy="128.6" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1261.8077 130.9997)" class="st3 st6 st15">mask</text>
+			<circle class="st25" cx="1188.4" cy="139.3" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1194.6837 141.6618)" class="st3 st6 st15">qc_report</text>
+			<circle class="st25" cx="1285.1" cy="139.3" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1255.8771 141.6618)" class="st3 st6 st15">overlay</text>
+			<circle class="st25" cx="1285.1" cy="150" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1248.7628 152.3229)" class="st3 st6 st15">instances</text>
+		</g>
+		<g id="block-metrics">
+			<path id="block-metrics-background" class="st22" d="M1083.7,178.4h82.5c3.9,0,7.1,3.2,7.1,7.1v43c0,3.9-3.2,7.1-7.1,7.1h-82.5
+				c-3.9,0-7.1-3.2-7.1-7.1v-43C1076.6,181.6,1079.8,178.4,1083.7,178.4z"/>
+			<path class="st23" d="M1076.6,193.4h96.7"/>
+			<text transform="matrix(1 0 0 1 1093.3917 189.0446)" class="st3 st4 st24">quantify_metrics</text>
+			<circle class="st25" cx="1076.6" cy="200.9" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1082.9366 203.2604)" class="st3 st6 st15">mask</text>
+			<circle class="st25" cx="1173.4" cy="200.9" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1152.8175 203.2604)" class="st3 st6 st15">area</text>
+			<circle class="st25" cx="1076.6" cy="211.6" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1082.9366 213.9225)" class="st3 st6 st15">image</text>
+			<circle class="st25" cx="1173.4" cy="211.6" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1121.6036 213.9225)" class="st3 st6 st15">darkness_P90</text>
+			<circle class="st25" cx="1173.4" cy="222.2" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1126.7452 224.5837)" class="st3 st6 st15">fusion_score</text>
+		</g>
+		<g id="block-review">
+			<path id="block-review-background" class="st22" d="M1195.5,178.4h82.5c3.9,0,7.1,3.2,7.1,7.1v43c0,3.9-3.2,7.1-7.1,7.1h-82.5
+				c-3.9,0-7.1-3.2-7.1-7.1v-43C1188.4,181.6,1191.5,178.4,1195.5,178.4z"/>
+			<path class="st23" d="M1188.4,193.4h96.7"/>
+			<text transform="matrix(1 0 0 1 1208.4171 189.0446)" class="st3 st4 st24">review_overlay</text>
+			<circle class="st25" cx="1188.4" cy="200.9" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1194.6837 203.2604)" class="st3 st6 st15">overlay</text>
+			<circle class="st25" cx="1285.1" cy="200.9" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1251.5255 203.2604)" class="st3 st6 st15">approval</text>
+			<circle class="st25" cx="1188.4" cy="211.6" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1194.6837 213.9225)" class="st3 st6 st15">confidence</text>
+			<circle class="st25" cx="1285.1" cy="211.6" r="2.4"/>
+			<text transform="matrix(1 0 0 1 1247.5822 213.9225)" class="st3 st6 st15">correction</text>
+		</g>
+		<text transform="matrix(1 0 0 1 1103.7218 247.8796)" class="st3 st6 st11">Block contract = inputs + outputs + tools</text>
+		<text transform="matrix(1 0 0 1 1122.7921 259.3307)" class="st3 st6 st11">+ agent + validation + artifacts</text>
+	</g>
+	<path class="st26" d="M803,162.4l8.3,4.1l-8.3,4.1V162.4z"/>
+	<path id="A-to-B" class="st26" d="M810.5,166.5"/>
+	<path class="st26" d="M1058.1,162.4l8.3,4.1l-8.3,4.1V162.4z"/>
+	<path id="B-to-C" class="st26" d="M1065.6,166.5"/>
+	<path id="panel-D-background" class="st2" d="M602,271.2h386.6c3.9,0,7.1,3.2,7.1,7.1v153.6c0,3.9-3.2,7.1-7.1,7.1H602
+		c-3.9,0-7.1-3.2-7.1-7.1V278.3C594.9,274.4,598.1,271.2,602,271.2z"/>
+	<text transform="matrix(1 0 0 1 601.9933 286.1813)" class="st3 st4 st5">D</text>
+	<path class="st0" d=""/>
+	<g transform="translate(45 620)">
+		<path class="st22" d="M562.9-301.4h19l7.9,7.9v26.9h-26.9V-301.4z"/>
+		<path class="st21" d="M581.9-301.4v7.9h7.9"/>
+		<text transform="matrix(1 0 0 1 568.7687 -282.4857)" class="st3 st4 st27">.aaps</text>
+		<text transform="matrix(1 0 0 1 569.7384 -274.5882)" class="st3 st6 st28">script</text>
+	</g>
+	<text transform="matrix(1 0 0 1 607.9103 359.6252)" class="st3 st6 st15">example</text>
+	<text transform="matrix(1 0 0 1 613.6359 368.3137)" class="st3 st6 st15">code</text>
+	<path class="st29" d="M675.8,294.9h16.6c2.6,0,4.7,2.1,4.7,4.7v12.6c0,2.6-2.1,4.7-4.7,4.7h-16.6c-2.6,0-4.7-2.1-4.7-4.7v-12.6
+		C671.1,297,673.2,294.9,675.8,294.9z"/>
+	<path class="st26" d="M721.7,301.8l8.3,4.1l-8.3,4.1V301.8z"/>
+	<path class="st26" d="M729.1,305.9"/>
+	<g transform="translate(367 543)">
+		<path class="st30" d="M378.7-254.8h14.2c2,0,3.6,1.6,3.6,3.6v19c0,2-1.6,3.6-3.6,3.6h-14.2c-2,0-3.6-1.6-3.6-3.6v-19
+			C375.2-253.3,376.8-254.8,378.7-254.8z"/>
+		<path class="st31" d="M375.2-251.7h14.2c2,0,3.6,1.6,3.6,3.6v19c0,2-1.6,3.6-3.6,3.6h-14.2c-2,0-3.6-1.6-3.6-3.6v-19
+			C371.6-250.1,373.2-251.7,375.2-251.7z"/>
+		<path class="st32" d="M371.6-248.5h14.2c2,0,3.6,1.6,3.6,3.6v19c0,2-1.6,3.6-3.6,3.6h-14.2c-2,0-3.6-1.6-3.6-3.6v-19
+			C368.1-246.9,369.7-248.5,371.6-248.5z"/>
+		<path class="st21" d="M372.8-241.4h11.8 M372.8-236.7h11.8 M372.8-231.9h9.5"/>
+	</g>
+	<path class="st26" d="M786,301.8l8.3,4.1l-8.3,4.1V301.8z"/>
+	<path class="st26" d="M793.5,305.9"/>
+	<path id="compiler-icon" class="st8" d="M805.7,292.1h15.8c3.9,0,7.1,3.2,7.1,7.1v13.4c0,3.9-3.2,7.1-7.1,7.1h-15.8
+		c-3.9,0-7.1-3.2-7.1-7.1v-13.4C798.6,295.3,801.8,292.1,805.7,292.1z"/>
+	<path class="st26" d="M859.1,301.8l8.3,4.1l-8.3,4.1V301.8z"/>
+	<path class="st26" d="M866.6,305.9"/>
+	<g transform="translate(716 543)">
+		<path class="st30" d="M167.5-254.8h14.2c2,0,3.6,1.6,3.6,3.6v19c0,2-1.6,3.6-3.6,3.6h-14.2c-2,0-3.6-1.6-3.6-3.6v-19
+			C164-253.3,165.6-254.8,167.5-254.8z"/>
+		<path class="st31" d="M164-251.7h14.2c2,0,3.6,1.6,3.6,3.6v19c0,2-1.6,3.6-3.6,3.6H164c-2,0-3.6-1.6-3.6-3.6v-19
+			C160.4-250.1,162-251.7,164-251.7z"/>
+		<path class="st32" d="M160.4-248.5h14.2c2,0,3.6,1.6,3.6,3.6v19c0,2-1.6,3.6-3.6,3.6h-14.2c-2,0-3.6-1.6-3.6-3.6v-19
+			C156.9-246.9,158.5-248.5,160.4-248.5z"/>
+		<path class="st21" d="M161.6-241.4h11.8 M161.6-236.7h11.8 M161.6-231.9h9.5"/>
+	</g>
+	<path id="execution-plan" class="st18" d="M917.1,334.4h43c3.9,0,7.1,3.2,7.1,7.1v8.7c0,3.9-3.2,7.1-7.1,7.1h-43
+		c-3.9,0-7.1-3.2-7.1-7.1v-8.7C910,337.5,913.2,334.4,917.1,334.4z"/>
+	<text transform="matrix(1 0 0 1 923.2052 344.2272)" class="st3 st6 st15">execution</text>
+	<text transform="matrix(1 0 0 1 931.6984 352.9138)" class="st3 st6 st15">plan</text>
+	<path id="parser" class="st18" d="M678.2,334.4h43c3.9,0,7.1,3.2,7.1,7.1v8.7c0,3.9-3.2,7.1-7.1,7.1h-43c-3.9,0-7.1-3.2-7.1-7.1
+		v-8.7C671.1,337.5,674.3,334.4,678.2,334.4z"/>
+	<text transform="matrix(1 0 0 1 689.4513 348.1755)" class="st3 st6 st15">parser</text>
+	<text transform="matrix(1 0 0 1 669.7023 366.7336)" class="st3 st6 st15">deterministic parse</text>
+	<path id="structured-IR" class="st18" d="M741.4,334.4h47c3.9,0,7.1,3.2,7.1,7.1v8.7c0,3.9-3.2,7.1-7.1,7.1h-47
+		c-3.9,0-7.1-3.2-7.1-7.1v-8.7C734.3,337.5,737.5,334.4,741.4,334.4z"/>
+	<text transform="matrix(1 0 0 1 744.3351 348.1755)" class="st3 st6 st15">structured IR</text>
+	<text transform="matrix(1 0 0 1 728.5323 366.7336)" class="st3 st6 st15">recursive module filling</text>
+	<path id="compiler" class="st18" d="M800.6,334.4h43c3.9,0,7.1,3.2,7.1,7.1v8.7c0,3.9-3.2,7.1-7.1,7.1h-43c-3.9,0-7.1-3.2-7.1-7.1
+		v-8.7C793.5,337.5,796.7,334.4,800.6,334.4z"/>
+	<text transform="matrix(1 0 0 1 808.504 348.1755)" class="st3 st6 st15">compiler</text>
+	<path class="st18" d="M873.7,334.4h43c3.9,0,7.1,3.2,7.1,7.1v8.7c0,3.9-3.2,7.1-7.1,7.1h-43c-3.9,0-7.1-3.2-7.1-7.1v-8.7
+		C866.6,337.5,869.7,334.4,873.7,334.4z"/>
+	<text transform="matrix(1 0 0 1 866.7394 348.1755)" class="st3 st6 st15">resolved workflow</text>
+	<text transform="matrix(1 0 0 1 854.087 366.7336)" class="st3 st6 st15">agent-assisted generation</text>
+	<text transform="matrix(1 0 0 1 900.4825 286.9704)" class="st3 st6 st15">top-down recursive</text>
+	<text transform="matrix(1 0 0 1 928.5421 296.4479)" class="st3 st6 st15">fill-in motif</text>
+	<path class="st26" d="M926.2,325.1l8.3,4.1l-8.3,4.1V325.1z"/>
+	<path class="st26" d="M933.7,329.2"/>
+	<path class="st29" d="M803.4,357.3v20.5h140.2v-20.5"/>
+	<text transform="matrix(1 0 0 1 610.8732 393.5842)" class="st3 st4 st15">Missing block</text>
+	<text transform="matrix(1 0 0 1 605.7247 404.6408)" class="st3 st6 st15">generate reusable</text>
+	<text transform="matrix(1 0 0 1 616.3956 414.1164)" class="st3 st6 st15">.aaps block</text>
+	<text transform="matrix(1 0 0 1 688.6613 393.5842)" class="st3 st4 st15">Missing script</text>
+	<text transform="matrix(1 0 0 1 691.0265 404.6408)" class="st3 st6 st15">write Python /</text>
+	<text transform="matrix(1 0 0 1 695.7687 414.1164)" class="st3 st6 st15">shell script</text>
+	<text transform="matrix(1 0 0 1 770.0099 393.5842)" class="st3 st4 st15">Missing tool</text>
+	<text transform="matrix(1 0 0 1 767.6261 404.6408)" class="st3 st6 st15">report setup or</text>
+	<text transform="matrix(1 0 0 1 768.4181 414.1164)" class="st3 st6 st15">select fallback</text>
+	<text transform="matrix(1 0 0 1 833.9679 393.5842)" class="st3 st4 st15">Missing dependency</text>
+	<text transform="matrix(1 0 0 1 848.9679 404.6408)" class="st3 st6 st15">prepare safe</text>
 </g>
-<g id="panel-B"><rect id="panel-B-background" x="558" y="12" width="630" height="470" rx="18" class="panel"/><text x="576" y="50" class="panel-label" text-anchor="start" >B</text><text x="616" y="50" class="panel-title" text-anchor="start" >Top-down GUI program design</text>
-<text x="1164" y="81" class="italic" text-anchor="end" >Top-down program</text>
-<text x="580" y="112" class="body" text-anchor="start" >1. Register raw images and metadata</text>
-<text x="580" y="148" class="body" text-anchor="start" >2. Inspect image quality and experimental context</text>
-<text x="580" y="184" class="body" text-anchor="start" >3. Route segmentation method</text>
-<rect id="loop-node" x="680" y="210" width="430" height="50" rx="18" class="soft-node"/>
-<text x="895" y="242" class="small" text-anchor="middle" >↻  for each image        QC and method routing</text>
-<path d="M700 260 V350 H735" class="line"/>
-<rect id="low-confidence-node" x="735" y="278" width="410" height="54" rx="18" class="soft-node"/>
-<text x="940" y="312" class="small" text-anchor="middle" >⚡ low confidence → human review / correction</text>
-<rect id="route-node" x="735" y="342" width="410" height="62" rx="18" class="soft-node"/>
-<text x="940" y="369" class="small" text-anchor="middle"><tspan x="940" dy="0">⚡ route: Cellpose / thresholding / signal recovery /</tspan><tspan x="940" dy="22">prompt-guided correction</tspan></text>
-<text x="580" y="414" class="body" text-anchor="start" >4. Verify mask and overlay</text>
-<text x="580" y="443" class="body" text-anchor="start" >5. Quantify growth, differentiation, and fusion metrics</text>
-<text x="580" y="472" class="body" text-anchor="start" >6. Summarize biological conclusions</text>
+<g id="panel-E">
+	<text transform="matrix(1 0 0 1 848.1788 414.1164)" class="st3 st6 st15">setup prompt</text>
+	<text transform="matrix(1 0 0 1 916.8956 393.5842)" class="st3 st4 st15">Ambiguous result</text>
+	<text transform="matrix(1 0 0 1 929.7198 404.6408)" class="st3 st6 st15">ask human</text>
+	<text transform="matrix(1 0 0 1 936.8351 414.1164)" class="st3 st6 st15">review</text>
+	<path id="panel-E-background" class="st2" d="M1009.5,271.2h279.6c3.9,0,7.1,3.2,7.1,7.1v153.6c0,3.9-3.2,7.1-7.1,7.1h-279.6
+		c-3.9,0-7.1-3.2-7.1-7.1V278.3C1002.4,274.4,1005.6,271.2,1009.5,271.2z"/>
+	<text transform="matrix(1 0 0 1 1009.4923 286.1813)" class="st3 st4 st5">E</text>
+	<path class="st0" d=""/>
+	<g transform="translate(1080 610)" class="st33">
+		<path class="st34" d="M-61.4-295.4h33.2c1.1,0,2,0.9,2,2v38.7c0,1.1-0.9,2-2,2h-33.2c-1.1,0-2-0.9-2-2v-38.7
+			C-63.4-294.5-62.5-295.4-61.4-295.4z"/>
+		<path class="st35" d="M-57.5-264.6c-4.3-9.5,4.7-20.1,12.6-15.4c8.3-8.3,17.8,2.4,11.5,9.5c6.7,9.1-7.1,14.2-12.2,8.3
+			C-51.2-256.7-55.9-259.5-57.5-264.6z"/>
+		<circle class="st36" cx="-37.3" cy="-282.4" r="3.9"/>
+	</g>
+	<g transform="translate(1094 620)" class="st37">
+		<path class="st34" d="M-69.9-301.4h33.2c1.1,0,2,0.9,2,2v38.7c0,1.1-0.9,2-2,2h-33.2c-1.1,0-2-0.9-2-2v-38.7
+			C-71.9-300.6-71-301.4-69.9-301.4z"/>
+		<path class="st35" d="M-65.9-270.6c-4.3-9.5,4.7-20.1,12.6-15.4c8.3-8.3,17.8,2.4,11.5,9.5c6.7,9.1-7.1,14.2-12.2,8.3
+			C-59.6-262.7-64.4-265.5-65.9-270.6z"/>
+		<circle class="st36" cx="-45.8" cy="-288.4" r="3.9"/>
+	</g>
+	<g transform="translate(1108 630)">
+		<path class="st34" d="M-78.4-307.5h33.2c1.1,0,2,0.9,2,2v38.7c0,1.1-0.9,2-2,2h-33.2c-1.1,0-2-0.9-2-2v-38.7
+			C-80.3-306.6-79.5-307.5-78.4-307.5z"/>
+		<path class="st35" d="M-74.4-276.7c-4.3-9.5,4.7-20.1,12.6-15.4c8.3-8.3,17.8,2.4,11.5,9.5c6.7,9.1-7.1,14.2-12.2,8.3
+			C-68.1-268.8-72.8-271.6-74.4-276.7z"/>
+		<circle class="st36" cx="-54.3" cy="-294.5" r="3.9"/>
+	</g>
+	<path class="st26" d="M1084.2,335.7l8.3,4.1l-8.3,4.1V335.7z"/>
+	<path class="st0" d="M1091.6,339.9"/>
+	<circle class="st38" cx="1104.3" cy="339.9" r="13.4"/>
+	<path class="st39" d="M1097.5,339.9l5.1,5.1l8.7-12.2"/>
+	<path class="st26" d="M1130.8,335.7l8.3,4.1l-8.3,4.1V335.7z"/>
+	<path class="st26" d="M1138.2,339.9"/>
+	<g transform="translate(1400 592)">
+		<path class="st40" d="M-255.1-284.5h34.7c1.1,0,2,0.9,2,2v26.1c0,1.1-0.9,2-2,2h-34.7c-1.1,0-2-0.9-2-2v-26.1
+			C-257-283.6-256.2-284.5-255.1-284.5z"/>
+		<path class="st41" d="M-250.3-266.3c-4.3-6.7,0.4-15,8.3-13c6.3-5.1,15.4,0,13,7.5c5.1,7.5-4.7,14.2-11.5,9.9
+			C-246-256.9-253.1-260.4-250.3-266.3z"/>
+		<path class="st42" d="M-237.3-276.6c4.7-4.7,13.4-1.2,12.6,5.9c4.7,4.7,0,12.2-6.7,9.9c-5.1,3.9-11.1-1.2-9.1-6.7
+			C-243.6-271.9-241.6-275-237.3-276.6z"/>
+		<path class="st43" d="M-251.9-275.8c2.4-5.5,9.5-5.9,12.2-1.2c4.3,2,2.8,9.5-2,11.1c-3.2,4.3-11.1,0.8-9.9-4.7
+			C-255.1-272.3-254.7-274.6-251.9-275.8z"/>
+	</g>
+	<path class="st40" d="M1153.2,316.2h34.7c1.1,0,2,0.9,2,2v26.1c0,1.1-0.9,2-2,2h-34.7c-1.1,0-2-0.9-2-2v-26.1
+		C1151.2,317.1,1152.1,316.2,1153.2,316.2z M1158,334.4c-4.3-6.7,0.4-15,8.3-13c6.3-5.1,15.4,0,13,7.5c5.1,7.5-4.7,14.2-11.5,9.9
+		C1162.3,343.8,1155.2,340.3,1158,334.4z M1171,324.1c4.7-4.7,13.4-1.2,12.6,5.9c4.7,4.7,0,12.2-6.7,9.9c-5.1,3.9-11.1-1.2-9.1-6.7
+		C1164.7,328.8,1166.6,325.7,1171,324.1z M1156.4,324.9c2.4-5.5,9.5-5.9,12.2-1.2c4.3,2,2.8,9.5-2,11.1c-3.2,4.3-11.1,0.8-9.9-4.7
+		C1153.2,328.4,1153.6,326.1,1156.4,324.9z"/>
+	<g transform="translate(1442 636)">
+		<path class="st40" d="M-280.5-311.1h34.7c1.1,0,2,0.9,2,2v26.1c0,1.1-0.9,2-2,2h-34.7c-1.1,0-2-0.9-2-2v-26.1
+			C-282.5-310.2-281.6-311.1-280.5-311.1z"/>
+		<path class="st44" d="M-275.7-293c-4.3-6.7,0.4-15,8.3-13c6.3-5.1,15.4,0,13,7.5c5.1,7.5-4.7,14.2-11.5,9.9
+			C-271.4-283.5-278.5-287-275.7-293z"/>
+		<path class="st45" d="M-262.7-303.2c4.7-4.7,13.4-1.2,12.6,5.9c4.7,4.7,0,12.2-6.7,9.9c-5.1,3.9-11.1-1.2-9.1-6.7
+			C-269-298.5-267.1-301.6-262.7-303.2z"/>
+		<path class="st46" d="M-277.3-302.4c2.4-5.5,9.5-5.9,12.2-1.2c4.3,2,2.8,9.5-2,11.1c-3.2,4.3-11.1,0.8-9.9-4.7
+			C-280.5-298.9-280.1-301.3-277.3-302.4z"/>
+	</g>
+	<path class="st26" d="M1210.5,335.7l8.3,4.1l-8.3,4.1V335.7z"/>
+	<path class="st26" d="M1218,339.9"/>
+	<g transform="translate(1600 574)">
+		<rect x="-378.1" y="-273.6" class="st47" width="28.4" height="24.5"/>
+		<path class="st48" d="M-374.9-270.4v18.2h22.9"/>
+		<path class="st49" d="M-374.9-253.1c7.9-3.6,10.7-12.6,21.3-16.2"/>
+	</g>
+	<g transform="translate(1600 648)">
+		<rect x="-378.1" y="-318.4" class="st47" width="28.4" height="24.5"/>
+		<path class="st48" d="M-374.9-315.2v18.2h22.9"/>
+		<path class="st50" d="M-374.9-312.9c7.1,1.6,12.6,11.5,21.3,15"/>
+	</g>
+	<path class="st47" d="M1221.9,358.8h28.4v24.5h-28.4V358.8z M1225.1,362v18.2h22.9 M1225.1,379.4l7.1-7.1l6.3,3.2l7.9-11.5"/>
+	<path class="st26" d="M1257.9,335.7l8.3,4.1l-8.3,4.1V335.7z"/>
+	<path class="st26" d="M1265.4,339.9"/>
+	<g transform="translate(1715 585)">
+		<path class="st30" d="M-444.5-280.3h15c1.7,0,3.2,1.4,3.2,3.2v49.8c0,1.7-1.4,3.2-3.2,3.2h-15c-1.7,0-3.2-1.4-3.2-3.2v-49.8
+			C-447.7-278.8-446.2-280.3-444.5-280.3z"/>
+		<path class="st31" d="M-448.5-276.3h15c1.7,0,3.2,1.4,3.2,3.2v49.8c0,1.7-1.4,3.2-3.2,3.2h-15c-1.7,0-3.2-1.4-3.2-3.2v-49.8
+			C-451.6-274.9-450.2-276.3-448.5-276.3z"/>
+		<path class="st32" d="M-452.4-272.4h15c1.7,0,3.2,1.4,3.2,3.2v49.8c0,1.7-1.4,3.2-3.2,3.2h-15c-1.7,0-3.2-1.4-3.2-3.2v-49.8
+			C-455.6-270.9-454.1-272.4-452.4-272.4z"/>
+		<rect x="-451.6" y="-266.8" class="st51" width="13.4" height="6.3"/>
+		<path class="st21" d="M-451.6-254.6h13.4 M-451.6-249.9h13.4 M-451.6-245.1h8.7"/>
+		<rect x="-451.6" y="-239.6" class="st52" width="5.1" height="5.1"/>
+		<circle class="st53" cx="-440.6" cy="-236.8" r="3.2"/>
+		<path class="st54" d="M-451.6-224.6l4.3-4.7l3.6,2.4l5.5-6.3"/>
+	</g>
+	<text transform="matrix(1 0 0 1 1016.7794 382.5275)" class="st3 st6 st15">Heterogeneous</text>
+	<text transform="matrix(1 0 0 1 1015.8009 391.215)" class="st3 st6 st15">DEO bright-field</text>
+	<text transform="matrix(1 0 0 1 1029.6251 399.9025)" class="st3 st6 st15">images</text>
+	<text transform="matrix(1 0 0 1 1097.9425 382.5275)" class="st3 st6 st15">QC:</text>
+	<text transform="matrix(1 0 0 1 1079.172 391.215)" class="st3 st6 st15">brightness, blur,</text>
+	<text transform="matrix(1 0 0 1 1072.5226 399.9025)" class="st3 st6 st15">density, object scale</text>
+	<text transform="matrix(1 0 0 1 1147.4816 382.5275)" class="st3 st6 st15">Segmentation</text>
+	<text transform="matrix(1 0 0 1 1151.0441 391.215)" class="st3 st6 st15">and metrics</text>
+	<text transform="matrix(1 0 0 1 1221.3263 382.5275)" class="st3 st6 st15">biological</text>
+	<text transform="matrix(1 0 0 1 1224.6935 391.215)" class="st3 st6 st15">metrics</text>
+	<text transform="matrix(1 0 0 1 1264.7687 382.5275)" class="st3 st6 st15">Artifacts</text>
+	<text transform="matrix(1 0 0 1 1261.4044 391.215)" class="st3 st6 st15">and report</text>
+	<text transform="matrix(1 0 0 1 1093.8204 427.1476)" class="st3 st6 st11">Validation and human review</text>
 </g>
-<g id="panel-C"><rect id="panel-C-background" x="1204" y="12" width="584" height="470" rx="18" class="panel"/><text x="1222" y="50" class="panel-label" text-anchor="start" >C</text><text x="1262" y="50" class="panel-title" text-anchor="start" >Reusable blocks and skills</text>
-<g id="block-image-qc"><rect id="block-image-qc-background" x="1232" y="82" width="245" height="145" rx="18" class="block"/><path d="M1232,120 H1477" class="block-divider"/><text x="1354.5" y="109" class="block-title" text-anchor="middle" >image_qc</text><circle cx="1232" cy="139" r="6" class="port"/><text x="1248" y="145" class="small" text-anchor="start" >image</text><circle cx="1477" cy="139" r="6" class="port"/><text x="1461" y="145" class="small" text-anchor="end" >qc_report</text><circle cx="1232" cy="166" r="6" class="port"/><text x="1248" y="172" class="small" text-anchor="start" >metadata</text><circle cx="1477" cy="166" r="6" class="port"/><text x="1461" y="172" class="small" text-anchor="end" >preview</text></g>
-<g id="block-segment"><rect id="block-segment-background" x="1515" y="82" width="245" height="145" rx="18" class="block"/><path d="M1515,120 H1760" class="block-divider"/><text x="1637.5" y="109" class="block-title" text-anchor="middle" >segment_organoid</text><circle cx="1515" cy="139" r="6" class="port"/><text x="1531" y="145" class="small" text-anchor="start" >image</text><circle cx="1760" cy="139" r="6" class="port"/><text x="1744" y="145" class="small" text-anchor="end" >mask</text><circle cx="1515" cy="166" r="6" class="port"/><text x="1531" y="172" class="small" text-anchor="start" >qc_report</text><circle cx="1760" cy="166" r="6" class="port"/><text x="1744" y="172" class="small" text-anchor="end" >overlay</text><circle cx="1760" cy="193" r="6" class="port"/><text x="1744" y="199" class="small" text-anchor="end" >instances</text></g>
-<g id="block-metrics"><rect id="block-metrics-background" x="1232" y="265" width="245" height="145" rx="18" class="block"/><path d="M1232,303 H1477" class="block-divider"/><text x="1354.5" y="292" class="block-title" text-anchor="middle" >quantify_metrics</text><circle cx="1232" cy="322" r="6" class="port"/><text x="1248" y="328" class="small" text-anchor="start" >mask</text><circle cx="1477" cy="322" r="6" class="port"/><text x="1461" y="328" class="small" text-anchor="end" >area</text><circle cx="1232" cy="349" r="6" class="port"/><text x="1248" y="355" class="small" text-anchor="start" >image</text><circle cx="1477" cy="349" r="6" class="port"/><text x="1461" y="355" class="small" text-anchor="end" >darkness_P90</text><circle cx="1477" cy="376" r="6" class="port"/><text x="1461" y="382" class="small" text-anchor="end" >fusion_score</text></g>
-<g id="block-review"><rect id="block-review-background" x="1515" y="265" width="245" height="145" rx="18" class="block"/><path d="M1515,303 H1760" class="block-divider"/><text x="1637.5" y="292" class="block-title" text-anchor="middle" >review_overlay</text><circle cx="1515" cy="322" r="6" class="port"/><text x="1531" y="328" class="small" text-anchor="start" >overlay</text><circle cx="1760" cy="322" r="6" class="port"/><text x="1744" y="328" class="small" text-anchor="end" >approval</text><circle cx="1515" cy="349" r="6" class="port"/><text x="1531" y="355" class="small" text-anchor="start" >confidence</text><circle cx="1760" cy="349" r="6" class="port"/><text x="1744" y="355" class="small" text-anchor="end" >correction</text></g>
-<text x="1496" y="441" class="body" text-anchor="middle" >Block contract = inputs + outputs + tools</text>
-<text x="1496" y="470" class="body" text-anchor="middle" >+ agent + validation + artifacts</text>
-</g>
-<path id="A-to-B" d="M542,235 L558,235" class="arrow"/>
-<path id="B-to-C" d="M1188,235 L1204,235" class="arrow"/>
-<g id="panel-D"><rect id="panel-D-background" x="12" y="500" width="1015" height="425" rx="18" class="panel"/><text x="30" y="538" class="panel-label" text-anchor="start" >D</text><text x="70" y="538" class="panel-title" text-anchor="start" >Parser, grammar, and agent-based compiler</text>
-<g class="icon" transform="translate(45 620)">
-      <path d="M0 0 H48 L68 20 V88 H0 Z" class="icon-fill"/>
-      <path d="M48 0 V20 H68" class="icon-line"/>
-      <text x="34" y="48" class="tiny-bold" text-anchor="middle" >.aaps</text>
-      <text x="34" y="68" class="tiny" text-anchor="middle" >script</text>
-    </g>
-<text x="79" y="724" class="small" text-anchor="middle"><tspan x="79" dy="0">example</tspan><tspan x="79" dy="22">code</tspan></text>
-<rect x="205" y="560" width="66" height="56" rx="12" class="dash"/>
-<path id="" d="M281,588 L352,588" class="arrow"/>
-<g class="icon" transform="translate(367 543)">
-      <rect x="18" y="0" width="54" height="66" rx="9" class="paper-back"/>
-      <rect x="9" y="8" width="54" height="66" rx="9" class="paper-mid"/>
-      <rect x="0" y="16" width="54" height="66" rx="9" class="paper-front"/>
-      <path d="M12 34 H42 M12 46 H42 M12 58 H36" class="icon-line"/>
-    </g>
-<path id="" d="M457,588 L515,588" class="arrow"/>
-<rect id="compiler-icon" x="528" y="553" width="76" height="70" rx="18" class="node"/>
-<path id="" d="M614,588 L700,588" class="arrow"/>
-<g class="icon" transform="translate(716 543)">
-      <rect x="18" y="0" width="54" height="66" rx="9" class="paper-back"/>
-      <rect x="9" y="8" width="54" height="66" rx="9" class="paper-mid"/>
-      <rect x="0" y="16" width="54" height="66" rx="9" class="paper-front"/>
-      <path d="M12 34 H42 M12 46 H42 M12 58 H36" class="icon-line"/>
-    </g>
-<rect id="execution-plan" x="810" y="660" width="145" height="58" rx="18" class="soft-node"/>
-<text x="882" y="685" class="small" text-anchor="middle" >execution</text>
-<text x="882" y="707" class="small" text-anchor="middle" >plan</text>
-<rect id="parser" x="205" y="660" width="145" height="58" rx="18" class="soft-node"/>
-<text x="277" y="695" class="small" text-anchor="middle" >parser</text>
-<text x="277" y="742" class="small" text-anchor="middle" >deterministic parse</text>
-<rect id="structured-IR" x="365" y="660" width="155" height="58" rx="18" class="soft-node"/>
-<text x="442" y="695" class="small" text-anchor="middle" >structured IR</text>
-<text x="442" y="742" class="small" text-anchor="middle" >recursive module filling</text>
-<rect id="compiler" x="515" y="660" width="145" height="58" rx="18" class="soft-node"/>
-<text x="587" y="695" class="small" text-anchor="middle" >compiler</text>
-<rect id="resolved-workflow" x="700" y="660" width="145" height="58" rx="18" class="soft-node"/>
-<text x="772" y="695" class="small" text-anchor="middle" >resolved workflow</text>
-<text x="772" y="742" class="small" text-anchor="middle" >agent-assisted generation</text>
-<text x="938" y="540" class="small" text-anchor="end" >top-down recursive</text>
-<text x="938" y="564" class="small" text-anchor="end" >fill-in motif</text>
-<path d="M870 623 V647" class="arrow"/>
-<path d="M540 718 V770 H895 V718" class="dash"/>
-<text x="112" y="810" class="small-bold" text-anchor="middle" >Missing block</text>
-<text x="112" y="838" class="small" text-anchor="middle" >generate reusable</text>
-<text x="112" y="862" class="small" text-anchor="middle" >.aaps block</text>
-<text x="310" y="810" class="small-bold" text-anchor="middle" >Missing script</text>
-<text x="310" y="838" class="small" text-anchor="middle" >write Python /</text>
-<text x="310" y="862" class="small" text-anchor="middle" >shell script</text>
-<text x="508" y="810" class="small-bold" text-anchor="middle" >Missing tool</text>
-<text x="508" y="838" class="small" text-anchor="middle" >report setup or</text>
-<text x="508" y="862" class="small" text-anchor="middle" >select fallback</text>
-<text x="706" y="810" class="small-bold" text-anchor="middle" >Missing dependency</text>
-<text x="706" y="838" class="small" text-anchor="middle" >prepare safe</text>
-<text x="706" y="862" class="small" text-anchor="middle" >setup prompt</text>
-<text x="904" y="810" class="small-bold" text-anchor="middle" >Ambiguous result</text>
-<text x="904" y="838" class="small" text-anchor="middle" >ask human</text>
-<text x="904" y="862" class="small" text-anchor="middle" >review</text>
-</g>
-<g id="panel-E"><rect id="panel-E-background" x="1044" y="500" width="744" height="425" rx="18" class="panel"/><text x="1062" y="538" class="panel-label" text-anchor="start" >E</text><text x="1102" y="538" class="panel-title" text-anchor="start" >Controlled execution and biological outputs</text>
-<g transform="translate(1080 610)" opacity="0.55"><rect width="94" height="108" rx="5" fill="#d6dde0" stroke="#526b73" stroke-width="2"/><path d="M15 78 C4 54 27 27 47 39 C68 18 92 45 76 63 C93 86 58 99 45 84 C31 98 19 91 15 78Z" fill="#87969b"/><circle cx="66" cy="33" r="10" fill="#aab5b9"/></g>
-<g transform="translate(1094 620)" opacity="0.72"><rect width="94" height="108" rx="5" fill="#d6dde0" stroke="#526b73" stroke-width="2"/><path d="M15 78 C4 54 27 27 47 39 C68 18 92 45 76 63 C93 86 58 99 45 84 C31 98 19 91 15 78Z" fill="#87969b"/><circle cx="66" cy="33" r="10" fill="#aab5b9"/></g>
-<g transform="translate(1108 630)" opacity="1"><rect width="94" height="108" rx="5" fill="#d6dde0" stroke="#526b73" stroke-width="2"/><path d="M15 78 C4 54 27 27 47 39 C68 18 92 45 76 63 C93 86 58 99 45 84 C31 98 19 91 15 78Z" fill="#87969b"/><circle cx="66" cy="33" r="10" fill="#aab5b9"/></g>
-<path id="" d="M1214,674 L1270,674" class="arrow"/>
-<circle cx="1302" cy="674" r="34" fill="#d8f2f1" stroke="#47798a" stroke-width="3"/><path d="M1285 674 L1298 687 L1320 656" fill="none" stroke="#47798a" stroke-width="4"/>
-<path id="" d="M1338,674 L1388,674" class="arrow"/>
-<g transform="translate(1400 592)"><rect width="98" height="76" rx="5" fill="#101820"/><path d="M17 46 C6 29 18 8 38 13 C54 0 77 13 71 32 C84 51 59 68 42 57 C28 70 10 61 17 46Z" fill="#26a6b7" stroke="#254f5f" stroke-width="2"/><path d="M50 20 C62 8 84 17 82 35 C94 47 82 66 65 60 C52 70 37 57 42 43 C34 32 39 24 50 20Z" fill="#61be76" stroke="#254f5f" stroke-width="2"/><path d="M13 22 C19 8 37 7 44 19 C55 24 51 43 39 47 C31 58 11 49 14 35 C5 31 6 25 13 22Z" fill="#844cc1" stroke="#254f5f" stroke-width="2"/></g>
-<g transform="translate(1421 614)"><rect width="98" height="76" rx="5" fill="#101820"/><path d="M17 46 C6 29 18 8 38 13 C54 0 77 13 71 32 C84 51 59 68 42 57 C28 70 10 61 17 46Z" fill="#28a6b8" stroke="#254f5f" stroke-width="2"/><path d="M50 20 C62 8 84 17 82 35 C94 47 82 66 65 60 C52 70 37 57 42 43 C34 32 39 24 50 20Z" fill="#6abb73" stroke="#254f5f" stroke-width="2"/><path d="M13 22 C19 8 37 7 44 19 C55 24 51 43 39 47 C31 58 11 49 14 35 C5 31 6 25 13 22Z" fill="#9a4fbd" stroke="#254f5f" stroke-width="2"/></g>
-<g transform="translate(1442 636)"><rect width="98" height="76" rx="5" fill="#101820"/><path d="M17 46 C6 29 18 8 38 13 C54 0 77 13 71 32 C84 51 59 68 42 57 C28 70 10 61 17 46Z" fill="#39a9bc" stroke="#254f5f" stroke-width="2"/><path d="M50 20 C62 8 84 17 82 35 C94 47 82 66 65 60 C52 70 37 57 42 43 C34 32 39 24 50 20Z" fill="#73bf68" stroke="#254f5f" stroke-width="2"/><path d="M13 22 C19 8 37 7 44 19 C55 24 51 43 39 47 C31 58 11 49 14 35 C5 31 6 25 13 22Z" fill="#9650b8" stroke="#254f5f" stroke-width="2"/></g>
-<path id="" d="M1545,674 L1590,674" class="arrow"/>
-<g class="icon" transform="translate(1600 574)">
-      <rect width="72" height="62" class="chart-bg"/>
-      <path d="M8 8 V54 H66" class="chart-axis"/>
-      <path d="M8 52 C28 43 35 20 62 11" fill="none" stroke="#63b7c7" stroke-width="5"/>
-    </g>
-<g class="icon" transform="translate(1600 648)">
-      <rect width="72" height="62" class="chart-bg"/>
-      <path d="M8 8 V54 H66" class="chart-axis"/>
-      <path d="M8 14 C26 18 40 43 62 52" fill="none" stroke="#58a8c8" stroke-width="5"/>
-    </g>
-<g class="icon" transform="translate(1600 722)">
-      <rect width="72" height="62" class="chart-bg"/>
-      <path d="M8 8 V54 H66" class="chart-axis"/>
-      <path d="M8 52 L26 34 L42 42 L62 13" fill="none" stroke="#db932d" stroke-width="5"/>
-    </g>
-<path id="" d="M1675,674 L1710,674" class="arrow"/>
-<g transform="translate(1715 585)"><rect width="54" height="142" rx="8" class="paper-back"/><rect x="-10" y="10" width="54" height="142" rx="8" class="paper-mid"/><rect x="-20" y="20" width="54" height="142" rx="8" class="paper-front"/><rect x="-10" y="34" width="34" height="16" fill="#d6eef2"/><path d="M-10 65 H24 M-10 77 H24 M-10 89 H12" class="icon-line"/><rect x="-10" y="103" width="13" height="13" fill="#e8b04e"/><circle cx="18" cy="110" r="8" fill="#70b68b"/><path d="M-10 141 L1 129 L10 135 L24 119" fill="none" stroke="#4ba4b8" stroke-width="3"/></g>
-<text x="1142" y="782" class="small" text-anchor="middle"><tspan x="1142" dy="0">Heterogeneous</tspan><tspan x="1142" dy="22">DEO bright-field</tspan><tspan x="1142" dy="22">images</tspan></text>
-<text x="1302" y="782" class="small" text-anchor="middle"><tspan x="1302" dy="0">QC:</tspan><tspan x="1302" dy="22">brightness, blur,</tspan><tspan x="1302" dy="22">density, object scale</tspan></text>
-<text x="1467" y="782" class="small" text-anchor="middle"><tspan x="1467" dy="0">Segmentation</tspan><tspan x="1467" dy="22">and metrics</tspan></text>
-<text x="1636" y="782" class="small" text-anchor="middle"><tspan x="1636" dy="0">biological</tspan><tspan x="1636" dy="22">metrics</tspan></text>
-<text x="1741" y="782" class="small" text-anchor="middle"><tspan x="1741" dy="0">Artifacts</tspan><tspan x="1741" dy="22">and report</tspan></text>
-<text x="1416" y="895" class="body" text-anchor="middle" >Validation and human review</text>
-</g>
-<path id="D-to-E" d="M1027,708 L1044,708" class="arrow"/>
+<path class="st26" d="M994.9,349.2l8.3,4.1l-8.3,4.1V349.2z"/>
+<path id="D-to-E" class="st26" d="M1002.4,353.3"/>
 </svg>

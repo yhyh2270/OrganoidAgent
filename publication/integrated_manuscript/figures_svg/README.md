@@ -26,6 +26,19 @@ This directory therefore uses a two-level migration strategy:
 - `figure2_integrated_organoid_workflow.svg`: publication-oriented revision of
   the AAPS figure with parallel Morphological Analysis and Viability Detection
   branches, explicit execution policy, and a unified evidence package.
+- `figure2_integrated_workflow_4panel.svg`: recommended main-text version. It
+  uses a four-part scientific narrative—data context, constrained orchestration,
+  parallel morphology/viability workflows, and unified evidence with review.
+- `figure3_aaps_morphology_workflow.svg`: detailed morphology-method figure
+  retaining the original AAPS design of image-prior inspection, adaptive method
+  routing, metric selection, QC, database outputs, plots, and interpretation.
+- `figure3_original_faithful_editable.svg`: faithful vertical reconstruction of
+  the original five-panel morphology figure. The hidden
+  `original-raster-reference` layer can be enabled for alignment checks; all
+  diagram text, boxes, arrows, tables, metrics, and plots are native SVG objects.
+- `figure4_viability_label_model_workflow.svg`: fluorescence-label QC and
+  construction, paired training data, bright-field-only deployment path, and
+  the editable ConvNeXt multi-scale regression architecture.
 
 Microscopy panels should remain raster images in the final SVG. Statistical
 plots should be regenerated from their CSV source as SVG/PDF rather than traced
