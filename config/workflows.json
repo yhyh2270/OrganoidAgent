@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "global_policy": {
+    "strict_pipeline": true,
+    "selected_inputs_only": true,
+    "allow_algorithm_substitution": false,
+    "allow_runtime_package_installation": false,
+    "on_required_method_failure": "stop_and_report_error"
+  },
+  "environments": {
+    "cellpose_windows_python": "D:\\app\\conda\\envs\\cpose\\python.exe",
+    "viability_windows_python": "D:\\app\\conda\\envs\\torch38\\python.exe"
+  },
+  "workflows": {
+    "zhengyu": {
+      "display_name": "DEO multiscale segmentation and metric pipeline",
+      "method": "Cellpose-first segmentation with quality-scored signal-recovery comparison; metrics use only the selected better mask",
+      "requires_cellpose": true,
+      "execution_mode": "managed_backend",
+      "managed_endpoint": "http://127.0.0.1:8080/api/morphology/run",
+      "python_environment": "cellpose_windows_python",
+      "preferred_entrypoint": "scripts/run_density_growth_d12_analysis.py",
+      "fallback": "run signal recovery only after Cellpose QC failure and select it only when its unified quality score safely exceeds Cellpose"
+    },
+    "y27632": {
+      "display_name": "Y-27632 dataset analysis",
+      "method": "App80 Y-27632 Cellpose-first segmentation with quality-scored fallback comparison and concentration-aware reporting",
+      "requires_cellpose": true,
+      "execution_mode": "managed_backend",
+      "managed_endpoint": "http://127.0.0.1:8080/api/morphology/run",
+      "python_environment": "cellpose_windows_python",
+      "preferred_entrypoint": "scripts/run_density_growth_d12_analysis.py --experiment y27632",
+      "fallback": "run signal recovery only after Cellpose QC failure and select it only when its unified quality score safely exceeds Cellpose"
+    },
+    "sodium_alginate": {
+      "display_name": "Sodium alginate dataset analysis",
+      "method": "App65 sodium alginate Cellpose-first segmentation with quality-scored fallback comparison and condition-aware reporting",
+      "requires_cellpose": true,
+      "execution_mode": "managed_backend",
+      "managed_endpoint": "http://127.0.0.1:8080/api/morphology/run",
+      "python_environment": "cellpose_windows_python",
+      "preferred_entrypoint": "scripts/run_density_growth_d12_analysis.py --experiment sodium_alginate",
+      "fallback": "run signal recovery only after Cellpose QC failure and select it only when its unified quality score safely exceeds Cellpose"
+    },
+    "yichao": {
+      "display_name": "Yichao pix2pix differentiation prediction",
+      "method": "multiscale Cellpose instance segmentation and paired-crop preparation",
+      "requires_cellpose": true,
+      "python_environment": "cellpose_windows_python",
+      "fallback": "none"
+    },
+    "compactness": {
+      "display_name": "Compactness analysis",
+      "method": "the exact segmentation and compactness steps declared by the loaded AAPS pipeline",
+      "requires_cellpose_when_declared": true,
+      "python_environment": "cellpose_windows_python",
+      "fallback": "none"
+    },
+    "generic": {
+      "display_name": "Generic organoid agent workflow",
+      "method": "the exact method declared by the loaded AAPS pipeline",
+      "fallback": "none unless explicitly requested by the user"
+    },
+    "fluorescence": {
+      "display_name": "Viability detection",
+      "method": "deterministic YOLO plus SAM segmentation and checkpoint-1 viability prediction",
+      "requires_cellpose": false,
+      "python_environment": "viability_windows_python",
+      "entrypoint": "scripts/run_fluorescence_prediction.py",
+      "fallback": "none"
+    }
+  }
+}
