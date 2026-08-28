@@ -288,6 +288,7 @@ def read_runtime_json(path, default=None):
 
 async def execute_morphology_job(job_id, command, job_dir):
     job_path = job_dir / "job.json"
+    progress_path = job_dir / "progress.json"
     job = read_runtime_json(job_path, {})
     if job.get("status") == "cancelled":
         MORPHOLOGY_ACTIVE.update({"job_id": None, "process": None})
@@ -311,6 +312,16 @@ async def execute_morphology_job(job_id, command, job_dir):
     except Exception as exc:
         job.update({"status": "failed", "error": f"{type(exc).__name__}: {exc}", "finished_at": time.time()})
     job_path.write_text(json.dumps(job, ensure_ascii=False, indent=2), encoding="utf-8")
+    if job.get("status") == "failed":
+        progress = read_runtime_json(progress_path, {})
+        progress.update(
+            {
+                "status": "failed",
+                "error": job.get("error", "morphology_runner_failed"),
+                "finished_at": job.get("finished_at"),
+            }
+        )
+        progress_path.write_text(json.dumps(progress, ensure_ascii=False, indent=2), encoding="utf-8")
     if MORPHOLOGY_ACTIVE.get("job_id") == job_id:
         MORPHOLOGY_ACTIVE.update({"job_id": None, "process": None})
 

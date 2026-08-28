@@ -1,6 +1,4 @@
 datasets/*
-!datasets/01_Density_demo_10x/
-!datasets/01_Density_demo_10x/**
 !datasets/02_Fluorescence_demo/
 !datasets/02_Fluorescence_demo/**
 .DS_Store

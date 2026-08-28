@@ -57,7 +57,7 @@ def main() -> int:
             raise AssertionError("PWA index does not contain the application name")
         datasets = dataset_payload.get("datasets", [])
         names = {item["name"] for item in datasets}
-        expected = {"01_Density_demo_10x", "02_Fluorescence_demo"}
+        expected = {"02_Fluorescence_demo"}
         if not expected.issubset(names):
             raise AssertionError(f"missing demo datasets: {sorted(expected - names)}")
         print(f"Smoke test passed on port {port}; datasets: {sorted(names)}")
