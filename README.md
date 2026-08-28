@@ -49,7 +49,7 @@ OrganoidAgent/
 ├── api-tests/                   # API/分割复现脚本及说明
 ├── scripts/                     # 环境检查、数据下载和命令行入口
 ├── config/workflows.json        # 分析环境和工作流配置
-├── datasets/                    # 本地数据与缓存（Git 忽略）
+├── datasets/                    # 演示数据；完整实验数据与缓存由 Git 忽略
 ├── analysis-outputs/            # 运行结果（Git 忽略）
 ├── requirements.txt             # Web 和数据预览依赖
 ├── requirements-analysis.txt    # 完整分析依赖
@@ -246,7 +246,12 @@ python scripts/run_fluorescence_prediction.py `
 
 ## 下载示例数据
 
-数据不会提交到 Git。按需运行下载脚本，文件将保存到 `datasets/`：
+仓库包含两个可直接运行的精简演示数据集：
+
+- `datasets/01_Density_demo_10x/`：低、中、高密度的 10× 明场 TIFF 示例及清单。
+- `datasets/02_Fluorescence_demo/`：用于荧光活性预测的 TIFF 示例。
+
+完整实验数据不会提交到 Git。需要更多公开数据时可按需运行下载脚本，文件将保存到 `datasets/`：
 
 ```bash
 python scripts/download_organoid_datasets.py
@@ -282,7 +287,7 @@ python app.py --port 8080
 
 ## 数据、隐私与安全
 
-- `datasets/`、`analysis-outputs/`、模型权重、缓存和本地环境默认不会进入 Git。
+- `datasets/` 中仅跟踪两个演示目录；完整实验数据、`analysis-outputs/`、模型权重、缓存和本地环境默认不会进入 Git。
 - 不要把 API 密钥、患者身份信息或受限制的原始数据提交到仓库。
 - Agent Studio 可启动本地 Codex 作业；仅在可信环境中运行，并检查其文件访问范围。
 - 使用外部数据集和模型时，请遵守各自许可证和数据治理要求。
