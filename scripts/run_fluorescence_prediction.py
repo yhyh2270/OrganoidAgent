@@ -13,7 +13,6 @@ def select_python() -> Path:
     configured = os.environ.get("ORGANOID_FLUORESCENCE_PYTHON", "").strip()
     candidates = [
         Path(configured) if configured else None,
-        Path(r"D:\app\conda\envs\torch38\python.exe") if os.name == "nt" else None,
         Path(sys.executable),
     ]
     for candidate in candidates:

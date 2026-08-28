@@ -7,6 +7,7 @@ from PIL import Image
 
 
 IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".tif", ".tiff"}
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def find_images(path: Path):
@@ -37,17 +38,17 @@ def main():
     parser = argparse.ArgumentParser(description="Overlay segmentation masks onto an original image.")
     parser.add_argument(
         "--original",
-        default="/home/lachlan/ProjectsLFS/OrganoidAgent/selected_data",
+        default=str(ROOT / "selected_data"),
         help="Path to original image or directory.",
     )
     parser.add_argument(
         "--segmentations",
-        default="/home/lachlan/ProjectsLFS/OrganoidAgent/segmentation",
+        default=str(ROOT / "segmentation"),
         help="Path to segmentation image(s) or directory.",
     )
     parser.add_argument(
         "--output",
-        default="/home/lachlan/ProjectsLFS/OrganoidAgent/segmentation/overlays",
+        default=str(ROOT / "segmentation" / "overlays"),
         help="Output directory for overlays.",
     )
     parser.add_argument("--alpha", type=int, default=140, help="Overlay alpha for non-black pixels.")

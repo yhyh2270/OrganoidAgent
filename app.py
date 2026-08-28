@@ -209,7 +209,6 @@ def fluorescence_runtime_status():
     configured = os.environ.get("ORGANOID_FLUORESCENCE_PYTHON", "").strip()
     candidates = [
         Path(configured) if configured else None,
-        Path(r"D:\app\conda\envs\torch38\python.exe") if os.name == "nt" else None,
         Path(sys.executable),
     ]
     python_path = next((path.resolve() for path in candidates if path and path.is_file()), None)

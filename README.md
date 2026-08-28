@@ -4,6 +4,8 @@
 ![Backend](https://img.shields.io/badge/Backend-Tornado-2c7fb8)
 ![Frontend](https://img.shields.io/badge/Frontend-PWA-0a9396)
 ![Analysis](https://img.shields.io/badge/Analysis-Segmentation%20%7C%20Viability-7b2cbf)
+[![CI](https://github.com/yhyh2270/OrganoidAgent/actions/workflows/ci.yml/badge.svg)](https://github.com/yhyh2270/OrganoidAgent/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/License-Apache--2.0-green.svg)](LICENSE)
 
 OrganoidAgent 是一个面向类器官显微图像和实验数据的本地优先分析平台。它把数据集浏览、TIFF/表格预览、类器官分割、形态学定量、荧光活性预测和 Agent 辅助工作流整合在一个 Tornado + PWA 应用中。
 
@@ -124,9 +126,23 @@ fluorescence_prediction/weights/
 └── sam_vit_b_01ec64.pth
 ```
 
-### 自动下载并校验（Windows PowerShell）
+### 自动下载并校验（推荐）
 
-在仓库根目录执行：
+推荐在仓库根目录执行内置下载器；它会跳过校验通过的现有文件，并对新下载文件执行大小和 SHA-256 双重校验：
+
+```bash
+python scripts/download_model_weights.py
+```
+
+如需重新下载全部文件：
+
+```bash
+python scripts/download_model_weights.py --force
+```
+
+### 手动下载并校验（Windows PowerShell）
+
+也可以使用以下 PowerShell 命令完成同样的下载和校验：
 
 ```powershell
 $release = "https://github.com/yhyh2270/OrganoidAgent/releases/download/models-v1.0.0"
@@ -148,7 +164,7 @@ foreach ($file in $weights.Keys) {
 }
 ```
 
-### 自动下载并校验（Linux/macOS）
+### 手动下载并校验（Linux/macOS）
 
 在仓库根目录执行：
 
@@ -194,6 +210,8 @@ $env:ORGANOID_CELLPOSE_PYTHON = "C:\path\to\python.exe"
 ```
 
 Linux/macOS 使用同名环境变量和绝对解释器路径。
+
+未设置环境变量时，应用使用启动它的当前 Python 解释器。`config/workflows.json` 中也可以填写项目部署环境的解释器路径；仓库默认不包含任何特定计算机的绝对路径。
 
 ## 启动与使用
 
@@ -294,4 +312,4 @@ python app.py --port 8080
 
 ## 许可证
 
-当前仓库尚未提供开源许可证。在添加明确的 `LICENSE` 文件前，默认保留所有权利；如计划允许他人使用、修改或分发，请先选择并加入合适的许可证。
+本项目依据 [Apache License 2.0](LICENSE) 发布。版权归属信息见 [NOTICE](NOTICE)。

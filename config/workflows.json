@@ -8,8 +8,8 @@
     "on_required_method_failure": "stop_and_report_error"
   },
   "environments": {
-    "cellpose_windows_python": "D:\\app\\conda\\envs\\cpose\\python.exe",
-    "viability_windows_python": "D:\\app\\conda\\envs\\torch38\\python.exe"
+    "cellpose_windows_python": "",
+    "viability_windows_python": ""
   },
   "workflows": {
     "zhengyu": {
