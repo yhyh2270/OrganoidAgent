@@ -115,7 +115,7 @@ python -m pip install -r requirements-analysis.txt
 
 ## 配置模型权重
 
-模型文件体积较大，不包含在 Git 仓库中。使用完整活性预测前，请将权重放入：
+模型文件体积较大，不包含在普通 Git 历史中，而是作为 [`models-v1.0.0`](https://github.com/yhyh2270/OrganoidAgent/releases/tag/models-v1.0.0) Release 资源发布。使用完整活性预测前，请将权重放入：
 
 ```text
 fluorescence_prediction/weights/
@@ -123,6 +123,62 @@ fluorescence_prediction/weights/
 ├── yolo_organoid_best.pt
 └── sam_vit_b_01ec64.pth
 ```
+
+### 自动下载并校验（Windows PowerShell）
+
+在仓库根目录执行：
+
+```powershell
+$release = "https://github.com/yhyh2270/OrganoidAgent/releases/download/models-v1.0.0"
+$weightDir = "fluorescence_prediction\weights"
+New-Item -ItemType Directory -Force -Path $weightDir | Out-Null
+
+$weights = @{
+  "sam_vit_b_01ec64.pth" = "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912"
+  "viability_best.pth"   = "cb328bae14ac8d1b77556636e4925e8c7549db83903c15430999c8b8ced9759b"
+  "yolo_organoid_best.pt" = "2236790c8e9f027310f63306686215ff6928120b0d59938304e68f965e21b0cf"
+}
+
+foreach ($file in $weights.Keys) {
+  $target = Join-Path $weightDir $file
+  Invoke-WebRequest "$release/$file" -OutFile $target
+  $actual = (Get-FileHash -Algorithm SHA256 $target).Hash.ToLower()
+  if ($actual -ne $weights[$file]) { throw "SHA-256 mismatch: $file" }
+  Write-Host "Verified $file"
+}
+```
+
+### 自动下载并校验（Linux/macOS）
+
+在仓库根目录执行：
+
+```bash
+set -euo pipefail
+release="https://github.com/yhyh2270/OrganoidAgent/releases/download/models-v1.0.0"
+weight_dir="fluorescence_prediction/weights"
+mkdir -p "$weight_dir"
+
+curl -fL "$release/sam_vit_b_01ec64.pth" -o "$weight_dir/sam_vit_b_01ec64.pth"
+curl -fL "$release/viability_best.pth" -o "$weight_dir/viability_best.pth"
+curl -fL "$release/yolo_organoid_best.pt" -o "$weight_dir/yolo_organoid_best.pt"
+
+cd "$weight_dir"
+printf '%s  %s\n' \
+  'ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912' 'sam_vit_b_01ec64.pth' \
+  'cb328bae14ac8d1b77556636e4925e8c7549db83903c15430999c8b8ced9759b' 'viability_best.pth' \
+  '2236790c8e9f027310f63306686215ff6928120b0d59938304e68f965e21b0cf' 'yolo_organoid_best.pt' \
+  | sha256sum --check --strict
+```
+
+macOS 如果没有 `sha256sum`，可先安装 GNU coreutils（`brew install coreutils`），再将最后一行的 `sha256sum` 改为 `gsha256sum`。
+
+### 文件校验值
+
+| 文件 | 大小 | SHA-256 |
+| --- | ---: | --- |
+| `sam_vit_b_01ec64.pth` | 375,042,383 bytes | `ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912` |
+| `viability_best.pth` | 335,956,115 bytes | `cb328bae14ac8d1b77556636e4925e8c7549db83903c15430999c8b8ced9759b` |
+| `yolo_organoid_best.pt` | 6,258,019 bytes | `2236790c8e9f027310f63306686215ff6928120b0d59938304e68f965e21b0cf` |
 
 运行以下命令检查依赖、解释器和权重是否就绪：
 
