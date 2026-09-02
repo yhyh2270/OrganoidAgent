@@ -4,7 +4,7 @@ self.addEventListener("activate", (event) => {
   event.waitUntil(
     Promise.all([
       caches.keys().then((keys) =>
-        Promise.all(keys.filter((key) => key !== "organoid-agent-v24").map((key) => caches.delete(key)))
+        Promise.all(keys.filter((key) => key !== "organoid-agent-v25").map((key) => caches.delete(key)))
       ),
       self.clients.claim(),
     ])
@@ -13,11 +13,11 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open("organoid-agent-v24").then((cache) =>
+    caches.open("organoid-agent-v25").then((cache) =>
       cache.addAll([
         "/",
-        "/static/styles.css?v=24",
-        "/static/app.js?v=24",
+        "/static/styles.css?v=25",
+        "/static/app.js?v=25",
         "/static/manifest.json",
         "/static/icons/icon-192.png",
         "/static/icons/icon-512.png",
@@ -40,7 +40,7 @@ self.addEventListener("fetch", (event) => {
       fetch(request)
         .then((response) => {
           const copy = response.clone();
-          caches.open("organoid-agent-v24").then((cache) => cache.put(request, copy));
+          caches.open("organoid-agent-v25").then((cache) => cache.put(request, copy));
           return response;
         })
         .catch(() => caches.match(request))
@@ -53,7 +53,7 @@ self.addEventListener("fetch", (event) => {
         cached ||
         fetch(request).then((response) => {
           const copy = response.clone();
-          caches.open("organoid-agent-v24").then((cache) => cache.put(request, copy));
+          caches.open("organoid-agent-v25").then((cache) => cache.put(request, copy));
           return response;
         })
     )

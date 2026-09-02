@@ -42,13 +42,6 @@
       "preferred_entrypoint": "scripts/run_density_growth_d12_analysis.py --experiment sodium_alginate",
       "fallback": "run signal recovery only after Cellpose QC failure and select it only when its unified quality score safely exceeds Cellpose"
     },
-    "yichao": {
-      "display_name": "Yichao pix2pix differentiation prediction",
-      "method": "multiscale Cellpose instance segmentation and paired-crop preparation",
-      "requires_cellpose": true,
-      "python_environment": "cellpose_windows_python",
-      "fallback": "none"
-    },
     "compactness": {
       "display_name": "Compactness analysis",
       "method": "the exact segmentation and compactness steps declared by the loaded AAPS pipeline",

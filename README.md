@@ -7,7 +7,7 @@
 [![CI](https://github.com/yhyh2270/OrganoidAgent/actions/workflows/ci.yml/badge.svg)](https://github.com/yhyh2270/OrganoidAgent/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/License-Apache--2.0-green.svg)](LICENSE)
 
-OrganoidAgent 是一个面向类器官显微图像和实验数据的本地优先分析平台。它把数据集浏览、TIFF/表格预览、类器官分割、形态学定量、荧光活性预测和 Agent 辅助工作流整合在一个 Tornado + PWA 应用中。
+OrganoidAgent 是一个面向类器官显微图像和实验数据的本地优先分析平台。它把数据集浏览、TIFF/表格预览、类器官分割、形态学定量、荧光活性预测和 Agent 辅助工作流整合在一个 Tornado + PWA 应用中。仓库自带两个小型研究演示数据集，克隆后即可验证 Web、预览和 Y-27632/荧光分析入口。
 
 > OrganoidAgent is a local-first platform for organoid dataset exploration, image segmentation, morphology analysis, fluorescence-based viability prediction, and agent-assisted workflows.
 
@@ -37,6 +37,17 @@ OrganoidAgent 是一个面向类器官显微图像和实验数据的本地优先
 
 默认报告将预测结果分为高活性（`>= 0.8`）、中活性（`0.6–0.8`）和低活性（`< 0.6`）；这些阈值只用于结果汇总和排序。
 
+## 内置工作流程
+
+| 工作流 | 适用数据 | 主要输出 |
+| --- | --- | --- |
+| Viability detection | `02_Fluorescence_demo` 或其他显微图像 | YOLO/SAM 掩膜、活性评分、CSV、JSON、Markdown 报告 |
+| Y-27632 dataset analysis | `03_Y-27632_experiment_10x` | Cellpose/信号恢复质量比较、形态指标、叠加图和报告 |
+| DEO morphology | 符合命名规则的密度实验 TIFF | 多尺度分割、增长/融合/圆度/边缘等指标 |
+| Sodium alginate analysis | 海藻酸钠实验 TIFF | 条件感知的分割、形态定量与汇总 |
+
+工作流使用用户明确选择的文件，不会自动扩展到其他数据集。所有模型输出均仅供科研分析。
+
 ## 项目结构
 
 ```text
@@ -51,7 +62,7 @@ OrganoidAgent/
 ├── api-tests/                   # API/分割复现脚本及说明
 ├── scripts/                     # 环境检查、数据下载和命令行入口
 ├── config/workflows.json        # 分析环境和工作流配置
-├── datasets/                    # 演示数据；完整实验数据与缓存由 Git 忽略
+├── datasets/                    # 两个版本化演示数据集；其他本地数据默认忽略
 ├── analysis-outputs/            # 运行结果（Git 忽略）
 ├── requirements.txt             # Web 和数据预览依赖
 ├── requirements-analysis.txt    # 完整分析依赖
@@ -65,6 +76,23 @@ OrganoidAgent/
 - Web 与数据预览可使用 CPU
 - 分割和活性预测推荐 NVIDIA GPU；示例 Conda 环境使用 CUDA 12.1
 - 完整环境及模型权重需要数 GB 磁盘空间
+
+## 快速开始
+
+仅启动 Web、浏览数据和生成预览：
+
+```bash
+git clone https://github.com/yhyh2270/OrganoidAgent.git
+cd OrganoidAgent
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python scripts/check_environment.py --profile core
+python app.py --port 8080
+```
+
+Windows PowerShell 将激活命令替换为 `.venv\Scripts\Activate.ps1`。浏览器打开 <http://localhost:8080>。
 
 ## 安装
 
@@ -211,6 +239,13 @@ $env:ORGANOID_CELLPOSE_PYTHON = "C:\path\to\python.exe"
 
 Linux/macOS 使用同名环境变量和绝对解释器路径。
 
+例如，当前环境已经安装 Cellpose 时：
+
+```bash
+export ORGANOID_CELLPOSE_PYTHON="$(command -v python3)"
+python app.py --port 8080
+```
+
 未设置环境变量时，应用使用启动它的当前 Python 解释器。`config/workflows.json` 中也可以填写项目部署环境的解释器路径；仓库默认不包含任何特定计算机的绝对路径。
 
 ## 启动与使用
@@ -262,13 +297,16 @@ python scripts/run_fluorescence_prediction.py `
 
 主要输出包括 `results.json`、`results.csv`、`report.md`，以及每个样本的裁剪图、掩膜、叠加图和结构化结果。
 
-## 下载示例数据
+## 内置数据集
 
-仓库包含一个可直接运行的精简演示数据集：
+仓库包含两个可直接使用的精简演示数据集：
 
-- `datasets/02_Fluorescence_demo/`：用于荧光活性预测的 TIFF 示例。
+| 目录 | 内容 | 规模 |
+| --- | --- | ---: |
+| `datasets/02_Fluorescence_demo/` | 荧光活性预测示例 | 2 张图像，约 20 MiB |
+| `datasets/03_Y-27632_experiment_10x/` | 10、20、100 µM，D05/D07 的 10× 示例 | 6 张 TIFF，约 103 MiB |
 
-完整实验数据不会提交到 Git。需要更多公开数据时可按需运行下载脚本，文件将保存到 `datasets/`：
+Y-27632 目录中的 `manifest.csv` 记录条件、日期、文件大小和 SHA-256，可用于传输后完整性检查。数据仅用于研究工作流演示，不应据此作出临床结论。其他完整实验数据仍不会自动提交到 Git；需要更多公开数据时可按需运行下载脚本，文件将保存到 `datasets/`：
 
 ```bash
 python scripts/download_organoid_datasets.py
@@ -284,7 +322,7 @@ python scripts/download_drug_screening_datasets.py
 ```bash
 python -m compileall app.py agent_studio.py fluorescence_prediction scripts
 python scripts/check_environment.py --profile core
-python app.py --port 8080
+python tests/smoke_test.py
 ```
 
 然后确认：
@@ -304,11 +342,12 @@ python app.py --port 8080
 
 ## 数据、隐私与安全
 
-- `datasets/` 中仅跟踪荧光演示目录；完整实验数据、`analysis-outputs/`、模型权重、缓存和本地环境默认不会进入 Git。
+- `datasets/` 中仅跟踪两个明确列出的演示目录；其他实验数据默认不会进入 Git。
+- `analysis-outputs/`、模型权重、预览缓存、本地环境和 Agent 作业日志不会上传到 GitHub。
 - 不要把 API 密钥、患者身份信息或受限制的原始数据提交到仓库。
 - Agent Studio 可启动本地 Codex 作业；仅在可信环境中运行，并检查其文件访问范围。
 - 使用外部数据集和模型时，请遵守各自许可证和数据治理要求。
 
 ## 许可证
 
-本项目依据 [Apache License 2.0](LICENSE) 发布。版权归属信息见 [NOTICE](NOTICE)。
+本项目代码依据 [Apache License 2.0](LICENSE) 发布，版权归属信息见 [NOTICE](NOTICE)。内置显微图像仅用于研究演示；发布或再分发其他数据前，请单独确认相应数据权利与许可。

@@ -1,4 +1,4 @@
-const PIPELINE_PRESET_VERSION = "2";
+const PIPELINE_PRESET_VERSION = "3";
 
 const state = {
   datasets: [],
@@ -21,7 +21,7 @@ const state = {
     morphologyJobId: null,
     morphologyStatus: null,
     pollTimer: null,
-    activeScript: "yichao",
+    activeScript: "generic",
     selectedDataset: "",
     availableFiles: [],
     selectedFiles: new Set(),
@@ -40,21 +40,6 @@ STEP {"id":"predict","block":"work","title":"Predict organoid viability","instru
 ACTION {"type":"script","target":"scripts/run_fluorescence_prediction.py"}
 STEP {"id":"review","block":"debug","title":"Review segmentation and evidence","instruction":"Confirm results.json, results.csv, report.md, overlays, masks, crops, viability scores, and morphology evidence exist. Flag low YOLO or SAM confidence."}
 STEP {"id":"report","block":"summary","title":"Report results","instruction":"Summarize ranked viability scores and measured image evidence without claiming biological causality."}`,
-  },
-  yichao: {
-    title: "Yichao pix2pix differentiation prediction",
-    databaseHint: "analysis-outputs/yichao_instance_pairs/database/instance_pairs.sqlite",
-    text: `AUTOAPPDEV_PIPELINE 1
-TASK {"id":"yichao_pix2pix","title":"Yichao fluorescence prediction dataset","objective":"Prepare paired brightfield and fluorescence instances for pix2pix training."}
-STEP {"id":"inspect","block":"plan","title":"Inspect data","instruction":"Check Yichao 1/2/3/4/5/6 structure, channel mapping, and existing instance-pair database."}
-ACTION {"type":"read","target":"references/Yichao"}
-STEP {"id":"segment","block":"work","title":"Segment brightfield","instruction":"Run the multiscale Cellpose segmentation pipeline on brightfield channel c1 and save overlays/intermediates."}
-ACTION {"type":"script","target":"analysis-tools/yichao_instance_pairs"}
-STEP {"id":"pair","block":"work","title":"Build pix2pix pairs","instruction":"Crop matched c1 brightfield and c0 fluorescence instances, then resize or pad to 256x256."}
-ACTION {"type":"dataset","target":"analysis-outputs/yichao_pix2pix_256"}
-STEP {"id":"database","block":"work","title":"Maintain database","instruction":"Backfill edge padding flags, size quantiles, source image metadata, and resized-pair links into SQLite."}
-ACTION {"type":"database","target":"analysis-outputs/yichao_instance_pairs/database/instance_pairs.sqlite"}
-STEP {"id":"review","block":"summary","title":"Review quality","instruction":"Report edge padding, instance size quantiles, debris filtering risks, and preview paths."}`,
   },
   zhengyu: {
     title: "DEO quality-selected segmentation and metric pipeline",
@@ -425,7 +410,7 @@ function loadSelectedScript(forcePreset = false) {
   if (!select || !editor) {
     return;
   }
-  const key = select.value || "yichao";
+  const key = select.value || "generic";
   const localKey = `organoid-agent-script-${key}`;
   const versionKey = `${localKey}-preset-version`;
   state.agent.activeScript = key;
@@ -444,7 +429,7 @@ function saveSelectedScript() {
   if (!editor) {
     return;
   }
-  const key = state.agent.activeScript || "yichao";
+  const key = state.agent.activeScript || "generic";
   localStorage.setItem(`organoid-agent-script-${key}`, editor.value);
   localStorage.setItem(`organoid-agent-script-${key}-preset-version`, PIPELINE_PRESET_VERSION);
   const status = document.getElementById("pipeline-status");
