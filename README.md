@@ -7,82 +7,80 @@
 [![CI](https://github.com/yhyh2270/OrganoidAgent/actions/workflows/ci.yml/badge.svg)](https://github.com/yhyh2270/OrganoidAgent/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/License-Apache--2.0-green.svg)](LICENSE)
 
-OrganoidAgent 是一个面向类器官显微图像和实验数据的本地优先分析平台。它把数据集浏览、TIFF/表格预览、类器官分割、形态学定量、荧光活性预测和 Agent 辅助工作流整合在一个 Tornado + PWA 应用中。仓库自带两个小型研究演示数据集，克隆后即可验证 Web、预览和 Y-27632/荧光分析入口。
+OrganoidAgent is a local-first platform for organoid microscopy and experimental-data analysis. It integrates dataset browsing, TIFF and table previews, organoid segmentation, morphological quantification, fluorescence-based viability prediction, and agent-assisted workflows in a Tornado + PWA application. The repository includes two compact research demonstration datasets that can be used to verify the web interface, preview functions, and Y-27632 and fluorescence-analysis workflows after cloning.
 
-> OrganoidAgent is a local-first platform for organoid dataset exploration, image segmentation, morphology analysis, fluorescence-based viability prediction, and agent-assisted workflows.
+> OrganoidAgent is intended for research use. Model outputs require experimental validation and must not be interpreted as clinical conclusions without appropriate evidence.
 
-## 主要功能
+## Features
 
-| 模块 | 功能 |
+| Module | Functionality |
 | --- | --- |
-| 数据浏览 | 索引 `datasets/`，递归浏览文件并预览 CSV、Excel、TIFF、常规图像、压缩包和 AnnData 文件 |
-| 形态学分析 | 运行多尺度 Cellpose 工作流，计算面积、尺寸、边缘、曲率及中心性等指标 |
-| 活性预测 | 结合 YOLO、SAM 与 ConvNeXt-Tiny，生成类器官掩膜、活性评分和图像证据 |
-| 批量报告 | 输出 JSON、CSV、Markdown 报告、裁剪图、掩膜和可视化叠加图 |
-| Agent Studio | 支持会话、工作流解析、Codex 作业、状态查询与结果管理 |
-| PWA | 无大型前端框架，可从浏览器安装，并缓存静态资源 |
+| Dataset browsing | Indexes `datasets/`, recursively browses files, and previews CSV, Excel, TIFF, standard image, archive, and AnnData files |
+| Morphology analysis | Runs multiscale Cellpose workflows and computes area, size, edge, curvature, and centrality-related metrics |
+| Viability prediction | Combines YOLO, SAM, and ConvNeXt-Tiny to generate organoid masks, viability scores, and image-based evidence |
+| Batch reporting | Produces JSON, CSV, and Markdown reports, crops, masks, and visualization overlays |
+| Agent Studio | Provides sessions, workflow parsing, Codex jobs, status monitoring, and result management |
+| PWA interface | Uses no large frontend framework, supports browser installation, and caches static resources |
 
-本项目用于科研分析，不应在未经实验验证的情况下将预测结果直接解释为临床结论。
-
-## 处理流程
+## Processing pipeline
 
 ```text
-显微图像
-   ├─ YOLO：定位类器官
-   ├─ SAM：生成精细实例掩膜
-   ├─ 形态特征与质量控制
-   └─ ConvNeXt-Tiny：预测活性分数
-                   └─ JSON / CSV / Markdown / 掩膜 / 叠加图
+Microscopy image
+   ├─ YOLO: organoid localization
+   ├─ SAM: fine-grained instance-mask generation
+   ├─ Morphological features and quality control
+   └─ ConvNeXt-Tiny: viability-score prediction
+                   └─ JSON / CSV / Markdown / masks / overlays
 ```
 
-默认报告将预测结果分为高活性（`>= 0.8`）、中活性（`0.6–0.8`）和低活性（`< 0.6`）；这些阈值只用于结果汇总和排序。
+The default report categorizes predictions as high viability (`>= 0.8`), intermediate viability (`0.6–0.8`), or low viability (`< 0.6`). These thresholds are used only for result summarization and ranking.
 
-## 内置工作流程
+## Built-in workflows
 
-| 工作流 | 适用数据 | 主要输出 |
+| Workflow | Input data | Main outputs |
 | --- | --- | --- |
-| Viability detection | `02_Fluorescence_demo` 或其他显微图像 | YOLO/SAM 掩膜、活性评分、CSV、JSON、Markdown 报告 |
-| Y-27632 dataset analysis | `03_Y-27632_experiment_10x` | Cellpose/信号恢复质量比较、形态指标、叠加图和报告 |
-| DEO morphology | 符合命名规则的密度实验 TIFF | 多尺度分割、增长/融合/圆度/边缘等指标 |
-| Sodium alginate analysis | 海藻酸钠实验 TIFF | 条件感知的分割、形态定量与汇总 |
+| Viability detection | `02_Fluorescence_demo` or other microscopy images | YOLO/SAM masks, viability scores, CSV, JSON, and Markdown reports |
+| Y-27632 dataset analysis | `03_Y-27632_experiment_10x` | Cellpose/signal-recovery quality comparison, morphological metrics, overlays, and reports |
+| DEO morphology | Density-experiment TIFF files following the expected naming convention | Multiscale segmentation, growth, fusion, roundness, edge, and related metrics |
+| Sodium alginate analysis | Sodium-alginate experiment TIFF files | Condition-aware segmentation, morphological quantification, and summaries |
 
-工作流使用用户明确选择的文件，不会自动扩展到其他数据集。所有模型输出均仅供科研分析。
+Workflows operate only on files explicitly selected by the user and do not automatically expand to other datasets. All model outputs are intended for research analysis only.
 
-## 项目结构
+## Repository structure
 
 ```text
 OrganoidAgent/
-├── app.py                       # Tornado API 与 PWA 服务
-├── agent_studio.py              # Agent 会话和 Codex 作业管理
-├── web/                         # HTML、JavaScript、CSS、Service Worker 和图标
-├── fluorescence_prediction/     # 分割、活性推理、特征和报告
-│   ├── SAM/                     # Segment Anything 实现
-│   └── weights/                 # 本地模型权重（Git 忽略）
-├── analysis-tools/              # 多尺度分割与实验分析脚本
-├── api-tests/                   # API/分割复现脚本及说明
-├── scripts/                     # 环境检查、数据下载和命令行入口
-├── config/workflows.json        # 分析环境和工作流配置
-├── datasets/                    # 两个版本化演示数据集；其他本地数据默认忽略
-├── analysis-outputs/            # 运行结果（Git 忽略）
-├── requirements.txt             # Web 和数据预览依赖
-├── requirements-analysis.txt    # 完整分析依赖
-└── environment.yml              # Conda 环境定义
+├── app.py                       # Tornado API and PWA server
+├── agent_studio.py              # Agent sessions and Codex job management
+├── web/                         # HTML, JavaScript, CSS, service worker, and icons
+├── fluorescence_prediction/     # Segmentation, viability inference, features, and reports
+│   ├── SAM/                     # Segment Anything implementation
+│   └── weights/                 # Local model weights (ignored by Git)
+├── analysis-tools/              # Multiscale segmentation and experiment-analysis scripts
+├── api-tests/                   # API and segmentation reproduction scripts and notes
+├── scripts/                     # Environment checks, downloaders, and CLI entry points
+├── config/workflows.json        # Analysis-environment and workflow configuration
+├── datasets/                    # Two versioned demonstration datasets; other local data is ignored
+├── analysis-outputs/            # Runtime outputs (ignored by Git)
+├── requirements.txt             # Web and data-preview dependencies
+├── requirements-analysis.txt    # Full analysis dependencies
+└── environment.yml              # Conda environment definition
 ```
 
-## 系统要求
+## System requirements
 
-- Python 3.10+
-- Windows、Linux 或 macOS
-- Web 与数据预览可使用 CPU
-- 分割和活性预测推荐 NVIDIA GPU；示例 Conda 环境使用 CUDA 12.1
-- 完整环境及模型权重需要数 GB 磁盘空间
+- Python 3.10 or newer
+- Windows, Linux, or macOS
+- CPU support for the web interface and data previews
+- An NVIDIA GPU is recommended for segmentation and viability prediction; the example Conda environment uses CUDA 12.1
+- Several GB of disk space for the full environment and model weights
 
-## 快速开始
+## Quick start
 
-仅启动 Web、浏览数据和生成预览：
+To start the web interface with dataset browsing and preview functionality only:
 
 ```bash
-git clone https://github.com/yhyh2270/OrganoidAgent.git
+git clone -b main https://github.com/yhyh2270/OrganoidAgent.git
 cd OrganoidAgent
 python3 -m venv .venv
 source .venv/bin/activate
@@ -92,18 +90,18 @@ python scripts/check_environment.py --profile core
 python app.py --port 8080
 ```
 
-Windows PowerShell 将激活命令替换为 `.venv\Scripts\Activate.ps1`。浏览器打开 <http://localhost:8080>。
+On Windows PowerShell, replace the activation command with `.venv\Scripts\Activate.ps1`. Then open <http://localhost:8080> in a browser.
 
-## 安装
+## Installation
 
-### 1. 克隆仓库
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yhyh2270/OrganoidAgent.git
+git clone -b main https://github.com/yhyh2270/OrganoidAgent.git
 cd OrganoidAgent
 ```
 
-### 2A. 安装完整分析环境（推荐）
+### 2A. Install the full analysis environment (recommended)
 
 ```bash
 conda env create -f environment.yml
@@ -111,11 +109,11 @@ conda activate organoid
 python scripts/check_environment.py --profile analysis
 ```
 
-`environment.yml` 默认安装 CUDA 12.1 版本的 PyTorch。没有 NVIDIA GPU 时，请先将其中的 `pytorch-cuda=12.1` 替换为适合本机的 CPU 配置。
+The provided `environment.yml` installs the CUDA 12.1 build of PyTorch. If no NVIDIA GPU is available, replace `pytorch-cuda=12.1` with a CPU-compatible configuration before creating the environment.
 
-### 2B. 只安装 Web 与数据预览功能
+### 2B. Install only the web and data-preview features
 
-Windows PowerShell：
+Windows PowerShell:
 
 ```powershell
 python -m venv .venv
@@ -125,7 +123,7 @@ python -m pip install -r requirements.txt
 python scripts/check_environment.py --profile core
 ```
 
-Linux/macOS：
+Linux/macOS:
 
 ```bash
 python3 -m venv .venv
@@ -135,17 +133,17 @@ python -m pip install -r requirements.txt
 python scripts/check_environment.py --profile core
 ```
 
-在 venv 中增加完整分析功能：
+To add the full analysis functionality to an existing virtual environment:
 
 ```bash
 python -m pip install -r requirements-analysis.txt
 ```
 
-如需特定 CUDA 版本，先按 [PyTorch 官方安装说明](https://pytorch.org/get-started/locally/) 安装匹配的 `torch` 和 `torchvision`。
+For a specific CUDA version, install matching `torch` and `torchvision` packages by following the [official PyTorch installation instructions](https://pytorch.org/get-started/locally/).
 
-## 配置模型权重
+## Model weights
 
-模型文件体积较大，不包含在普通 Git 历史中，而是作为 [`models-v1.0.0`](https://github.com/yhyh2270/OrganoidAgent/releases/tag/models-v1.0.0) Release 资源发布。使用完整活性预测前，请将权重放入：
+The model files are large and are not stored in the regular Git history. They are distributed as assets in the [`models-v1.0.0`](https://github.com/yhyh2270/OrganoidAgent/releases/tag/models-v1.0.0) release. Before running full viability prediction, place the following files in:
 
 ```text
 fluorescence_prediction/weights/
@@ -154,23 +152,21 @@ fluorescence_prediction/weights/
 └── sam_vit_b_01ec64.pth
 ```
 
-### 自动下载并校验（推荐）
+### Automatic download and verification (recommended)
 
-推荐在仓库根目录执行内置下载器；它会跳过校验通过的现有文件，并对新下载文件执行大小和 SHA-256 双重校验：
+From the repository root, run the built-in downloader. It skips files that already pass verification and applies both size and SHA-256 checks to new downloads:
 
 ```bash
 python scripts/download_model_weights.py
 ```
 
-如需重新下载全部文件：
+To redownload all files:
 
 ```bash
 python scripts/download_model_weights.py --force
 ```
 
-### 手动下载并校验（Windows PowerShell）
-
-也可以使用以下 PowerShell 命令完成同样的下载和校验：
+### Manual download and verification: Windows PowerShell
 
 ```powershell
 $release = "https://github.com/yhyh2270/OrganoidAgent/releases/download/models-v1.0.0"
@@ -192,9 +188,7 @@ foreach ($file in $weights.Keys) {
 }
 ```
 
-### 手动下载并校验（Linux/macOS）
-
-在仓库根目录执行：
+### Manual download and verification: Linux/macOS
 
 ```bash
 set -euo pipefail
@@ -214,71 +208,71 @@ printf '%s  %s\n' \
   | sha256sum --check --strict
 ```
 
-macOS 如果没有 `sha256sum`，可先安装 GNU coreutils（`brew install coreutils`），再将最后一行的 `sha256sum` 改为 `gsha256sum`。
+On macOS, if `sha256sum` is unavailable, install GNU coreutils (`brew install coreutils`) and replace `sha256sum` with `gsha256sum` in the final command.
 
-### 文件校验值
+### File checksums
 
-| 文件 | 大小 | SHA-256 |
+| File | Size | SHA-256 |
 | --- | ---: | --- |
 | `sam_vit_b_01ec64.pth` | 375,042,383 bytes | `ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912` |
 | `viability_best.pth` | 335,956,115 bytes | `cb328bae14ac8d1b77556636e4925e8c7549db83903c15430999c8b8ced9759b` |
 | `yolo_organoid_best.pt` | 6,258,019 bytes | `2236790c8e9f027310f63306686215ff6928120b0d59938304e68f965e21b0cf` |
 
-运行以下命令检查依赖、解释器和权重是否就绪：
+Check dependencies, interpreters, and model weights with:
 
 ```bash
 python scripts/check_environment.py --profile analysis
 ```
 
-如果推理或 Cellpose 使用独立环境，可设置：
+If fluorescence inference or Cellpose runs in a separate environment, set:
 
 ```powershell
 $env:ORGANOID_FLUORESCENCE_PYTHON = "C:\path\to\python.exe"
 $env:ORGANOID_CELLPOSE_PYTHON = "C:\path\to\python.exe"
 ```
 
-Linux/macOS 使用同名环境变量和绝对解释器路径。
+On Linux/macOS, use the same variable names with absolute interpreter paths.
 
-例如，当前环境已经安装 Cellpose 时：
+For example, if Cellpose is installed in the current environment:
 
 ```bash
 export ORGANOID_CELLPOSE_PYTHON="$(command -v python3)"
 python app.py --port 8080
 ```
 
-未设置环境变量时，应用使用启动它的当前 Python 解释器。`config/workflows.json` 中也可以填写项目部署环境的解释器路径；仓库默认不包含任何特定计算机的绝对路径。
+If these variables are not set, the application uses the Python interpreter that launched it. Paths to deployment-specific interpreters may also be configured in `config/workflows.json`; the repository does not include machine-specific absolute paths.
 
-## 启动与使用
+## Run the application
 
 ```bash
 python app.py --port 8080
 ```
 
-打开 <http://localhost:8080>。首次使用可将 TIFF、CSV、XLSX 或其他支持的文件放到 `datasets/`，刷新页面后即可浏览和预览。
+Open <http://localhost:8080>. To browse and preview additional data, place TIFF, CSV, XLSX, or other supported files in `datasets/` and refresh the page.
 
-快速验证后端：
+Quick backend checks:
 
 ```bash
 curl http://localhost:8080/api/datasets
 curl http://localhost:8080/api/fluorescence/status
 ```
 
-常用 API：
+Common API endpoints:
 
-| 路径 | 用途 |
+| Endpoint | Purpose |
 | --- | --- |
-| `GET /api/datasets` | 列出本地数据集 |
-| `GET /api/preview?path=...` | 生成文件预览 |
-| `GET /api/fluorescence/status` | 检查推理环境与权重 |
-| `POST /api/fluorescence/run` | 创建荧光活性预测任务 |
-| `POST /api/morphology/run` | 创建形态学分析任务 |
-| `GET /api/morphology/status?id=...` | 查询形态学任务状态 |
-| `POST /api/morphology/cancel` | 取消形态学任务 |
-| `POST /api/agent/chat` | 使用 Agent Studio 会话接口 |
+| `GET /api/datasets` | List local datasets |
+| `GET /api/preview?path=...` | Generate a file preview |
+| `GET /api/fluorescence/status` | Check inference dependencies and weights |
+| `POST /api/fluorescence/run` | Create a fluorescence-viability prediction task |
+| `POST /api/morphology/run` | Create a morphology-analysis task |
+| `GET /api/morphology/status?id=...` | Query morphology-task status |
+| `POST /api/morphology/cancel` | Cancel a morphology task |
+| `POST /api/agent/chat` | Use the Agent Studio session interface |
 
-## 命令行活性预测
+## Command-line viability prediction
 
-单张图像：
+Single image:
 
 ```bash
 python scripts/run_fluorescence_prediction.py \
@@ -286,7 +280,7 @@ python scripts/run_fluorescence_prediction.py \
   --output-dir analysis-outputs/fluorescence_prediction/single
 ```
 
-批量目录（Windows PowerShell）：
+Batch directory (Windows PowerShell):
 
 ```powershell
 python scripts/run_fluorescence_prediction.py `
@@ -295,29 +289,29 @@ python scripts/run_fluorescence_prediction.py `
   --order desc
 ```
 
-主要输出包括 `results.json`、`results.csv`、`report.md`，以及每个样本的裁剪图、掩膜、叠加图和结构化结果。
+Main outputs include `results.json`, `results.csv`, `report.md`, and per-sample crops, masks, overlays, and structured results.
 
-## 内置数据集
+## Included datasets
 
-仓库包含两个可直接使用的精简演示数据集：
+The repository contains two compact demonstration datasets that can be used immediately after cloning:
 
-| 目录 | 内容 | 规模 |
+| Directory | Contents | Size |
 | --- | --- | ---: |
-| `datasets/02_Fluorescence_demo/` | 荧光活性预测示例 | 2 张图像，约 20 MiB |
-| `datasets/03_Y-27632_experiment_10x/` | 10、20、100 µM，D05/D07 的 10× 示例 | 6 张 TIFF，约 103 MiB |
+| `datasets/02_Fluorescence_demo/` | Fluorescence-based viability-prediction examples | 2 images, approximately 20 MiB |
+| `datasets/03_Y-27632_experiment_10x/` | 10, 20, and 100 µM; D05/D07; 10× examples | 6 TIFF files, approximately 103 MiB |
 
-Y-27632 目录中的 `manifest.csv` 记录条件、日期、文件大小和 SHA-256，可用于传输后完整性检查。数据仅用于研究工作流演示，不应据此作出临床结论。其他完整实验数据仍不会自动提交到 Git；需要更多公开数据时可按需运行下载脚本，文件将保存到 `datasets/`：
+The Y-27632 directory includes a `manifest.csv` with condition, date, file-size, and SHA-256 metadata for post-transfer integrity checks. These data are provided for research workflow demonstrations only and must not be used to draw clinical conclusions. Other complete experimental datasets are not automatically committed to Git; additional public data can be downloaded on demand with:
 
 ```bash
 python scripts/download_organoid_datasets.py
 python scripts/download_drug_screening_datasets.py
 ```
 
-部分来源可能要求网络访问、Kaggle 凭据或接受数据提供方的使用条款。
+Some sources may require network access, Kaggle credentials, or acceptance of the data provider's terms of use.
 
-## 开发与验证
+## Development and verification
 
-修改后至少进行以下检查：
+After making changes, run at least:
 
 ```bash
 python -m compileall app.py agent_studio.py fluorescence_prediction scripts
@@ -325,29 +319,29 @@ python scripts/check_environment.py --profile core
 python tests/smoke_test.py
 ```
 
-然后确认：
+Then verify that:
 
-1. PWA 可在浏览器打开。
-2. `/api/datasets` 返回 JSON。
-3. CSV、XLSX、TIFF、普通图片和压缩包预览正常。
-4. 如已配置分析环境，权重状态显示为 ready，并用少量样本验证推理输出。
+1. The PWA opens in a browser.
+2. `/api/datasets` returns JSON.
+3. CSV, XLSX, TIFF, standard-image, and archive previews work.
+4. When the analysis environment is configured, the weight status is `ready` and a small sample produces inference outputs.
 
-## 常见问题
+## Troubleshooting
 
-- **页面可打开但没有数据**：确认文件位于仓库的 `datasets/` 中，并刷新页面。
-- **推理状态不是 ready**：运行 analysis 环境检查，核对三个权重文件及 Python 环境变量。
-- **CUDA/torch 安装失败**：安装与驱动兼容的 PyTorch 构建，或改用 CPU 环境。
-- **TIFF/Excel 无法预览**：确认已安装 `imagecodecs`、`tifffile`、`openpyxl` 和 `xlrd`。
-- **端口被占用**：改用 `python app.py --port 8081`。
+- **The page opens but no data are shown:** Confirm that files are under the repository's `datasets/` directory and refresh the page.
+- **Inference status is not `ready`:** Run the analysis environment check and verify all three weight files and interpreter environment variables.
+- **CUDA/PyTorch installation fails:** Install a PyTorch build compatible with the installed driver, or use a CPU configuration.
+- **TIFF/Excel preview fails:** Confirm that `imagecodecs`, `tifffile`, `openpyxl`, and `xlrd` are installed.
+- **The port is already in use:** Start the application on another port, for example `python app.py --port 8081`.
 
-## 数据、隐私与安全
+## Data, privacy, and security
 
-- `datasets/` 中仅跟踪两个明确列出的演示目录；其他实验数据默认不会进入 Git。
-- `analysis-outputs/`、模型权重、预览缓存、本地环境和 Agent 作业日志不会上传到 GitHub。
-- 不要把 API 密钥、患者身份信息或受限制的原始数据提交到仓库。
-- Agent Studio 可启动本地 Codex 作业；仅在可信环境中运行，并检查其文件访问范围。
-- 使用外部数据集和模型时，请遵守各自许可证和数据治理要求。
+- Only the two explicitly listed demonstration directories under `datasets/` are tracked; other experimental data are ignored by default.
+- `analysis-outputs/`, model weights, preview caches, local environments, and Agent jobs are not uploaded to GitHub.
+- Do not commit API keys, personally identifiable patient information, or restricted raw data.
+- Agent Studio can launch local Codex jobs. Use it only in trusted environments and review its file-access scope.
+- Follow the licenses and data-governance requirements of external datasets and model components.
 
-## 许可证
+## License
 
-本项目代码依据 [Apache License 2.0](LICENSE) 发布，版权归属信息见 [NOTICE](NOTICE)。内置显微图像仅用于研究演示；发布或再分发其他数据前，请单独确认相应数据权利与许可。
+The source code is released under the [Apache License 2.0](LICENSE). Copyright and attribution information is provided in [NOTICE](NOTICE). The included microscopy images are intended for research demonstrations; verify the applicable data rights and licenses before publishing or redistributing other data.
