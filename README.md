@@ -302,7 +302,7 @@ The repository contains public demonstration data from four experimental dataset
 | `datasets/03_Y-27632_experiment_10x/` | Five Y-27632 concentrations and matched days | 20 TIFF files, approximately 340 MiB |
 | `datasets/05_Fluorescence_demo/` | Fluorescence-based viability-prediction examples | 372 microscopy images, approximately 3.8 GiB |
 
-The morphology directories include source `manifest.csv` files with condition, date, file-size, and SHA-256 metadata for post-transfer integrity checks. These data are provided for research workflow demonstrations only and must not be used to draw clinical conclusions. Additional public data can be downloaded on demand with:
+The morphology directories include source `manifest.csv` files with condition, date, file-size, and SHA-256 metadata for post-transfer integrity checks. Only the 20-image subsets listed above are included for the morphology experiments; their complete source collections are not committed to this repository. These data are provided for research workflow demonstrations only and must not be used to draw clinical conclusions. Optional downloader scripts can retrieve external datasets on demand; they do not add complete morphology collections to this repository:
 
 ```bash
 python scripts/download_organoid_datasets.py
