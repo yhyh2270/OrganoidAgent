@@ -1,0 +1,37 @@
+﻿condition,day,destination_file,source_path,bytes,sha256
+control,D00,control_D00_10x__No_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\19-十一月-2025\No 10x00.tif,17830567,4d196b7f0e27cc2f569eee77a99faf05c1ecf6a8f3df3777317f880c19941205
+alginate_0.02pct,D00,alginate_0.02pct_D00_10x__0.02%_Alginate_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\19-十一月-2025\0.02% Alginate 10x00.tif,17830579,b8abd1ffcbf5082d73bad9862bf7a234e1d4c42933cb2068df6bebd696df332a
+alginate_0.05pct,D00,alginate_0.05pct_D00_10x__0.05%_Alginate_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\19-十一月-2025\0.05% Alginate 10x00.tif,17830579,e86a14a972b4846c5c8c9659ebbfa163eb8893ce25938194d99958151fa39250
+control,D01,control_D01_10x__no_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\20-十一月-2025\no 10x00.tif,17830687,406419c71753feb02ee4eef2fe1c20a407819bc194def94cebb951deb079ae73
+alginate_0.02pct,D01,alginate_0.02pct_D01_10x__0.02%_Alginate_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\20-十一月-2025\0.02% Alginate 10x00.tif,17830700,5e5a29d620386d92353cacee18404d66fc7c4fbd69e159945a51ba70aec2092c
+alginate_0.05pct,D01,alginate_0.05pct_D01_10x__0.05%_Alginate_10x05.tif,F:\wzydata\DEO\App65 DEO+Alginate\20-十一月-2025\0.05% Alginate 10x05.tif,17830700,f02eb30b6e05459322dbf1c6beaf11505820215d6a8d0a041458fb577f58b7e2
+control,D03,control_D03_10x__No_10X00.tif,F:\wzydata\DEO\App65 DEO+Alginate\22-十一月-2025\No 10X00.tif,17830687,23873dd5ad43774b536e8318502d1242a7331707e5b171816747d45a06f92da8
+alginate_0.02pct,D03,alginate_0.02pct_D03_10x__0.02%_Alginate_10X00.tif,F:\wzydata\DEO\App65 DEO+Alginate\22-十一月-2025\0.02% Alginate 10X00.tif,17830686,405a0abbbfb9444678d84a11b7a05defafe54c114295e76c30e464b964f4bf6a
+alginate_0.05pct,D03,alginate_0.05pct_D03_10x__0.05%_Alginate_10X00.tif,F:\wzydata\DEO\App65 DEO+Alginate\22-十一月-2025\0.05% Alginate 10X00.tif,17830686,2ba174de55d2da800c88bca77eec9bb54f4a429616ebb72874729c9d469a9e51
+control,D05,control_D05_10x__No-10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\24-十一月-2025\No-10x00.tif,17830673,1fd08659d8dcc2bb8df3a791ffc8bdc86a530d39c6e05929518f4c6e77d3f31c
+alginate_0.02pct,D05,alginate_0.02pct_D05_10x__0.02%_Alginate-10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\24-十一月-2025\0.02% Alginate-10x00.tif,17830686,64d8e0246f114f82a6fd09d6f322aed63804a3d9740f25e0a6a4b1b6239d554d
+alginate_0.05pct,D05,alginate_0.05pct_D05_10x__0.05%_Alginate-10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\24-十一月-2025\0.05% Alginate-10x00.tif,17830686,0e1804b194bb69acd0b9d5e57d955ef6beda2659c015b20ab8ef885fc5e151ee
+control,D06,control_D06_10x__no_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\25-十一月-2025\no 10x00.tif,17830687,b26223fb19be80ffe735244b0c23ee1ee9f047d937993a9272055cbff4a19666
+alginate_0.02pct,D06,alginate_0.02pct_D06_10x__0.02%_Alginate_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\25-十一月-2025\0.02% Alginate 10x00.tif,17830699,b2fd5d481a7bdb3e5938cf4b0deeec2f360f6cb918ade50df881064daf78b070
+alginate_0.05pct,D06,alginate_0.05pct_D06_10x__0.05%_Alginate_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\25-十一月-2025\0.05% Alginate 10x00.tif,17830700,2a73aefe742f0fd0eb2f3b0d4329396403d5b3e318d3b4e52e1a37a16f818c05
+control,D07,control_D07_10x__no_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\26-十一月-2025\no 10x00.tif,17830673,a90676de8b1cf90e05d6b82780878be35832f009263672ed6af03b9c59d4b6cf
+alginate_0.02pct,D07,alginate_0.02pct_D07_10x__0.02%_Alginate_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\26-十一月-2025\0.02% Alginate 10x00.tif,17830686,3898245f0c84d68fa0f895b1a77efcdf94dcadab6e59157651dedc8613d786f0
+alginate_0.05pct,D07,alginate_0.05pct_D07_10x__0.05%_Alginate_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\26-十一月-2025\0.05% Alginate 10x00.tif,17830686,48885f1b30ae65e74f03c6a9cdaf13b494d915cf8c12ff958302cee440e64411
+control,D08,control_D08_10x__no_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\27-十一月-2025\no 10x00.tif,17830673,2b534ab8ff1061490f8d7e9339d27e9726989a48876449c29b1209aefab94d0c
+alginate_0.02pct,D08,alginate_0.02pct_D08_10x__0.02%_Alginate_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\27-十一月-2025\0.02% Alginate 10x00.tif,17830686,d87ccddd329636241f166f83b213b2bce8a4e40aef86e1370d1af09be93c5c50
+alginate_0.05pct,D08,alginate_0.05pct_D08_10x__0.05%_Alginate_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\27-十一月-2025\0.05% Alginate 10x00.tif,17830686,233eba1392031d9f08376bd430b265bda364244698cbb602a283716b84d11f58
+control,D09,control_D09_10x__no-10X00.tif,F:\wzydata\DEO\App65 DEO+Alginate\28-十一月-2025\no-10X00.tif,17830560,6fe07ddf726108c7dd22f39ffa115619beacd5931e09be29ad40221e546c4831
+alginate_0.02pct,D09,alginate_0.02pct_D09_10x__0.02%_Alginate-10X00.tif,F:\wzydata\DEO\App65 DEO+Alginate\28-十一月-2025\0.02% Alginate-10X00.tif,17830550,491c5c392137d1a0f3f0b6d53e28b4dee916db2217b01c2e9cdb873b6b9f1bd8
+alginate_0.05pct,D09,alginate_0.05pct_D09_10x__0.05%_Alginate-10X00.tif,F:\wzydata\DEO\App65 DEO+Alginate\28-十一月-2025\0.05% Alginate-10X00.tif,17830550,adcb9da845dff061de4484aeafaae049f0f94fe039dffd39213734c2000dd9b3
+control,D10,control_D10_10x__no_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\29-十一月-2025\no 10x00.tif,17830673,d92a45e38c1c37774e1c899479717b62f40f9c4b31f8bbdc1c37f08571795604
+alginate_0.02pct,D10,alginate_0.02pct_D10_10x__0.02%_Alginate_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\29-十一月-2025\0.02% Alginate 10x00.tif,17830685,a01f0baa7ccaded2c6444a6232c2b6fe0a96fe5c21d47dc14e792b6320ea0d39
+alginate_0.05pct,D10,alginate_0.05pct_D10_10x__0.05%_Alginate_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\29-十一月-2025\0.05% Alginate 10x00.tif,17830686,3681e64c4229fd196e37b1dbc9d949249620c229e5959d51e504ba31ae780f3b
+control,D11,control_D11_10x__no-10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\30-十一月-2025\no-10x00.tif,17830556,71c57a3e0b66c35f02bb185b766b893b560dade52971d025c8a50593dbcfc635
+alginate_0.02pct,D11,alginate_0.02pct_D11_10x__0.02%_Alginate-10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\30-十一月-2025\0.02% Alginate-10x00.tif,17830568,1f36bf9d0e2b40cf8faa546a49fa25a235446cacc328bcf800df5335000337b7
+alginate_0.05pct,D11,alginate_0.05pct_D11_10x__0.05%_Alginate-10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\30-十一月-2025\0.05% Alginate-10x00.tif,17830583,6c4046253b7c96f2790a8f2780fa13c76cb45e21daaa5c3e4fbe64bdb918195e
+control,D12,control_D12_10x__no-10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\01-十二月-2025\no-10x00.tif,17830675,8f9ce72a26747fe335ef1897eaa11872f4c2dddbdb403ff2e8110d2efb52bb84
+alginate_0.02pct,D12,alginate_0.02pct_D12_10x__0.02%_Alginate-10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\01-十二月-2025\0.02% Alginate-10x00.tif,17830665,ef43d9b64583b53c04ffa6aebaf49e1551989972bae7048a59d0ccd904cbedba
+alginate_0.05pct,D12,alginate_0.05pct_D12_10x__0.05%_Alginate-10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\01-十二月-2025\0.05% Alginate-10x00.tif,17830666,b297531d915a7fcf3120b878b4202a41f64ac0bd34d4545c924d2c2c4e65630c
+control,D13,control_D13_10x__no_10x14.tif,F:\wzydata\DEO\App65 DEO+Alginate\02-十二月-2025\no 10x14.tif,17830382,7cf0a2c287206880c7ab5ef91afdfb327ae7993719855c1934b7149f7681bfee
+alginate_0.02pct,D13,alginate_0.02pct_D13_10x__0.02%_Alginate_10x00.tif,F:\wzydata\DEO\App65 DEO+Alginate\02-十二月-2025\0.02% Alginate 10x00.tif,17830572,4d677febd96a265a2cb322e4ffa89243f05d7ec153215ae7fe2a58d912a51701
+alginate_0.05pct,D13,alginate_0.05pct_D13_10x__0.05%_Alginate_10x11.tif,F:\wzydata\DEO\App65 DEO+Alginate\02-十二月-2025\0.05% Alginate 10x11.tif,17830572,45e76e8cfa819abf9bb91e17e8208224c054734a5d08f977fb4d37fd68ce4924

@@ -1,9 +1,13 @@
 datasets/*
 !datasets/README.md
-!datasets/02_Fluorescence_demo/
-!datasets/02_Fluorescence_demo/**
+!datasets/01_Density_experiment_10x/
+!datasets/01_Density_experiment_10x/**
+!datasets/02_Sodium_alginate_experiment_10x/
+!datasets/02_Sodium_alginate_experiment_10x/**
 !datasets/03_Y-27632_experiment_10x/
 !datasets/03_Y-27632_experiment_10x/**
+!datasets/05_Fluorescence_demo/
+!datasets/05_Fluorescence_demo/**
 .DS_Store
 .env
 .env.*
