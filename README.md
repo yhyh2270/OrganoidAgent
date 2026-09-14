@@ -7,7 +7,7 @@
 [![CI](https://github.com/yhyh2270/OrganoidAgent/actions/workflows/ci.yml/badge.svg)](https://github.com/yhyh2270/OrganoidAgent/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/License-Apache--2.0-green.svg)](LICENSE)
 
-OrganoidAgent is a local-first platform for organoid microscopy and experimental-data analysis. It integrates dataset browsing, TIFF and table previews, organoid segmentation, morphological quantification, fluorescence-based viability prediction, and agent-assisted workflows in a Tornado + PWA application. The repository includes curated subsets from four research datasets that can be used to verify the web interface, preview functions, and the density, sodium-alginate, Y-27632, and fluorescence-analysis workflows after cloning.
+OrganoidAgent is a local-first platform for organoid microscopy and experimental-data analysis. It integrates dataset browsing, TIFF and table previews, organoid segmentation, morphological quantification, fluorescence-based viability prediction, and agent-assisted workflows in a Tornado + PWA application. The repository includes public demonstration data from four research datasets that can be used to verify the web interface, preview functions, and the density, sodium-alginate, Y-27632, and fluorescence-analysis workflows after cloning.
 
 > OrganoidAgent is intended for research use. Model outputs require experimental validation and must not be interpreted as clinical conclusions without appropriate evidence.
 
@@ -60,7 +60,7 @@ OrganoidAgent/
 ├── api-tests/                   # API and segmentation reproduction scripts and notes
 ├── scripts/                     # Environment checks, downloaders, and CLI entry points
 ├── config/workflows.json        # Analysis-environment and workflow configuration
-├── datasets/                    # Curated public subsets; other local data is ignored
+├── datasets/                    # Public demonstration data; other local data is ignored
 ├── analysis-outputs/            # Runtime outputs (ignored by Git)
 ├── requirements.txt             # Web and data-preview dependencies
 ├── requirements-analysis.txt    # Full analysis dependencies
@@ -293,16 +293,16 @@ Main outputs include `results.json`, `results.csv`, `report.md`, and per-sample 
 
 ## Included datasets
 
-The repository contains curated subsets from four experimental datasets that can be used immediately after cloning. Each dataset contributes 20 representative TIFF images; the full source collections are larger and are not included here.
+The repository contains public demonstration data from four experimental datasets that can be used immediately after cloning. The three morphology datasets provide curated subsets of 20 representative TIFF images each. The fluorescence directory contains the complete 372-file demonstration collection.
 
 | Directory | Contents | Size |
 | --- | --- | ---: |
 | `datasets/01_Density_experiment_10x/` | Low, middle, and high-density bright-field examples | 20 TIFF files, approximately 340 MiB |
 | `datasets/02_Sodium_alginate_experiment_10x/` | Control and two sodium-alginate conditions | 20 TIFF files, approximately 340 MiB |
 | `datasets/03_Y-27632_experiment_10x/` | Five Y-27632 concentrations and matched days | 20 TIFF files, approximately 340 MiB |
-| `datasets/05_Fluorescence_demo/` | Fluorescence-based viability-prediction examples | 20 microscopy images, approximately 325 MiB |
+| `datasets/05_Fluorescence_demo/` | Fluorescence-based viability-prediction examples | 372 microscopy images, approximately 3.8 GiB |
 
-The morphology directories include source `manifest.csv` files with condition, date, file-size, and SHA-256 metadata for post-transfer integrity checks. These data are provided for research workflow demonstrations only and must not be used to draw clinical conclusions. Other complete experimental datasets are not automatically committed to Git; additional public data can be downloaded on demand with:
+The morphology directories include source `manifest.csv` files with condition, date, file-size, and SHA-256 metadata for post-transfer integrity checks. These data are provided for research workflow demonstrations only and must not be used to draw clinical conclusions. Additional public data can be downloaded on demand with:
 
 ```bash
 python scripts/download_organoid_datasets.py
@@ -338,7 +338,7 @@ Then verify that:
 
 ## Data, privacy, and security
 
-- Only the four explicitly listed curated dataset directories under `datasets/` are tracked; other experimental data are ignored by default.
+- Only the four explicitly listed dataset directories under `datasets/` are tracked; other experimental data are ignored by default.
 - `analysis-outputs/`, model weights, preview caches, local environments, and Agent jobs are not uploaded to GitHub.
 - Do not commit API keys, personally identifiable patient information, or restricted raw data.
 - Agent Studio can launch local Codex jobs. Use it only in trusted environments and review its file-access scope.
